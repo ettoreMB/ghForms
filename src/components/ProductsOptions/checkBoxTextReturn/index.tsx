@@ -3,6 +3,7 @@ import { InputText } from "../../formComponents/inputText";
 
 interface CheckBoxTexReturnProps {
   label: string;
+  name?: string;
 }
 
 export function CheckBoxTexReturn({ label }: CheckBoxTexReturnProps) {
