@@ -1,4 +1,4 @@
-import { InputText } from "../../formComponents/inputText"
+import { Disclosure } from "@headlessui/react"
 
 const products = [
   {
@@ -70,24 +70,29 @@ const products = [
 export function ProductsList() {
   return (
     <>
-      {products.map((product) => {
-        return (
-          <div className="mb-6">
-            <h3 className="font-bold">{product.title}:</h3>
-            {product.products.map(item => {
-              return (
-                <>
-                  <div className="flex flex-row w-6/12 mb-4 align-center">
-                    <h3 className="pt-3">{item.info}</h3>
-                    <InputText type="text" placeholder={'product name | Brand'} />
-                  </div>
-
-                </>
-              )
-            })}
-          </div>
-        )
-      })}
+      <Disclosure >
+        <Disclosure.Button>
+          Opçoes abrir
+        </Disclosure.Button>
+        <Disclosure.Panel>
+          {products.map((product) => {
+            return (
+              <div className="mb-6">
+                <h3 className="font-bold">{product.title}:</h3>
+                {product.products.map(item => {
+                  return (
+                    <>
+                      <div className="flex flex-row w-6/12 mb-4 align-center">
+                        <h3 className="pt-3">{item.info}</h3>
+                      </div>
+                    </>
+                  )
+                })}
+              </div>
+            )
+          })}
+        </Disclosure.Panel>
+      </Disclosure>
     </>
   )
 }
