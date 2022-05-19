@@ -1,16 +1,4 @@
-import { useState } from "react";
-import { Disclosure } from '@headlessui/react';
-import { ChevronUpIcon } from '@heroicons/react/solid'
-
-interface ProcedureListProps {
-  title: string;
-}
-interface Procedure {
-  title: string;
-  description: string;
-
-}
-const procedures = [
+export const procedures = [
   {
     title: "FX DE PUNHO",
     description: 'Plates & Screws superior extremities, Small, cannulated screws'
@@ -85,24 +73,7 @@ const procedures = [
   },
 ]
 
-export function ProcedureList() {
-  return (
-    <>
-      <Disclosure>
-        <Disclosure.Button className="py-2 flex flex-row">
-          Procedures
-          <ChevronUpIcon className="w-8" />
-        </Disclosure.Button>
-        <Disclosure.Panel className="text-gray-500">
-          {procedures.map((procedure: Procedure) => (
-            <div className="flex flex-row">
-              <input type={'checkbox'} />
-              <h2>{procedure.title}</h2>
-              <span>{procedure.description}</span>
-            </div>
-          ))}
-        </Disclosure.Panel>
-      </Disclosure>
-    </>
-  )
+export interface ProcedureProps {
+  title: string;
+  description: string;
 }

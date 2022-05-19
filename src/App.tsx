@@ -4,6 +4,7 @@ import { StateMachineProvider, createStore } from "little-state-machine";
 import Step1 from "./steps/step1";
 import Result from "./steps/result";
 import Step2 from "./steps/step2";
+import Step3 from "./steps/step3";
 
 const products = [
   {
@@ -81,7 +82,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Step1 />} />
         <Route path="/step2" element={<Step2 />} />
-        <Route path="/result" element={<Result />} />
+        <Route path="/step3" element={<Step3 />} />
+        <Route path="/results" element={<Result />} />
       </Routes>
     </Router>
   )

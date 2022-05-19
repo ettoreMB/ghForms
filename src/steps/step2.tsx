@@ -14,7 +14,7 @@ export default function Step2() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/result");
+    navigate("/results");
   }
 
   const atLeastOne = () => getValues("practiceNameLocation").length ? true : "Please tell";
@@ -40,10 +40,9 @@ export default function Step2() {
 
           <div className="flex w-full flex-row mb-10">
             <div className="mr-10 w-full">
-              <InputText type="text" name="position" label="Position" {...register('position')} />
+              <InputText type="text" label="Position" {...register('position')} required />
             </div>
             <div className="mr-10 w-full">
-              <label htmlFor="Position"></label>
               <InputText type="text" label={"Clinical Specialty"} {...register('clinicalSpeciality')} />
             </div>
           </div>

@@ -2,7 +2,7 @@ import { useStateMachine } from "little-state-machine";
 import updateAction from "../utils/updateAction";
 
 
-const Result = (props: any) => {
+const Result = () => {
   const { state } = useStateMachine({ updateAction });
 
   return (
