@@ -4,6 +4,7 @@ import { StateMachineProvider } from 'little-state-machine'
 import App from './App'
 import './global.css'
 
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <StateMachineProvider>

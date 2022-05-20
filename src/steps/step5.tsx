@@ -8,20 +8,19 @@ import { Disclosure } from "@headlessui/react";
 import { procedures, ProcedureProps } from "../utils/procedures";
 import { InputText } from "../components/formComponents/inputText";
 
-export default function Step3(props: any) {
+export default function Step5() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/step4");
+    navigate("/step6");
   }
 
   const options = [
-    'Plates & Screws for hip or pelvis ',
-    'Plates & Screws inferior extremities',
-    'Plates & Screws superior extremities '
+    'Small, cannulated screws ',
+    'Large, cannulated screws ',
   ]
 
   return (
@@ -29,14 +28,14 @@ export default function Step3(props: any) {
       <div className="flex flex-col mb-10">
         <h2 className="text-center">Terceiro Passo</h2>
         <form className="w-full max-w p-10 form-select" onSubmit={handleSubmit(onSubmit)}>
-          <h2>Please indicate which product categories are you familiar with and comfortable to speak about:</h2>
-          <h2>Hip, Pelvis, Extremities: </h2>
+          <h2 className="mb-6 font-bold">Please indicate which product categories are you familiar with and comfortable to speak about:</h2>
+          <h2>Shoulder, Hip, Pelvis, Femur, Tibia, Extremities: </h2>
           <div>
-            <h3>Products (and representative example): </h3>
+            <h3 className="mb-4">Products (and representative example): </h3>
             <div className="mb-10">
               {options.map((option) => (
                 <div className="ml-4">
-                  <input type="checkbox" value={option} {...register('hipPelvisExtremitiesProducts')} />
+                  <input type="checkbox" value={option} {...register('shoulderHipPelvisFemurTibiaExtremitiesProducts')} />
                   <label htmlFor="">{option}</label>
                 </div>
               ))}
@@ -44,7 +43,7 @@ export default function Step3(props: any) {
           </div>
           <div className="mb-10">
             <h3>○	Target specialties: Orthopedic Surgeon, Trauma Surgeon</h3>
-            <InputText placeholder="Digite Aqui" {...register('HipPelvisExtremitiesTarget')} />
+            <InputText placeholder="Digite Aqui" {...register('shoulderHipPelvisFemurTibiaExtremitiesTarget')} />
           </div>
 
 
@@ -62,7 +61,7 @@ export default function Step3(props: any) {
                 <>
                   {procedures.map((procedure: ProcedureProps) => (
                     <div>
-                      <input type="checkbox" id={procedure.title} value={procedure.title} key={procedure.title} {...register("hipsPelvisExtremitiesProcedures")} />
+                      <input type="checkbox" id={procedure.title} value={procedure.title} key={procedure.title} {...register("shoulderHipPelvisFemurTibiaExtremitiesProcedures")} />
                       <label htmlFor="">{procedure.title}</label>
                     </div>
                   ))}

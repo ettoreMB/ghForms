@@ -14,7 +14,7 @@ export default function Step2() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/results");
+    navigate("/step3");
   }
 
   const atLeastOne = () => getValues("practiceNameLocation").length ? true : "Please tell";

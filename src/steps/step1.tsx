@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../utils/updateAction";
-import { ArrowArcRight, ArrowDownRight, ArrowRight } from "phosphor-react";
+import { ArrowRight } from "phosphor-react";
 
 export default function Step1(props: any) {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ export default function Step1(props: any) {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/step2");
+    navigate("/results");
   }
   return (
     <>
