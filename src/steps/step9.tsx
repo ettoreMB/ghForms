@@ -15,7 +15,7 @@ export default function Step9() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/step8");
+    navigate("/step10");
   }
 
 

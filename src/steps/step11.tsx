@@ -3,19 +3,31 @@ import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../utils/updateAction";
 import { ArrowDown, ArrowRight } from "phosphor-react";
-import { Disclosure } from "@headlessui/react";
 
-import { procedures, ProcedureProps } from "../utils/procedures";
-import { InputText } from "../components/formComponents/inputText";
 
-export default function Step10() {
+const rows = [
+  'Plates for hip or pelvis ',
+  'Plates inferior extremities ',
+  'Plates superior extremities ',
+  'Screws for hip or pelvis ',
+  'Screws inferior extremities ',
+  'Screws superior extremities ',
+  'Humeral Intramedullary nails',
+  'Cephalomedular Intramedullary nails',
+  'Femoral Intramedullary',
+  'Tibial Intramedullary nails',
+  'small, cannulated screws',
+  'Large, cannulated screws',
+]
+
+export default function Step11() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/step8");
+    navigate("/step12");
   }
 
 
@@ -34,12 +46,33 @@ export default function Step10() {
                 <th>Types</th>
                 <th>Purchase Price</th>
                 <th>Affordability (Cost)</th>
-                <th>brand used in your facility</th>
-                <th>brand used in your facility</th>
-                <th>brand used in your facility</th>
-                <th>brand used in your facility</th>
+                <th>Quality | High clinical performance</th>
+                <th>Availability of products / inventory</th>
+                <th>Support and training by manufacturer for use</th>
+                <th>Ability to use products for other types of procedures</th>
+                <th>Other (please specify): </th>
               </tr>
             </thead>
+            <tbody>
+
+
+              {rows.map(row => (
+                <tr>
+                  <td>
+                    {row}
+                  </td>
+                  <td> <input type="text" className="border-2 border-black w-10" /> </td>
+                  <td><input type="text" className="border-2 border-black w-10" /></td>
+                  <td><input type="text" className="border-2 border-black w-10" /></td>
+                  <td><input type="text" className="border-2 border-black w-10" /></td>
+                  <td><input type="text" className="border-2 border-black w-10" /></td>
+                  <td><input type="text" className="border-2 border-black w-10" /></td>
+                  <td><input type="text" className="border-2 border-black w-20" /></td>
+                </tr>
+              ))}
+
+
+            </tbody>
           </table>
           <button type="submit" className="w-full  bg-teal-300 text-white p-4 rounded-lg text-center font-bold flex flex-row">
             Próximo Passo

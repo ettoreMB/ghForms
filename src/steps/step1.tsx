@@ -12,7 +12,7 @@ export default function Step1(props: any) {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/results");
+    navigate("/step2");
   }
   return (
     <>
