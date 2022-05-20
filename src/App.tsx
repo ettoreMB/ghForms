@@ -10,6 +10,8 @@ import Step5 from "./steps/step5";
 import Step6 from "./steps/step6";
 import Step7 from "./steps/step7";
 import Step8 from "./steps/step8";
+import Step9 from "./steps/step9";
+import Step10 from "./steps/step10";
 
 const products = [
   {
@@ -91,6 +93,8 @@ function App() {
         <Route path="/step6" element={<Step6 />} />
         <Route path="/step7" element={<Step7 />} />
         <Route path="/step8" element={<Step8 />} />
+        <Route path="/step9" element={<Step9 />} />
+        <Route path="/step10" element={<Step10 />} />
         <Route path="/results" element={<Result />} />
       </Routes>
     </Router>

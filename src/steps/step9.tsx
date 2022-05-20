@@ -8,7 +8,7 @@ import { Disclosure } from "@headlessui/react";
 import { procedures, ProcedureProps } from "../utils/procedures";
 import { InputText } from "../components/formComponents/inputText";
 
-export default function Step8() {
+export default function Step9() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
@@ -24,31 +24,22 @@ export default function Step8() {
       <div className="flex flex-col mb-10">
         <h2 className="text-center">Terceiro Passo</h2>
         <form className="w-full max-w p-10 form-select" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="mb-6 font-bold">5.	To what extent do you expect fluctuations about the following procedures: </h2>
-
-          <div>
-            <h3>a.	Expected growth over the next 1-5 years?</h3>
-            <span>(Use -/+ percentage to indicate magnitude of growth and/or decrease) </span>
-            <span>Price fluctuations over the past 6 months? Why? </span>
-          </div>
+          <h2 className="mb-6 font-bold">6.	Which products and brands do you currently use for Trauma procedures?  </h2>
 
           <table cellSpacing="0" cellPadding="0">
             <thead>
               <tr>
-                <th rowSpan={2} className="p-2">Procedure</th>
-                <th rowSpan={3} className="p-2">Expected growth</th>
-                <th colSpan={3} className="p-2">Has the cost fluctuated in the past 6 months?</th>
-              </tr>
-              <tr>
-                <th>If yes, by how much (%)?</th>
-                <th>If cost has fluctuated, why?</th>
+                <th className="p-2">PROCEDURE</th>
+                <th className="p-2">PRODUCTS</th>
+                <th className="p-2">Brands available for use at your facility</th>
+                <th className="p-2">Preferred brand? Why?</th>
               </tr>
             </thead>
             <tbody>
               {procedures.map(procedure => (
                 <tr key={procedure.title}>
                   <td className="p-2">{procedure.title}</td>
-                  <td><input type="text" className="border-2 border-blue-50" /></td>
+                  <td>{procedure.description}</td>
                   <td><input type="text" className="border-2 border-blue-50" /></td>
                   <td><input type="text" className="border-2 border-blue-50" /></td>
                 </tr>
