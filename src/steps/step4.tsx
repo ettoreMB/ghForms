@@ -16,7 +16,7 @@ export default function Step4() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/results");
+    navigate("/step5");
   }
 
   const questions = [
