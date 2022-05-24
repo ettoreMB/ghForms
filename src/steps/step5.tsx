@@ -2,11 +2,12 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../utils/updateAction";
-import { ArrowDown, ArrowRight } from "phosphor-react";
+import { ArrowDown } from "phosphor-react";
 import { Disclosure } from "@headlessui/react";
 
 import { procedures, ProcedureProps } from "../utils/procedures";
 import { InputText } from "../components/formComponents/inputText";
+import { NextStepButton } from "../components/nextStepButton";
 
 export default function Step5() {
   const navigate = useNavigate();
@@ -18,61 +19,178 @@ export default function Step5() {
     navigate("/step6");
   }
 
-  const options = [
-    'Small, cannulated screws ',
-    'Large, cannulated screws ',
+  const questions = [
+    {
+      title: 'Placas para quadril ou pélvis',
+      options: {
+        q1: 'PlacasParaQuadrilPelvis_B_3_1',
+        q2: 'PlacasParaQuadrilPelvis_B_3_2',
+        q3: 'PlacasParaQuadrilPelvis_B_3_3',
+      }
+    },
+    {
+      title: 'Placas extremidades inferiores',
+      options: {
+        q1: 'PlacasExtremidadesInferiores_B_3_1',
+        q2: 'PlacasExtremidadesInferiores_B_3_2',
+        q3: 'PlacasExtremidadesInferiores_B_3_3',
+      }
+    },
+    {
+      title: 'Placas extremidades superiores',
+      options: {
+        q1: 'PlacasExtremidadesSuperiores_B_3_1',
+        q2: 'PlacasExtremidadesSuperiores_B_3_2',
+        q3: 'PlacasExtremidadesSuperiores_B_3_3',
+      }
+    },
+    {
+      title: 'Parafusos para quadril ou pélvis',
+      options: {
+        q1: 'ParafusosQuadrilPelvis_B_3_1',
+        q2: 'ParafusosQuadrilPelvis_B_3_2',
+        q3: 'ParafusosQuadrilPelvis_B_3_3',
+      }
+    },
+    {
+      title: 'Parafusos extremidades inferiores',
+      options: {
+        q1: 'ParafusosExtremidadesInferiores_B_3_1',
+        q2: 'ParafusosExtremidadesInferiores_B_3_2',
+        q3: 'ParafusosExtremidadesInferiores_B_3_3',
+      }
+    },
+    {
+      title: 'Parafusos extremidades superiores',
+      options: {
+        q1: 'ParafusosExtremidadesSuperiores_B_3_1',
+        q2: 'ParafusosExtremidadesSuperiores_B_3_2',
+        q3: 'ParafusosExtremidadesSuperiores_B_3_3',
+      }
+    },
+    {
+      title: 'Pinos intramedulares umeral',
+      options: {
+        q1: 'PinosIntramedularesUmeral_B_3_1',
+        q2: 'PinosIntramedularesUmeral_B_3_2',
+        q3: 'PinosIntramedularesUmeral_B_3_3',
+      }
+    },
+    {
+      title: 'Pinos intramedulares acetabulares',
+      options: {
+        q1: 'PinosIntramedularesAcetabulares_B_3_1',
+        q2: 'PinosIntramedularesAcetabulares_B_3_2',
+        q3: 'PinosIntramedularesAcetabulares_B_3_3',
+      }
+    },
+    {
+      title: 'Pino intramedular femoral',
+      options: {
+        q1: 'PinoIntramedularFemoral_B_3_1',
+        q2: 'PinoIntramedularFemoral_B_3_2',
+        q3: 'PinoIntramedularFemoral_B_3_3',
+      }
+    },
+    {
+      title: 'Pinos intramedulares tibiais',
+      options: {
+        q1: 'PinosIntramedularesTibiais_B_3_1',
+        q2: 'PinosIntramedularesTibiais_B_3_2',
+        q3: 'PinosIntramedularesTibiais_B_3_3',
+      }
+    },
+    {
+      title: 'Parafusos pequenos e cânulados',
+      options: {
+        q1: 'ParafusosPequenosCanulados_B_3_1',
+        q2: 'ParafusosPequenosCanulados_B_3_2',
+        q3: 'ParafusosPequenosCanulados_B_3_3',
+      }
+    },
+    {
+      title: 'Parafusos grandes e canulados',
+      options: {
+        q1: 'ParafusosGrandescanulados_B_3_1',
+        q2: 'ParafusosGrandescanulados_B_3_2',
+        q3: 'ParafusosGrandescanulados_B_3_3',
+      }
+    },
+    {
+      title: 'Grandes Fixações Externas',
+      options: {
+        q1: 'GrandesFixaCoesExternas_B_3_1',
+        q2: 'GrandesFixaCoesExternas_B_3_2',
+        q3: 'GrandesFixaCoesExternas_B_3_3',
+      }
+    },
+    {
+      title: 'Grandes Fixações Externas',
+      options: {
+        q1: 'GrandesFixaCoesExternas_B_3_1',
+        q2: 'GrandesFixaCoesExternas_B_3_2',
+        q3: 'GrandesFixaCoesExternas_B_3_3',
+      }
+    },
+    {
+      title: 'Fixações externas médias',
+      options: {
+        q1: 'FixacoesExternasMedias_B_3_1',
+        q2: 'FixacoesExternasMedias_B_3_2',
+        q3: 'FixacoesExternasMedias_B_3_3',
+      }
+    },
+    {
+      title: 'Pequenas Fixações Externas',
+      options: {
+        q1: 'PequenasFixaCoesExternas_B_3_1',
+        q2: 'PequenasFixaCoesExternas_B_3_2',
+        q3: 'PequenasFixaCoesExternas_B_3_3',
+      }
+    },
+    {
+      title: 'Mini Fixações Externas',
+      options: {
+        q1: 'MiniFixacoesExternas_B_3_1',
+        q2: 'MiniFixacoesExternas_B_3_2',
+        q3: 'MiniFixacoesExternas_B_3_3',
+      }
+    },
   ]
 
   return (
     <>
-      <div className="flex flex-col mb-10">
-        <h2 className="text-center">Terceiro Passo</h2>
-        <form className="w-full max-w p-10 form-select" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="mb-6 font-bold">Please indicate which product categories are you familiar with and comfortable to speak about:</h2>
-          <h2>Shoulder, Hip, Pelvis, Femur, Tibia, Extremities: </h2>
-          <div>
-            <h3 className="mb-4">Products (and representative example): </h3>
-            <div className="mb-10">
-              {options.map((option) => (
-                <div className="ml-4">
-                  <input type="checkbox" value={option} {...register('shoulderHipPelvisFemurTibiaExtremitiesProducts')} />
-                  <label htmlFor="">{option}</label>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="mb-10">
-            <h3>○	Target specialties: Orthopedic Surgeon, Trauma Surgeon</h3>
-            <InputText placeholder="Digite Aqui" {...register('shoulderHipPelvisFemurTibiaExtremitiesTarget')} />
-          </div>
+      <div className="container">
+        <form className="form-select" onSubmit={handleSubmit(onSubmit)}>
+          <h2 className="question">3.	Quais produtos e marcas você vende  atualmente para procedimentos de Trauma?  </h2>
 
+          <table className="border-collapse border border-slate-400 table-auto">
+            <thead>
+              <tr>
+                <th className="border border-slate-300">PRODUTOS VENDIDOS</th>
+                <th className="border border-slate-300">selecionar os que sua empresa vende</th>
+                <th className="border border-slate-300">As marcas mais vendidas?</th>
+                <th className="border border-slate-300">Por que? O que explica a preferência da marca?</th>
+              </tr>
+            </thead>
+            <tbody>
 
-          <div className="mb-10">
-            <Disclosure>
-              <Disclosure.Button>
-                <span className="flex flex-row p-2 h-10 bg-blue-400 rounded-lg w-full text-center text-white">
-                  Procedures
-                  <ArrowDown className="mt-1 font-bold" />
-                </span>
-
-              </Disclosure.Button>
-              <Disclosure.Panel>
-
-                <>
-                  {procedures.map((procedure: ProcedureProps) => (
-                    <div>
-                      <input type="checkbox" id={procedure.title} value={procedure.title} key={procedure.title} {...register("shoulderHipPelvisFemurTibiaExtremitiesProcedures")} />
-                      <label htmlFor="">{procedure.title}</label>
+              {questions.map(row => (
+                <tr>
+                  <td className=" w-1/12 border border-slate-300" key={row.title}>{row.title}</td>
+                  <td className=" w-1/12 border border-slate-300">
+                    <div className="justify-center w-full flex">
+                      <input type="checkbox" id="" {...register(`${row.options.q1}`)} />
                     </div>
-                  ))}
-                </>
-              </Disclosure.Panel>
-            </Disclosure>
-          </div>
-          <button type="submit" className="w-full  bg-teal-300 text-white p-4 rounded-lg text-center font-bold flex flex-row">
-            Próximo Passo
-            <ArrowRight />
-          </button>
+                  </td>
+                  <td className="  w-2/12 border border-slate-300"><InputText {...register(`${row.options.q2}`)} /></td>
+                  <td className="  w-2/12  border border-slate-300"><InputText {...register(`${row.options.q3}`)} /></td>
+                </tr>
+              ))}
+
+            </tbody>
+          </table>
+          <NextStepButton />
         </form>
       </div>
     </>

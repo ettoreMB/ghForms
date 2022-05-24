@@ -7,6 +7,7 @@ import { Disclosure } from "@headlessui/react";
 
 import { procedures, ProcedureProps } from "../utils/procedures";
 import { InputText } from "../components/formComponents/inputText";
+import { NextStepButton } from "../components/nextStepButton";
 
 export default function Step6() {
   const navigate = useNavigate();
@@ -18,63 +19,40 @@ export default function Step6() {
     navigate("/step7");
   }
 
-  const options = [
-    'Small, cannulated screws ',
-    'Large, cannulated screws ',
-  ]
+
 
   return (
     <>
-      <div className="flex flex-col mb-10">
-        <h2 className="text-center">Terceiro Passo</h2>
-        <form className="w-full max-w p-10 form-select" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="mb-6 font-bold">Please indicate which product categories are you familiar with and comfortable to speak about:</h2>
-          <h2>Shoulder, Femur, Tibia, forearm, hand: </h2>
+      <div className="container">
+        <form className="form-select" onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <h3 className="mb-4">Products (and representative example): </h3>
-            <div className="mb-10">
-              {options.map((option) => (
-                <div className="ml-4">
-                  <input type="checkbox" value={option} {...register('shoulderFemurTibiaForearmHandProducts')} />
-                  <label htmlFor="">{option}</label>
-                </div>
-              ))}
+            <h2 className="question">
+              Há marcas que você gostaria de vender, mas que não estão disponíveis em seus mercados? Por favor liste conforme sua preferência.
+            </h2>
+            <textarea />
+          </div>
+
+          <div>
+            <h2 className="question">
+              Quais são as principais marcas brasileiras que você conhece?
+            </h2>
+            <div>
+              <h3 className="question">Como eles se comparam com marcas fabricadas no exterior nestes procedimentos?</h3>
+              <textarea />
+            </div>
+            <div>
+              <h3 className="question">Quais as tendências que você vê em relação às marcas brasileiras em relação a marcas estrangeiras e importadas? por quê?</h3>
+              <textarea />
+            </div>
+            <div>
+              <h3 className="question">Das seguintes marcas, quais você usa/vende?</h3>
+              <textarea />
             </div>
           </div>
-          <div className="mb-10">
-            <h3>Target specialties: Orthopedic Surgeon, Trauma Surgeon</h3>
-            <InputText placeholder="Digite Aqui" {...register('shoulderFemurTibiaForearmHandTarget')} />
-          </div>
 
-
-          <div className="mb-10">
-            <Disclosure>
-              <Disclosure.Button>
-                <span className="flex flex-row p-2 h-10 bg-blue-400 rounded-lg w-full text-center text-white">
-                  Procedures
-                  <ArrowDown className="mt-1 font-bold" />
-                </span>
-
-              </Disclosure.Button>
-              <Disclosure.Panel>
-
-                <>
-                  {procedures.map((procedure: ProcedureProps) => (
-                    <div>
-                      <input type="checkbox" id={procedure.title} value={procedure.title} key={procedure.title} {...register("shoulderFemurTibiaForearmHandProcedures")} />
-                      <label htmlFor="">{procedure.title}</label>
-                    </div>
-                  ))}
-                </>
-              </Disclosure.Panel>
-            </Disclosure>
-          </div>
-          <button type="submit" className="w-full  bg-teal-300 text-white p-4 rounded-lg text-center font-bold flex flex-row">
-            Próximo Passo
-            <ArrowRight />
-          </button>
+          <NextStepButton title="Próximo Passo" />
         </form>
-      </div>
+      </div >
     </>
   )
 }

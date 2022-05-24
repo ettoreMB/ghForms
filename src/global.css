@@ -3,15 +3,32 @@
 @tailwind utilities;
 
 
-input[type=checkbox] {
+/* input[type=checkbox] {
   @apply rounded-full mr-2;
-}
+} */
+
 
 body {
   @apply bg-gray-100;
 }
 
+textarea {
+  @apply w-full bg-gray-100 p-4 rounded-md;
+}
+
 section,
 form {
-  @apply mx-auto max-w-screen-xl px-4 py-8 bg-white rounded-lg shadow-md;
+  @apply w-full mx-auto p-10 max-w-screen-xl bg-white rounded-lg shadow-md;
+}
+
+@layer components {
+  .container {
+    @apply flex flex-col mx-auto p-10;
+  }
+
+  .question {
+    @apply text-gray-700 font-bold mb-4 text-lg
+  }
+
+
 }

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../utils/updateAction";
 import { ArrowRight } from "phosphor-react";
+import { NextStepButton } from "../components/nextStepButton";
 
 export default function Step1(props: any) {
   const navigate = useNavigate();
@@ -16,16 +17,21 @@ export default function Step1(props: any) {
   }
   return (
     <>
-      <div className="flex flex-col mb-10">
-        <h2 className="text-center">Primeiro Passo</h2>
-        <form className="w-full max-w p-10 form-select" onSubmit={handleSubmit(onSubmit)}>
-          <InputText placeholder='Oi' label={"Nome"}   {...register("nome")} required />
-          <InputText label={"Email"}  {...register("email")} required />
-          <InputText label={"Telefone"}  {...register("telefone")} required />
-          <button type="submit" className="w-full  bg-teal-300 text-white p-4 rounded-lg text-center font-bold flex flex-row">
-            Próximo Passo
-            <ArrowRight />
-          </button>
+      <div className="container">
+        <form className="form-select" onSubmit={handleSubmit(onSubmit)}>
+          <div className="mb-6 w-full">
+            <InputText placeholder='Nome Completo' label={"Nome"}   {...register("nome")} required />
+            <div className="flex flex-row flex-wrap">
+              <InputText placeholder='Seu melhor email' label={"Email"}  {...register("email")} required />
+              <InputText placeholder='colocar mascara' label={"Telefone"}  {...register("telefone")} required />
+            </div>
+
+
+            <InputText placeholder='Nome da Instituição' label={"Instituição"}  {...register("empresa")} required />
+            <InputText placeholder='Sua posição na empresa' label={"Posição"}  {...register("cargo")} required />
+          </div>
+
+          <NextStepButton />
         </form>
       </div>
     </>

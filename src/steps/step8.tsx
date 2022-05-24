@@ -7,6 +7,7 @@ import { Disclosure } from "@headlessui/react";
 
 import { procedures, ProcedureProps } from "../utils/procedures";
 import { InputText } from "../components/formComponents/inputText";
+import { NextStepButton } from "../components/nextStepButton";
 
 export default function Step8() {
   const navigate = useNavigate();
@@ -21,46 +22,40 @@ export default function Step8() {
 
   return (
     <>
-      <div className="flex flex-col mb-10">
-        <h2 className="text-center">Terceiro Passo</h2>
-        <form className="w-full max-w p-10 form-select" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="mb-6 font-bold">5.	To what extent do you expect fluctuations about the following procedures: </h2>
-
+      <div className="container">
+        <form className="form-select" onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <h3>a.	Expected growth over the next 1-5 years?</h3>
-            <span>(Use -/+ percentage to indicate magnitude of growth and/or decrease) </span>
-            <span>Price fluctuations over the past 6 months? Why? </span>
+            <h2 className="question">8.	Quais tendências você prevê na compra/venda desses produtos relacionados ao trauma os próximos 5 anos? Que motivos explicam essas tendencias?</h2>
+            <textarea />
+          </div>
+          <div>
+            <h2 className="question">9.	Qual é o processo de compra para a introdução desses produtos em hospital privado?</h2>
+            <textarea />
+            <div>
+              <h3>a.	Existe algum processo de avaliação para identificar e testar novos produtos?</h3>
+              <textarea />
+            </div>
+            <div>
+              <h3>b.	Existe uma expectativa de que o fabricante forneça treinamento antes de introduzir um novo produto?</h3>
+              <textarea />
+            </div>
+            <div>
+              <h3>c.	Quais distribuidores ou marcas você concorre mais pelas vendas desses tipos de produtos para hospitais privados?</h3>
+              <InputText label="Placas e Parafusos" />
+              <InputText label="Pinos" />
+              <InputText label="Parafusos cânulados" />
+              <InputText label="Fixações Externas" />
+            </div>
+            <div>
+              <h3>10.	Que termos você normalmente negocia com os hospitais para os produtos acima mencionados? </h3>
+              <textarea />
+            </div>
           </div>
 
-          <table cellSpacing="0" cellPadding="0">
-            <thead>
-              <tr>
-                <th rowSpan={2} className="p-2">Procedure</th>
-                <th rowSpan={3} className="p-2">Expected growth</th>
-                <th colSpan={3} className="p-2">Has the cost fluctuated in the past 6 months?</th>
-              </tr>
-              <tr>
-                <th>If yes, by how much (%)?</th>
-                <th>If cost has fluctuated, why?</th>
-              </tr>
-            </thead>
-            <tbody>
-              {procedures.map(procedure => (
-                <tr key={procedure.title}>
-                  <td className="p-2">{procedure.title}</td>
-                  <td><input type="text" className="border-2 border-blue-50" /></td>
-                  <td><input type="text" className="border-2 border-blue-50" /></td>
-                  <td><input type="text" className="border-2 border-blue-50" /></td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <button type="submit" className="w-full  bg-teal-300 text-white p-4 rounded-lg text-center font-bold flex flex-row">
-            Próximo Passo
-            <ArrowRight />
-          </button>
+
+          <NextStepButton />
         </form>
-      </div>
+      </div >
     </>
   )
 }
