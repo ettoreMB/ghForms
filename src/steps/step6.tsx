@@ -16,6 +16,7 @@ export default function Step6() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
+    console.log(data)
     navigate("/step7");
   }
 
@@ -24,30 +25,28 @@ export default function Step6() {
   return (
     <>
       <div className="container">
-        <form className="form-select" onSubmit={handleSubmit(onSubmit)}>
+        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
           <div>
             <h2 className="question">
               Há marcas que você gostaria de vender, mas que não estão disponíveis em seus mercados? Por favor liste conforme sua preferência.
             </h2>
-            <textarea />
+            <textarea {...register("section__B_6")} />
           </div>
 
           <div>
             <h2 className="question">
               Quais são as principais marcas brasileiras que você conhece?
             </h2>
+            <InputText placeholder="Nome das Marcas" {...register("section__B_7")} />
             <div>
               <h3 className="question">Como eles se comparam com marcas fabricadas no exterior nestes procedimentos?</h3>
-              <textarea />
+              <textarea {...register("section__B_7_A")} />
             </div>
             <div>
               <h3 className="question">Quais as tendências que você vê em relação às marcas brasileiras em relação a marcas estrangeiras e importadas? por quê?</h3>
-              <textarea />
+              <textarea {...register("section__B_7_B")} />
             </div>
-            <div>
-              <h3 className="question">Das seguintes marcas, quais você usa/vende?</h3>
-              <textarea />
-            </div>
+
           </div>
 
           <NextStepButton title="Próximo Passo" />

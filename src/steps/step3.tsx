@@ -16,6 +16,7 @@ export default function Step3() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
+    console.log(data)
     navigate("/step4");
   }
 
@@ -46,7 +47,7 @@ export default function Step3() {
   return (
     <>
       <div className="container">
-        <form className="form-select" onSubmit={handleSubmit(onSubmit)}>
+        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
           <h2 className="question">Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
           <div className="px-4">
             <div>
@@ -55,7 +56,7 @@ export default function Step3() {
               <div className="mb-10 mt-2 mx-4">
                 {QuadrilPelvisExtremidadesOptions.map((option) => (
                   <div className="ml-4">
-                    <input type="checkbox" className="form-checkbox" value={option} {...register('QuadrilPelvisExtremidadesProducts')} />
+                    <input type="checkbox" className="form-checkbox" value={option} {...register('section_INTRO_QuadrilPelvisExtremidadesProdutos')} />
                     <label className="ml-4">{option}</label>
                   </div>
                 ))}
@@ -67,7 +68,7 @@ export default function Step3() {
               <div className="mb-10 mt-2 mx-4">
                 {OmbroQuadrilFêmurTibiaOptions.map((option) => (
                   <div className="ml-4">
-                    <input type="checkbox" className="form-checkbox" value={option} {...register('OmbroQuadrilFêmurTibiaProducts')} />
+                    <input type="checkbox" className="form-checkbox" value={option} {...register('section_INTRO_OmbroQuadrilFemurTibiaProdutos')} />
                     <label className="ml-4">{option}</label>
                   </div>
                 ))}
@@ -79,7 +80,7 @@ export default function Step3() {
               <div className="mb-10 mt-2 mx-4">
                 {OmbroQuadrilPélvisFêmurTíbiaExtremidadesOptions.map((option) => (
                   <div className="ml-4">
-                    <input type="checkbox" className="form-checkbox" value={option} {...register('OmbroQuadrilFêmurTibiaProducts')} />
+                    <input type="checkbox" className="form-checkbox" value={option} {...register('section_INTRO_OmbroQuadrilFemurTibiaProdutos')} />
                     <label className="ml-4">{option}</label>
                   </div>
                 ))}
@@ -91,7 +92,7 @@ export default function Step3() {
               <div className="mb-10 mt-2 mx-4">
                 {OmbroFemurTíbiaAntebracomaoOptions.map((option) => (
                   <div className="ml-4">
-                    <input type="checkbox" className="form-checkbox" value={option} {...register('OmbroFemurTíbiaAntebracomaoProducts')} />
+                    <input type="checkbox" className="form-checkbox" value={option} {...register('section_INTRO_OmbroFemurTíbiaAntebracoMaoProdutos')} />
                     <label className="ml-4">{option}</label>
                   </div>
                 ))}
@@ -100,17 +101,17 @@ export default function Step3() {
             <div>
               <div className="mb-10">
                 <h2 className="question">Em média, para quantos hospitais você vende em relação aos produtos mencionados acima?</h2>
-                <InputText {...register("sectionA_P_1")} />
+                <InputText {...register("section_INTRO_1")} />
               </div>
               <div>
                 <h2 className="question">Se possível pode dizer entre essas principais regiões:</h2>
                 <div className="flex flex-row my-10">
-                  <InputText label="SP" placeholder="Quantidade"{...register("sectionA_P_1_SP")} />
-                  <InputText label="RJ" placeholder="Quantidade"{...register("sectionA_P_1_RJ")} />
-                  <InputText label="MG" placeholder="Quantidade"{...register("sectionA_P_1_MG")} />
-                  <InputText label="RECIFE" placeholder="Quantidade"{...register("sectionA_P_1_RECIFE")} />
-                  <InputText label="FORTALEZA" placeholder="Quantidade"{...register("sectionA_P_1_FORTALEZA")} />
-                  <InputText label="OUTROS" placeholder="Quantidade"{...register("sectionA_P_1_OUTROS")} />
+                  <InputText label="SP" placeholder="Quantidade"{...register("section_INTRO_1_SP")} />
+                  <InputText label="RJ" placeholder="Quantidade"{...register("section_INTRO_1_RJ")} />
+                  <InputText label="MG" placeholder="Quantidade"{...register("section_INTRO_1_MG")} />
+                  <InputText label="RECIFE" placeholder="Quantidade"{...register("section_INTRO_1_RECIFE")} />
+                  <InputText label="FORTALEZA" placeholder="Quantidade"{...register("section_INTRO_1_FORTALEZA")} />
+                  <InputText label="OUTROS" placeholder="Quantidade"{...register("section_INTRO_1_OUTROS")} />
                 </div>
               </div>
               <div>
@@ -118,11 +119,11 @@ export default function Step3() {
                 <div className="flex flex-row w-6/12 justify-between">
                   <div className="flex flex-row px-2 mx-2 border-b border-teal-500 mb-2  w-40">
                     <label className="mr-4" htmlFor="">Publico</label>
-                    <input placeholder="%" type="number" name="" id="" className="w-14" />
+                    <input placeholder="%" type="number" className="w-14"{...register("section_INTRO_1_qtd_publico")} />
                   </div>
                   <div className="flex flex-row px-2 mx-2 border-b border-teal-500 mb-2 w-40 ">
                     <label className="mr-4">Privado</label>
-                    <input placeholder="%" prefix="%" type="number" name="" id="" className="w-14" />
+                    <input placeholder="%" prefix="%" type="number" className="w-14" {...register("section_INTRO_1_qtd_privado")} />
                   </div>
                 </div>
               </div>

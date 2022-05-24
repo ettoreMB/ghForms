@@ -16,6 +16,7 @@ export default function Step5() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
+    console.log(data)
     navigate("/step6");
   }
 
@@ -23,137 +24,137 @@ export default function Step5() {
     {
       title: 'Placas para quadril ou pélvis',
       options: {
-        q1: 'PlacasParaQuadrilPelvis_B_3_1',
-        q2: 'PlacasParaQuadrilPelvis_B_3_2',
-        q3: 'PlacasParaQuadrilPelvis_B_3_3',
+        q1: 'PlacasParaQuadrilPelvis_section__B_3_1',
+        q2: 'PlacasParaQuadrilPelvis_section__B_3_2',
+        q3: 'PlacasParaQuadrilPelvis_section__B_3_3',
       }
     },
     {
       title: 'Placas extremidades inferiores',
       options: {
-        q1: 'PlacasExtremidadesInferiores_B_3_1',
-        q2: 'PlacasExtremidadesInferiores_B_3_2',
-        q3: 'PlacasExtremidadesInferiores_B_3_3',
+        q1: 'PlacasExtremidadesInferiores_section__B_3_1',
+        q2: 'PlacasExtremidadesInferiores_section__B_3_2',
+        q3: 'PlacasExtremidadesInferiores_section__B_3_3',
       }
     },
     {
       title: 'Placas extremidades superiores',
       options: {
-        q1: 'PlacasExtremidadesSuperiores_B_3_1',
-        q2: 'PlacasExtremidadesSuperiores_B_3_2',
-        q3: 'PlacasExtremidadesSuperiores_B_3_3',
+        q1: 'PlacasExtremidadesSuperiores_section__B_3_1',
+        q2: 'PlacasExtremidadesSuperiores_section__B_3_2',
+        q3: 'PlacasExtremidadesSuperiores_section__B_3_3',
       }
     },
     {
       title: 'Parafusos para quadril ou pélvis',
       options: {
-        q1: 'ParafusosQuadrilPelvis_B_3_1',
-        q2: 'ParafusosQuadrilPelvis_B_3_2',
-        q3: 'ParafusosQuadrilPelvis_B_3_3',
+        q1: 'ParafusosQuadrilPelvis_section__B_3_1',
+        q2: 'ParafusosQuadrilPelvis_section__B_3_2',
+        q3: 'ParafusosQuadrilPelvis_section__B_3_3',
       }
     },
     {
       title: 'Parafusos extremidades inferiores',
       options: {
-        q1: 'ParafusosExtremidadesInferiores_B_3_1',
-        q2: 'ParafusosExtremidadesInferiores_B_3_2',
-        q3: 'ParafusosExtremidadesInferiores_B_3_3',
+        q1: 'ParafusosExtremidadesInferiores_section__B_3_1',
+        q2: 'ParafusosExtremidadesInferiores_section__B_3_2',
+        q3: 'ParafusosExtremidadesInferiores_section__B_3_3',
       }
     },
     {
       title: 'Parafusos extremidades superiores',
       options: {
-        q1: 'ParafusosExtremidadesSuperiores_B_3_1',
-        q2: 'ParafusosExtremidadesSuperiores_B_3_2',
-        q3: 'ParafusosExtremidadesSuperiores_B_3_3',
+        q1: 'ParafusosExtremidadesSuperiores_section__B_3_1',
+        q2: 'ParafusosExtremidadesSuperiores_section__B_3_2',
+        q3: 'ParafusosExtremidadesSuperiores_section__B_3_3',
       }
     },
     {
       title: 'Pinos intramedulares umeral',
       options: {
-        q1: 'PinosIntramedularesUmeral_B_3_1',
-        q2: 'PinosIntramedularesUmeral_B_3_2',
-        q3: 'PinosIntramedularesUmeral_B_3_3',
+        q1: 'PinosIntramedularesUmeral_section__B_3_1',
+        q2: 'PinosIntramedularesUmeral_section__B_3_2',
+        q3: 'PinosIntramedularesUmeral_section__B_3_3',
       }
     },
     {
       title: 'Pinos intramedulares acetabulares',
       options: {
-        q1: 'PinosIntramedularesAcetabulares_B_3_1',
-        q2: 'PinosIntramedularesAcetabulares_B_3_2',
-        q3: 'PinosIntramedularesAcetabulares_B_3_3',
+        q1: 'PinosIntramedularesAcetabulares_section__B_3_1',
+        q2: 'PinosIntramedularesAcetabulares_section__B_3_2',
+        q3: 'PinosIntramedularesAcetabulares_section__B_3_3',
       }
     },
     {
       title: 'Pino intramedular femoral',
       options: {
-        q1: 'PinoIntramedularFemoral_B_3_1',
-        q2: 'PinoIntramedularFemoral_B_3_2',
-        q3: 'PinoIntramedularFemoral_B_3_3',
+        q1: 'PinoIntramedularFemoral_section__B_3_1',
+        q2: 'PinoIntramedularFemoral_section__B_3_2',
+        q3: 'PinoIntramedularFemoral_section__B_3_3',
       }
     },
     {
       title: 'Pinos intramedulares tibiais',
       options: {
-        q1: 'PinosIntramedularesTibiais_B_3_1',
-        q2: 'PinosIntramedularesTibiais_B_3_2',
-        q3: 'PinosIntramedularesTibiais_B_3_3',
+        q1: 'PinosIntramedularesTibiais_section__B_3_1',
+        q2: 'PinosIntramedularesTibiais_section__B_3_2',
+        q3: 'PinosIntramedularesTibiais_section__B_3_3',
       }
     },
     {
       title: 'Parafusos pequenos e cânulados',
       options: {
-        q1: 'ParafusosPequenosCanulados_B_3_1',
-        q2: 'ParafusosPequenosCanulados_B_3_2',
-        q3: 'ParafusosPequenosCanulados_B_3_3',
+        q1: 'ParafusosPequenosCanulados_section__B_3_1',
+        q2: 'ParafusosPequenosCanulados_section__B_3_2',
+        q3: 'ParafusosPequenosCanulados_section__B_3_3',
       }
     },
     {
       title: 'Parafusos grandes e canulados',
       options: {
-        q1: 'ParafusosGrandescanulados_B_3_1',
-        q2: 'ParafusosGrandescanulados_B_3_2',
-        q3: 'ParafusosGrandescanulados_B_3_3',
+        q1: 'ParafusosGrandescanulados_section__B_3_1',
+        q2: 'ParafusosGrandescanulados_section__B_3_2',
+        q3: 'ParafusosGrandescanulados_section__B_3_3',
       }
     },
     {
       title: 'Grandes Fixações Externas',
       options: {
-        q1: 'GrandesFixaCoesExternas_B_3_1',
-        q2: 'GrandesFixaCoesExternas_B_3_2',
-        q3: 'GrandesFixaCoesExternas_B_3_3',
+        q1: 'GrandesFixaCoesExternas_section__B_3_1',
+        q2: 'GrandesFixaCoesExternas_section__B_3_2',
+        q3: 'GrandesFixaCoesExternas_section__B_3_3',
       }
     },
     {
       title: 'Grandes Fixações Externas',
       options: {
-        q1: 'GrandesFixaCoesExternas_B_3_1',
-        q2: 'GrandesFixaCoesExternas_B_3_2',
-        q3: 'GrandesFixaCoesExternas_B_3_3',
+        q1: 'GrandesFixaCoesExternas_section__B_3_1',
+        q2: 'GrandesFixaCoesExternas_section__B_3_2',
+        q3: 'GrandesFixaCoesExternas_section__B_3_3',
       }
     },
     {
       title: 'Fixações externas médias',
       options: {
-        q1: 'FixacoesExternasMedias_B_3_1',
-        q2: 'FixacoesExternasMedias_B_3_2',
-        q3: 'FixacoesExternasMedias_B_3_3',
+        q1: 'FixacoesExternasMedias_section__B_3_1',
+        q2: 'FixacoesExternasMedias_section__B_3_2',
+        q3: 'FixacoesExternasMedias_section__B_3_3',
       }
     },
     {
       title: 'Pequenas Fixações Externas',
       options: {
-        q1: 'PequenasFixaCoesExternas_B_3_1',
-        q2: 'PequenasFixaCoesExternas_B_3_2',
-        q3: 'PequenasFixaCoesExternas_B_3_3',
+        q1: 'PequenasFixaCoesExternas_section__B_3_1',
+        q2: 'PequenasFixaCoesExternas_section__B_3_2',
+        q3: 'PequenasFixaCoesExternas_section__B_3_3',
       }
     },
     {
       title: 'Mini Fixações Externas',
       options: {
-        q1: 'MiniFixacoesExternas_B_3_1',
-        q2: 'MiniFixacoesExternas_B_3_2',
-        q3: 'MiniFixacoesExternas_B_3_3',
+        q1: 'MiniFixacoesExternas_section__B_3_1',
+        q2: 'MiniFixacoesExternas_section__B_3_2',
+        q3: 'MiniFixacoesExternas_section__B_3_3',
       }
     },
   ]
@@ -161,7 +162,7 @@ export default function Step5() {
   return (
     <>
       <div className="container">
-        <form className="form-select" onSubmit={handleSubmit(onSubmit)}>
+        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
           <h2 className="question">3.	Quais produtos e marcas você vende  atualmente para procedimentos de Trauma?  </h2>
 
           <table className="border-collapse border border-slate-400 table-auto">

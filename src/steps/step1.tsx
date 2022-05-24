@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../utils/updateAction";
-import { ArrowRight } from "phosphor-react";
 import { NextStepButton } from "../components/nextStepButton";
 
 export default function Step1(props: any) {
@@ -13,12 +12,13 @@ export default function Step1(props: any) {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
+    console.log(data)
     navigate("/step2");
   }
   return (
     <>
       <div className="container">
-        <form className="form-select" onSubmit={handleSubmit(onSubmit)}>
+        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6 w-full">
             <InputText placeholder='Nome Completo' label={"Nome"}   {...register("nome")} required />
             <div className="flex flex-row flex-wrap">

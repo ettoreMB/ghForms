@@ -1,10 +1,9 @@
-import { GlobalState } from "little-state-machine";
 
-export default function updateAction(state: GlobalState, payload: any) {
+export default function updateAction(state: any, payload: any) {
   return {
     ...state,
     data: {
-      ...state,
+      ...state.data,
       ...payload
     }
   }

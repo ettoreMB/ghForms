@@ -15,6 +15,7 @@ export default function Step2() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
+    console.log(data)
     navigate("/step3");
   }
 
@@ -22,7 +23,7 @@ export default function Step2() {
 
   return (
     <div className="container">
-      <form className="form-select" onSubmit={handleSubmit(onSubmit)}>
+      <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
         <div>
           <h2 className="question tex-center p-10" >
             Introdução
