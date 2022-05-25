@@ -4,7 +4,7 @@ import updateAction from "../utils/updateAction";
 
 const Result = () => {
   const { state } = useStateMachine({ updateAction });
-
+  console.log(state)
   return (
     <>
       <div className="container">

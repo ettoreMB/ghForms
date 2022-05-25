@@ -1,29 +1,13 @@
-import { InputText } from "../components/formComponents/inputText";
-import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
-import { useStateMachine } from "little-state-machine";
-import updateAction from "../utils/updateAction";
 import { NextStepButton } from "../components/nextStepButton";
-
-
-const practiceNameLocationOptions = ['PRIMARY hospital institution', 'Affiliation with PRIVATE Hospitals', 'Private institution where Physician conduct the most procedures']
 
 export default function Step2() {
   const navigate = useNavigate();
-  const { register, handleSubmit, getValues } = useForm();
-  const { actions, state } = useStateMachine({ updateAction });
 
-  const onSubmit = (data: any) => {
-    actions.updateAction(data);
-    console.log(data)
-    navigate("/step3");
-  }
-
-  const atLeastOne = () => getValues("practiceNameLocation").length ? true : "Please tell";
 
   return (
     <div className="container">
-      <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
+      <form className="form-select max-w-screen-xl" onSubmit={() => { navigate("/step3") }}>
         <div>
           <h2 className="question tex-center p-10" >
             Introdução

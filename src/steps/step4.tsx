@@ -2,10 +2,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../utils/updateAction";
-import { ArrowDown } from "phosphor-react";
-import { Disclosure } from "@headlessui/react";
 
-import { procedures, ProcedureProps } from "../utils/procedures";
 import { InputText } from "../components/formComponents/inputText";
 import { NextStepButton } from "../components/nextStepButton";
 
@@ -24,154 +21,145 @@ export default function Step4() {
     {
       title: 'Placas para quadril ou pélvis',
       options: {
-        q1: 'PlacasParaQuadrilPelvis_section__A_2_1',
-        q2: 'PlacasParaQuadrilPelvis_section__A_2_2',
-        q3: 'PlacasParaQuadrilPelvis_section__A_2_3',
-        q4: 'PlacasParaQuadrilPelvis_section__A_2_4',
+        q1: 'questao_2_PlacasParaQuadrilPelvis_1',
+        q2: 'questao_2_PlacasParaQuadrilPelvis_2',
+        q3: 'questao_2_PlacasParaQuadrilPelvis_3',
+        q4: 'questao_2_PlacasParaQuadrilPelvis_4',
       }
     },
     {
       title: 'Placas extremidades inferiores',
       options: {
-        q1: 'PlacasExtremidadesInferiores_section__A_2_1',
-        q2: 'PlacasExtremidadesInferiores_section__A_2_2',
-        q3: 'PlacasExtremidadesInferiores_section__A_2_3',
-        q4: 'PlacasExtremidadesInferiores_section__A_2_4',
+        q1: 'questao_2_PlacasExtremidadesInferiores_1',
+        q2: 'questao_2_PlacasExtremidadesInferiores_2',
+        q3: 'questao_2_PlacasExtremidadesInferiores_3',
+        q4: 'questao_2_PlacasExtremidadesInferiores_4',
       }
     },
     {
       title: 'Placas extremidades superiores',
       options: {
-        q1: 'PlacasExtremidadesSuperiores_section__A_2_1',
-        q2: 'PlacasExtremidadesSuperiores_section__A_2_2',
-        q3: 'PlacasExtremidadesSuperiores_section__A_2_3',
-        q4: 'PlacasExtremidadesSuperiores_section__A_2_4',
+        q1: 'questao_2_PlacasExtremidadesSuperiores_1',
+        q2: 'questao_2_PlacasExtremidadesSuperiores_2',
+        q3: 'questao_2_PlacasExtremidadesSuperiores_3',
+        q4: 'questao_2_PlacasExtremidadesSuperiores_4',
       }
     },
     {
       title: 'Parafusos para quadril ou pélvis',
       options: {
-        q1: 'ParafusosQuadrilPelvis_section__A_2_1',
-        q2: 'ParafusosQuadrilPelvis_section__A_2_2',
-        q3: 'ParafusosQuadrilPelvis_section__A_2_3',
-        q4: 'ParafusosQuadrilPelvis_section__A_2_4'
+        q1: 'questao_2_ParafusosQuadrilPelvis_1',
+        q2: 'questao_2_ParafusosQuadrilPelvis_2',
+        q3: 'questao_2_ParafusosQuadrilPelvis_3',
+        q4: 'questao_2_ParafusosQuadrilPelvis_4'
       }
     },
     {
       title: 'Parafusos extremidades inferiores',
       options: {
-        q1: 'ParafusosExtremidadesInferiores_section__A_2_1',
-        q2: 'ParafusosExtremidadesInferiores_section__A_2_2',
-        q3: 'ParafusosExtremidadesInferiores_section__A_2_3',
-        q4: 'ParafusosExtremidadesInferiores_section__A_2_4',
+        q1: 'questao_2_ParafusosExtremidadesInferiores_1',
+        q2: 'questao_2_ParafusosExtremidadesInferiores_2',
+        q3: 'questao_2_ParafusosExtremidadesInferiores_3',
+        q4: 'questao_2_ParafusosExtremidadesInferiores_4',
       }
     },
     {
       title: 'Parafusos extremidades superiores',
       options: {
-        q1: 'ParafusosExtremidadesSuperiores_section__A_2_1',
-        q2: 'ParafusosExtremidadesSuperiores_section__A_2_2',
-        q3: 'ParafusosExtremidadesSuperiores_section__A_2_3',
-        q4: 'ParafusosExtremidadesSuperiores_section__A_2_4',
+        q1: 'questao_2_ParafusosExtremidadesSuperiores_1',
+        q2: 'questao_2_ParafusosExtremidadesSuperiores_2',
+        q3: 'questao_2_ParafusosExtremidadesSuperiores_3',
+        q4: 'questao_2_ParafusosExtremidadesSuperiores_4',
       }
     },
     {
       title: 'Pinos intramedulares umeral',
       options: {
-        q1: 'PinosIntramedularesUmeral_section__A_2_1',
-        q2: 'PinosIntramedularesUmeral_section__A_2_2',
-        q3: 'PinosIntramedularesUmeral_section__A_2_3',
-        q4: 'PinosIntramedularesUmeral_section__A_2_4',
+        q1: 'questao_2_PinosIntramedularesUmeral_1',
+        q2: 'questao_2_PinosIntramedularesUmeral_2',
+        q3: 'questao_2_PinosIntramedularesUmeral_3',
+        q4: 'questao_2_PinosIntramedularesUmeral_4',
       }
     },
     {
       title: 'Pinos intramedulares acetabulares',
       options: {
-        q1: 'PinosIntramedularesAcetabulares_section__A_2_1',
-        q2: 'PinosIntramedularesAcetabulares_section__A_2_2',
-        q3: 'PinosIntramedularesAcetabulares_section__A_2_3',
-        q4: 'PinosIntramedularesAcetabulares_section__A_2_4'
+        q1: 'questao_2_PinosIntramedularesAcetabulares_1',
+        q2: 'questao_2_PinosIntramedularesAcetabulares_2',
+        q3: 'questao_2_PinosIntramedularesAcetabulares_3',
+        q4: 'questao_2_PinosIntramedularesAcetabulares_4'
       }
     },
     {
       title: 'Pino intramedular femoral',
       options: {
-        q1: 'PinoIntramedularFemoral_section__A_2_1',
-        q2: 'PinoIntramedularFemoral_section__A_2_2',
-        q3: 'PinoIntramedularFemoral_section__A_2_3',
-        q4: 'PinoIntramedularFemoral_section__A_2_4',
+        q1: 'questao_2_PinoIntramedularFemoral_1',
+        q2: 'questao_2_PinoIntramedularFemoral_2',
+        q3: 'questao_2_PinoIntramedularFemoral_3',
+        q4: 'questao_2_PinoIntramedularFemoral_4',
       }
     },
     {
       title: 'Pinos intramedulares tibiais',
       options: {
-        q1: 'PinosIntramedularesTibiais_section__A_2_1',
-        q2: 'PinosIntramedularesTibiais_section__A_2_2',
-        q3: 'PinosIntramedularesTibiais_section__A_2_3',
-        q4: 'PinosIntramedularesTibiais_section__A_2_4',
+        q1: 'questao_2_PinosIntramedularesTibiais_1',
+        q2: 'questao_2_PinosIntramedularesTibiais_2',
+        q3: 'questao_2_PinosIntramedularesTibiais_3',
+        q4: 'questao_2_PinosIntramedularesTibiais_4',
       }
     },
     {
       title: 'Parafusos pequenos e cânulados',
       options: {
-        q1: 'ParafusosPequenosCanulados_section__A_2_1',
-        q2: 'ParafusosPequenosCanulados_section__A_2_2',
-        q3: 'ParafusosPequenosCanulados_section__A_2_3',
-        q4: 'ParafusosPequenosCanulados_section__A_2_4',
+        q1: 'questao_2_ParafusosPequenosCanulados_1',
+        q2: 'questao_2_ParafusosPequenosCanulados_2',
+        q3: 'questao_2_ParafusosPequenosCanulados_3',
+        q4: 'questao_2_ParafusosPequenosCanulados_4',
       }
     },
     {
       title: 'Parafusos grandes e canulados',
       options: {
-        q1: 'ParafusosGrandescanulados_section__A_2_1',
-        q2: 'ParafusosGrandescanulados_section__A_2_2',
-        q3: 'ParafusosGrandescanulados_section__A_2_3',
-        q4: 'ParafusosGrandescanulados_section__A_2_4',
+        q1: 'questao_2_ParafusosGrandescanulados_1',
+        q2: 'questao_2_ParafusosGrandescanulados_2',
+        q3: 'questao_2_ParafusosGrandescanulados_3',
+        q4: 'questao_2_ParafusosGrandescanulados_4',
       }
     },
     {
       title: 'Grandes Fixações Externas',
       options: {
-        q1: 'GrandesFixaCoesExternas_section__A_2_1',
-        q2: 'GrandesFixaCoesExternas_section__A_2_2',
-        q3: 'GrandesFixaCoesExternas_section__A_2_3',
-        q4: 'GrandesFixaCoesExternas_section__A_2_4',
-      }
-    },
-    {
-      title: 'Grandes Fixações Externas',
-      options: {
-        q1: 'GrandesFixaCoesExternas_section__A_2_1',
-        q2: 'GrandesFixaCoesExternas_section__A_2_2',
-        q3: 'GrandesFixaCoesExternas_section__A_2_3',
-        q4: 'GrandesFixaCoesExternas_section__A_2_4',
+        q1: 'questao_2_GrandesFixaCoesExternas_1',
+        q2: 'questao_2_GrandesFixaCoesExternas_2',
+        q3: 'questao_2_GrandesFixaCoesExternas_3',
+        q4: 'questao_2_GrandesFixaCoesExternas_4',
       }
     },
     {
       title: 'Fixações externas médias',
       options: {
-        q1: 'FixacoesExternasMedias_section__A_2_1',
-        q2: 'FixacoesExternasMedias_section__A_2_2',
-        q3: 'FixacoesExternasMedias_section__A_2_3',
-        q4: 'FixacoesExternasMedias_section__A_2_4',
+        q1: 'questao_2_FixacoesExternasMedias_1',
+        q2: 'questao_2_FixacoesExternasMedias_2',
+        q3: 'questao_2_FixacoesExternasMedias_3',
+        q4: 'questao_2_FixacoesExternasMedias_4',
       }
     },
     {
       title: 'Pequenas Fixações Externas',
       options: {
-        q1: 'PequenasFixaCoesExternas_section__A_2_1',
-        q2: 'PequenasFixaCoesExternas_section__A_2_2',
-        q3: 'PequenasFixaCoesExternas_section__A_2_3',
-        q4: 'PequenasFixaCoesExternas_section__A_2_4',
+        q1: 'questao_2_PequenasFixaCoesExternas_1',
+        q2: 'questao_2_PequenasFixaCoesExternas_2',
+        q3: 'questao_2_PequenasFixaCoesExternas_3',
+        q4: 'questao_2_PequenasFixaCoesExternas_4',
       }
     },
     {
       title: 'Mini Fixações Externas',
       options: {
-        q1: 'MiniFixacoesExternas_section__A_2_1',
-        q2: 'MiniFixacoesExternas_section__A_2_2',
-        q3: 'MiniFixacoesExternas_section__A_2_3',
-        q4: 'MiniFixacoesExternas_section__A_2_4',
+        q1: 'questao_2_MiniFixacoesExternas_1',
+        q2: 'questao_2_MiniFixacoesExternas_2',
+        q3: 'questao_2_MiniFixacoesExternas_3',
+        q4: 'questao_2_MiniFixacoesExternas_4',
       }
     },
   ]
@@ -209,9 +197,9 @@ export default function Step4() {
                       <input type="checkbox" id="" {...register(`${row.options.q1}`)} />
                     </div>
                   </td>
-                  <td className="  border border-slate-300"><InputText {...register(`${row.options.q2}`)} /></td>
-                  <td className="    border border-slate-300"><InputText {...register(`${row.options.q3}`)} /></td>
-                  <td className="    border border-slate-300"><InputText {...register(`${row.options.q4}`)} /></td>
+                  <td className="border border-slate-300"><InputText type="number"{...register(`${row.options.q2}`)} /></td>
+                  <td className="border border-slate-300"><InputText {...register(`${row.options.q3}`)} /></td>
+                  <td className="border border-slate-300"><InputText type="number"{...register(`${row.options.q4}`)} /></td>
                 </tr>
               ))}
 

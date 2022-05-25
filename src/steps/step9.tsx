@@ -6,6 +6,7 @@ import { Dialog } from '@headlessui/react'
 
 import { InputText } from "../components/formComponents/inputText";
 import { NextStepButton } from "../components/nextStepButton";
+import axios from "axios";
 
 export default function Step9() {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ export default function Step9() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    console.log(data)
+    axios.post('http://localhost:3333/results', state)
     navigate("/results");
   }
 
@@ -25,18 +26,17 @@ export default function Step9() {
           <h2 className="question">Conclusão</h2>
           <div className="mb-10">
             <h3 className="question">11.	Você tem algum comentário ou dúvida sobre o projeto ou entrevista?  </h3>
-            <textarea {...register("section_C_11")} />
+            <textarea {...register("questao_10")} />
           </div>
           <div>
             <h3 className="question">12.	Há outros especialistas que você considera líderes de pensamento e cujas perspectivas seriam valiosas para nós considerarmos? Deixe o nome e telefone. </h3>
             <div className="flex flex-row">
-              <InputText label="Recomendações" placeholder="Ex:Nome, Telefone, Nome, Telefone" {...register("section_C_12")} />
+              <InputText label="Recomendações" placeholder="Ex: Nome, Telefone, Nome, Telefone" {...register("recomendacoes")} />
             </div>
           </div>
           <NextStepButton title="Enviar Respostas" />
         </form>
       </div >
-
     </>
   )
 }

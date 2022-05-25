@@ -2,10 +2,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../utils/updateAction";
-import { ArrowDown, ArrowRight } from "phosphor-react";
-import { Disclosure } from "@headlessui/react";
 
-import { procedures, ProcedureProps } from "../utils/procedures";
 import { InputText } from "../components/formComponents/inputText";
 import { NextStepButton } from "../components/nextStepButton";
 
@@ -20,8 +17,6 @@ export default function Step6() {
     navigate("/step7");
   }
 
-
-
   return (
     <>
       <div className="container">
@@ -30,21 +25,25 @@ export default function Step6() {
             <h2 className="question">
               Há marcas que você gostaria de vender, mas que não estão disponíveis em seus mercados? Por favor liste conforme sua preferência.
             </h2>
-            <textarea {...register("section__B_6")} />
+            <textarea {...register("questao_4")} />
           </div>
 
           <div>
             <h2 className="question">
               Quais são as principais marcas brasileiras que você conhece?
             </h2>
-            <InputText placeholder="Nome das Marcas" {...register("section__B_7")} />
+            <textarea placeholder="Nome das Marcas" {...register("questao_5")} />
             <div>
               <h3 className="question">Como eles se comparam com marcas fabricadas no exterior nestes procedimentos?</h3>
-              <textarea {...register("section__B_7_A")} />
+              <textarea {...register("questao_5_pergunta_1")} />
             </div>
             <div>
               <h3 className="question">Quais as tendências que você vê em relação às marcas brasileiras em relação a marcas estrangeiras e importadas? por quê?</h3>
-              <textarea {...register("section__B_7_B")} />
+              <textarea {...register("questao_5_pergunta_2")} />
+            </div>
+            <div>
+              <h3 className="question">Das seguintes marcas, quais você usa/vende??</h3>
+              <textarea {...register("questao_5_pergunta_3")} />
             </div>
 
           </div>

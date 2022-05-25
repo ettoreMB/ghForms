@@ -25,8 +25,6 @@ export default function Step1(props: any) {
               <InputText placeholder='Seu melhor email' label={"Email"}  {...register("email")} required />
               <InputText placeholder='colocar mascara' label={"Telefone"}  {...register("telefone")} required />
             </div>
-
-
             <InputText placeholder='Nome da Instituição' label={"Instituição"}  {...register("empresa")} required />
             <InputText placeholder='Sua posição na empresa' label={"Posição"}  {...register("cargo")} required />
           </div>
