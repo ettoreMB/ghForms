@@ -29,8 +29,8 @@ form {
   }
 
   .bigtable {
-    max-width: 2000px;
-    min-width: 1800px;
+    max-width: 1850px;
+    /* min-width: 1800px; */
   }
 
   .question {

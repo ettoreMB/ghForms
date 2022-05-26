@@ -6,7 +6,7 @@ interface InputProps {
   placeholder?: string;
   required?: boolean;
   type?: string;
-
+  onChange?: (event: any) => void;
 
 }
 

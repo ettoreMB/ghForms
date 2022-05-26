@@ -245,7 +245,7 @@ export default function Step7() {
 
   return (
     <>
-      <div className="w-max my-10">
+      <div className="w-max p-10">
         <form className="bigtable" onSubmit={handleSubmit(onSubmit)}>
           <div>
             <h2 className="question">Principais características do produto para os procedimentos de trauma mais frequentes realizados:</h2>
@@ -259,9 +259,12 @@ export default function Step7() {
           <table className="border-collapse border border-slate-400 table-auto">
             <thead>
               <tr>
-                <th className=" border border-slate-300">Tipos</th>
-                <th className="w-52  border border-slate-300">MARCA MAIS VENDIDA</th>
-                <th className="w-48 border border-slate-300 ">Preço médio de venda da marca top</th>
+                <th rowSpan={3} colSpan={1} className=" border border-slate-300">Tipos</th>
+                <th rowSpan={3} colSpan={1} className="w-52  border border-slate-300">MARCA MAIS VENDIDA</th>
+                <th rowSpan={3} colSpan={1} className="w-48 border border-slate-300 ">Preço médio de venda da marca top</th>
+                <th colSpan={7} rowSpan={1} className="w-48 border border-slate-300 ">ATRIBUTOS DE PRODUTO MAIS BEM AVALIADOS pelos hospitais (ordem de classificação de 1 a 7)</th>
+              </tr>
+              <tr>
                 <th className="w-48 border border-slate-300 ">Acessibilidade (Custo)</th>
                 <th className="w-36 border border-slate-300 ">Alto desempenho clínico</th>
                 <th className="w-36 border border-slate-300 ">Disponibilidade de produtos/inventário</th>
@@ -279,12 +282,12 @@ export default function Step7() {
                   <td className="border border-slate-300"><InputText {...register(`${row.options.q1}`)} /></td>
                   <td className="border border-slate-300 "><InputText placeholder="R$" type="number" {...register(`${row.options.q2}`)} /></td>
                   <td className="border border-slate-300"><InputText placeholder="R$" type="number"{...register(`${row.options.q3}`)} /></td>
-                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q4}`)} /></td>
-                  <td className="border border-slate-300 "><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q5}`)} /></td>
-                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q6}`)} /></td>
-                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q7}`)} /></td>
-                  <td className="border border-slate-300 "><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q8}`)} /></td>
-                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q9}`)} /></td>
+                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q4}`, { min: 1, max: 7 })} /></td>
+                  <td className="border border-slate-300 "><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q5}`, { min: 1, max: 7 })} /></td>
+                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q6}`, { min: 1, max: 7 })} /></td>
+                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q7}`, { min: 1, max: 7 })} /></td>
+                  <td className="border border-slate-300 "><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q8}`, { min: 1, max: 7 })} /></td>
+                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q9}`, { min: 1, max: 7 })} /></td>
                 </tr>
               ))}
 
