@@ -25,9 +25,6 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: UpdateDB
-        run: npx prisma db pull
-
       - uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -48,4 +45,5 @@ jobs:
             exec bash \-l
             cd ~/app/gh-forms-back
             npm i
+            npx prisma db pull
             pm2 restart pesquisas_gh
