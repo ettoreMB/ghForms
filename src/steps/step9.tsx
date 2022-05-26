@@ -8,6 +8,7 @@ import { InputText } from "../components/formComponents/inputText";
 import { NextStepButton } from "../components/nextStepButton";
 import axios from "axios";
 import { useState, Fragment } from "react";
+import { api } from "../lib/api";
 
 
 export default function Step9() {
@@ -25,9 +26,9 @@ export default function Step9() {
   }
 
 
-  const onSubmit = (data: any) => {
-    // actions.updateAction(data);
-    // axios.post('http://localhost:3333/results', state)
+  const onSubmit = async (data: any) => {
+    actions.updateAction(data);
+    await api.post('/results', state)
     openModal()
   }
   return (

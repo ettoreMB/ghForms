@@ -4,16 +4,17 @@ import { useStateMachine } from "little-state-machine";
 import updateAction from "../utils/updateAction";
 import { InputText } from "../components/formComponents/inputText";
 import { NextStepButton } from "../components/nextStepButton";
+import axios from "axios";
 
 export default function Step3() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = async (data: any) => {
     actions.updateAction(data);
-    console.log(data)
     navigate("/step4");
+
   }
 
   const questions = [

@@ -4,15 +4,17 @@ import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../utils/updateAction";
 import { NextStepButton } from "../components/nextStepButton";
+import axios from "axios";
+import { api } from "../lib/api";
 
 export default function Step1(props: any) {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = async (data: any) => {
     actions.updateAction(data);
-    console.log(data)
+    await api.post('/contact', data)
     navigate("/step2");
   }
   return (

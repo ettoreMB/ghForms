@@ -13,7 +13,7 @@ export default function Step6() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    console.log(data)
+
     navigate("/step7");
   }
 
