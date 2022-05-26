@@ -25,7 +25,7 @@ export default function Step8() {
             <textarea {...register("questao_7")} />
           </div>
           <div>
-            <h2 className="question">9.	Qual é o processo de compra para a introdução desses produtos em hospital privado?</h2>
+            <h2 className="question">8.	Qual é o processo de compra para a introdução desses produtos em hospital privado?</h2>
             <textarea {...register("questao_8")} />
             <div>
               <h3>a.	Existe algum processo de avaliação para identificar e testar novos produtos?</h3>
@@ -43,9 +43,25 @@ export default function Step8() {
               <InputText label="Fixações Externas"  {...register("questao_8_3_4")} />
             </div>
             <div>
-              <h3 className="question">10.	Que termos você normalmente negocia com os hospitais para os produtos acima mencionados? </h3>
+              <h3 className="question">9.	Que termos você normalmente negocia com os hospitais para os produtos acima mencionados? </h3>
               <textarea {...register("questao_9")} />
             </div>
+            <div>
+              <h3 className="question">10. Qual é o processo de compra para a introdução desses produtos as companhias de seguro médico? </h3>
+              <textarea {...register("questao_10")} />
+            </div>
+            <div>
+              <h3 className="question">•Existe algum processo de avaliação para identificar e testar novos produtos? </h3>
+              <textarea {...register("questao_10_1")} />
+            </div>
+            <div>
+              <h3 className="question">•Existe uma expectativa de que o fabricante forneça treinamento antes de introduzir um novo produto? </h3>
+              <textarea {...register("questao_10_2")} />
+            </div>
+          </div>
+          <div>
+            <h3 className="question">•Que termos você normalmente negocia com os seguros de saúde para os produtos acima mencionados?</h3>
+            <textarea {...register("questao_10_4")} />
           </div>
 
           <NextStepButton />
