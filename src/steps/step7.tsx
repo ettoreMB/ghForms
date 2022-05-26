@@ -245,8 +245,8 @@ export default function Step7() {
 
   return (
     <>
-      <div className="w-full my-10">
-        <form className="bigtable max-w-fit" onSubmit={handleSubmit(onSubmit)}>
+      <div className="w-max my-10">
+        <form className="bigtable" onSubmit={handleSubmit(onSubmit)}>
           <div>
             <h2 className="question">Principais características do produto para os procedimentos de trauma mais frequentes realizados:</h2>
           </div>
@@ -259,16 +259,16 @@ export default function Step7() {
           <table className="border-collapse border border-slate-400 table-auto">
             <thead>
               <tr>
-                <th className="border border-slate-300">Tipos</th>
-                <th className="border border-slate-300">MARCA MAIS VENDIDA</th>
-                <th className="border border-slate-300 ">Preço médio de venda da marca top</th>
-                <th className="border border-slate-300 ">Acessibilidade (Custo)</th>
-                <th className="border border-slate-300 ">Alto desempenho clínico</th>
-                <th className="border border-slate-300 ">Disponibilidade de produtos/inventário</th>
-                <th className="border border-slate-300 ">Suporte e treinamento por fabricante para uso</th>
-                <th className="border border-slate-300 ">Capacidade de usar produtos para outros tipos de procedimentos</th>
-                <th className="border border-slate-300 ">Percepção da marca como "premium"</th>
-                <th className="border border-slate-300 ">Outros (por favor, especifiquem): </th>
+                <th className=" border border-slate-300">Tipos</th>
+                <th className="w-52  border border-slate-300">MARCA MAIS VENDIDA</th>
+                <th className="w-48 border border-slate-300 ">Preço médio de venda da marca top</th>
+                <th className="w-48 border border-slate-300 ">Acessibilidade (Custo)</th>
+                <th className="w-36 border border-slate-300 ">Alto desempenho clínico</th>
+                <th className="w-36 border border-slate-300 ">Disponibilidade de produtos/inventário</th>
+                <th className="w-36  border border-slate-300 ">Suporte e treinamento por fabricante para uso</th>
+                <th className="w-36  border border-slate-300 ">Capacidade de usar produtos para outros tipos de procedimentos</th>
+                <th className="w-36 border border-slate-300 ">Percepção da marca como "premium"</th>
+                <th className="w-36 border border-slate-300 ">Outros (por favor, especifiquem): </th>
               </tr>
             </thead>
             <tbody>

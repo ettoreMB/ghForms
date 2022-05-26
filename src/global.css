@@ -28,6 +28,11 @@ form {
     @apply flex flex-col mx-auto p-10;
   }
 
+  .bigtable {
+    max-width: 2000px;
+    min-width: 1800px;
+  }
+
   .question {
     @apply text-gray-700 font-bold mb-4 text-lg
   }
