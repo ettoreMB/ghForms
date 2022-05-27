@@ -1,20 +1,19 @@
-import { InputText } from "../components/formComponents/inputText";
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
-import { updateAction } from "../utils/updateAction";
-import { NextStepButton } from "../components/nextStepButton";
-import axios from "axios";
-import { api } from "../lib/api";
+import { updateAction } from "../../utils/updateAction";
 
-export function Step1(props: any) {
+import { InputText } from "../../components/formComponents/inputText";
+import { NextStepButton } from "../../components/nextStepButton";
+
+export function MedicoTraumaStep1() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
 
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
-    await api.post('/contact', data)
+    // await api.post('/contact', data)
     navigate("/step2");
   }
   return (
