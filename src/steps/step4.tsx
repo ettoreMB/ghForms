@@ -165,15 +165,15 @@ export default function Step4() {
 
   return (
     <>
-      <div className="container">
-        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
+      <div className="max-w-screen-fit">
+        <form className="bigtable form-select max-w-fit " onSubmit={handleSubmit(onSubmit)}>
           <h2 className="question">2.	Abaixo listamos alguns produtos, e gostaríamos de saber até que ponto você espera flutuações nas vendas:</h2>
 
           <table className="border border-slate-400" cellSpacing="0" cellPadding="0">
             <thead>
               <tr>
-                <th rowSpan={3} colSpan={1} className="border border-slate-300">PRODUTOS VENDIDOS</th>
-                <th rowSpan={3} colSpan={1} className="border border-slate-300">selecionar os que sua empresa vende</th>
+                <th rowSpan={3} colSpan={1} className="w-32 border border-slate-300">PRODUTOS VENDIDOS</th>
+                <th rowSpan={3} colSpan={1} className="w-20 border border-slate-300">selecionar os que sua empresa vende</th>
                 <th colSpan={3} rowSpan={1} className="border border-slate-300">Para produtos selecionados</th>
               </tr>
               <tr>
@@ -192,13 +192,13 @@ export default function Step4() {
                 <tr>
                   <td className="border border-slate-300" key={row.title}>{row.title}</td>
                   <td className="border border-slate-300">
-                    <div className="justify-center w-full flex">
+                    <div className="justify-center  flex">
                       <input type="checkbox" id="" {...register(`${row.options.q1}`)} />
                     </div>
                   </td>
-                  <td className="border border-slate-300"><InputText type="number"{...register(`${row.options.q2}`)} /></td>
+                  <td className="border border-slate-300"><InputText type="text"{...register(`${row.options.q2}`)} /></td>
                   <td className="border border-slate-300"><InputText {...register(`${row.options.q3}`)} /></td>
-                  <td className="border border-slate-300"><InputText type="number"{...register(`${row.options.q4}`)} /></td>
+                  <td className="border border-slate-300"><InputText type="text"{...register(`${row.options.q4}`)} /></td>
                 </tr>
               ))}
 

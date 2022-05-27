@@ -61,7 +61,7 @@ export default function Step8() {
           </div>
           <div>
             <h3 className="question">•Que termos você normalmente negocia com os seguros de saúde para os produtos acima mencionados?</h3>
-            <textarea {...register("questao_10_4")} />
+            <textarea {...register("questao_10_3")} />
           </div>
 
           <NextStepButton />
