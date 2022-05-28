@@ -6,7 +6,7 @@ import { updateAction } from "../../utils/updateAction";
 import { InputText } from "../../components/formComponents/inputText";
 import { NextStepButton } from "../../components/nextStepButton";
 
-export function MedicoTraumaStep1() {
+export default function MedicoTraumaStep1() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
