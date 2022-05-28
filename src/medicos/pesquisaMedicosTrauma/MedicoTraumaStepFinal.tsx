@@ -10,7 +10,7 @@ import { useState, Fragment } from "react";
 import { api } from "../../lib/api";
 
 
-export function StepFinal() {
+export default function StepFinal() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
