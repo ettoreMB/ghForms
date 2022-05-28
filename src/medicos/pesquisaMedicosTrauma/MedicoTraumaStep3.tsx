@@ -14,7 +14,7 @@ export default function Step3() {
 
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
-    navigate("/step4");
+    navigate("/medicos_trauma/step4");
 
   }
 

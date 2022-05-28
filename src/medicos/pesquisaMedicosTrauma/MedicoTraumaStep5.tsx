@@ -13,7 +13,7 @@ export default function Step5() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/step6");
+    navigate("/medicos_trauma/step6");
   }
 
   return (

@@ -91,7 +91,7 @@ export default function StepFinal() {
                     <button
                       type="button"
                       className="w-full mt-10 bg-teal-300 text-white p-4 rounded-lg text-center font-bold flex items-center justify-center"
-                      onClick={() => navigate('/')}
+                      onClick={() => navigate('/medicos_trauma')}
                     >
                       Finalizar Pesquisa
                     </button>

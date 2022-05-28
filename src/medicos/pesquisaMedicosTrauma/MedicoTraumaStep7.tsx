@@ -13,7 +13,7 @@ export default function Step7() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/step8");
+    navigate("/medicos_trauma/step8");
   }
 
   const questions = [

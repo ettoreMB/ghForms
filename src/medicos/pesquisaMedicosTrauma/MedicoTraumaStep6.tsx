@@ -14,7 +14,7 @@ export default function Step6() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    console.log(data)
+    navigate("/medicos_trauma/step7");
   }
 
   const questions = [

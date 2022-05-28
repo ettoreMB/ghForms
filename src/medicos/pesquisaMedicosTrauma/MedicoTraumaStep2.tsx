@@ -7,7 +7,7 @@ export default function Step2() {
 
   return (
     <div className="container">
-      <form className="form-select max-w-screen-xl" onSubmit={() => { navigate("/step3") }}>
+      <form className="form-select max-w-screen-xl" onSubmit={() => { navigate("/medicos_trauma/step3") }}>
         <div>
           <h1 className="text-center text-2xl font-bold tex-center">Introdução</h1>
           <h2 className="question tex-center p-10" >

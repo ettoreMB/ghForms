@@ -14,7 +14,7 @@ export default function MedicoTraumaStep1() {
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
     // await api.post('/contact', data)
-    navigate("/step2");
+    navigate("/medicos_trauma/step2");
   }
   return (
     <>

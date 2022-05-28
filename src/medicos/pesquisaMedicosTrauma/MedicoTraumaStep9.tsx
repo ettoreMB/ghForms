@@ -13,7 +13,7 @@ export default function Step9() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/step9");
+    navigate("/medicos_trauma/step10");
   }
   const produtos_tipos = [
     "Placas para quadril ou pélvis",
