@@ -20,26 +20,43 @@ export default function Step10() {
     <>
       <div className="container">
         <form className="form-select w-fit" onSubmit={handleSubmit(onSubmit)}>
-          <div>
-            <h2 className="question">12 Quais são os principais fatores de decisão para a seleção de certos produtos da marca em relação aos outros durante a cirurgia</h2>
-            <InputText label="Placas e Parafusos" />
-            <InputText label="Pinos" />
-            <InputText label="Parafusos cânulados" />
-            <InputText label="Parafusos Fixações Externas" />
+          <div className="mb-6">
+            <h2 className="question">15. Quais as tendências que  você espera que vejam a compra desses produtos relacionados ao trauma em sua instalação nos próximos 5 anos?</h2>
+            <textarea {...register("questao_15")} />
+            <div className="pl-4">
+              <h3>. Que motivos explicam essas tendências?</h3>
+              <textarea {...register("questao_15_1")}></textarea>
+            </div>
           </div>
           <div>
-            <h2 className="question">13 Quais são as preocupações, se houver, sobre o uso de produtos de valor/economia nos procedimentos discutidos anteriormente?</h2>
-            <textarea {...register("questao_13")} />
+            <h2 className="question">16. Qual é o processo de compra para a introdução desses produtos ao hospital?</h2>
+            <textarea {...register("questao_16")} />
+            <div className="pl-4">
+              <div>
+                <h3 >. Qual é o seu papel (se houver) em garantir que certos produtos estejam disponíveis em sua instalação?</h3>
+                <textarea {...register("questao_16_1")}></textarea>
+              </div>
+              <div>
+                <h3>. Existe algum processo de avaliação para identificar e testar novos produtos?</h3>
+                <textarea {...register("questao_16_2")}></textarea>
+              </div>
+              <div>
+                <h3>. Existe uma expectativa de que o fabricante forneça treinamento antes de introduzir um novo produto?</h3>
+                <textarea {...register("questao_16_3")}></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="question">17. Quais distribuidores ou marcas se aproximaram do seu hospital para esses tipos de produtos?</h2>
+            <InputText label="Placas e Parafusos" {...register('questao_17_1')} />
+            <InputText label="Pinos" {...register('questao_17_2')} />
+            <InputText label="Parafusos cânulados" {...register('questao_17_3')} />
+            <InputText label="Fixações Externas" {...register('questao_17_4')} />
           </div>
           <div>
-            <h2 className="question">14 Como a disponibilidade de produtos premium versus valor influencia sua decisão de realizar o procedimento de trauma em diferentes instalações?</h2>
-            <textarea {...register("questao_14")} />
-          </div>
-          <div>
-            <h2 className="question">15 Como os pacientes de trauma normalmente pagam por seus procedimentos?</h2>
-            <InputText label="Particular (%)" />
-            <InputText label="Coberto pelo SUS (%)" />
-            <InputText label="Coberto por seguro privado (%)" />
+            <h2 className="question">18. O que faria você considerar uma mudança de fornecedor?</h2>
+            <textarea {...register('questao_18')} />
           </div>
 
           <NextStepButton />

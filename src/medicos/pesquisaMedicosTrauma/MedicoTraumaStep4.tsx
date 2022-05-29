@@ -16,195 +16,61 @@ export default function Step4() {
     navigate("/medicos_trauma/step5");
   }
 
-  const questions = [
-    {
-      title: 'FX DE PUNHO',
-      products: [
-        'Placas e Parafusos extremidades superiores',
-        'Parafusos pequenos e cânulados',
-        'Pequena fixação externa'
-      ]
-    },
-    {
-      title: 'FX DE COTOVELO',
-      products: [
-        'Placas e Parafusos extremidades superiores',
-        'Parafusos pequenos e cânulados',
-        'Fixação externa média',
-      ]
-
-    },
-    {
-      title: 'FX UMERO',
-      products: [
-        'Placas e Parafusos extremidades superiores',
-        'Pinos intramedulares umeral',
-        'Parafusos pequenos e cânulados'
-      ]
-    },
-    {
-      title: 'FX CLAVÍCULA',
-      products: [
-        'Placas e Parafusos extremidades superiores',
-        'Parafusos pequenos e cânulados'
-      ]
-    },
-    {
-      title: 'FX METACARPO',
-      products: [
-        'Placas e Parafusos extremidades superiores',
-        'Mini fixação externa'
-      ]
-    },
-    {
-      title: 'FX DE FALANGE',
-      products: [
-        'Placas e Parafusos extremidades superiores',
-        'Parafusos pequenos e cânulados',
-        'Mini fixação externa'
-      ]
-    },
-    {
-      title: 'FX TROCANTERICA',
-      products: [
-        'Placas e parafusos para quadril ou pélvis',
-        'Pinos intramedulares acetabular',
-        'Parafusos grandes e canulados',
-        'Grande fixação externa'
-      ]
-    },
-    {
-      title: 'FX DIAFISE FEMUR',
-      products: [
-        'Placas e Parafusos extremidades inferiores',
-        'Pinos intramedulares femoral',
-        'Grande fixação externa'
-      ]
-
-
-    },
-    {
-      title: 'FX FEMUR DISTAL',
-      products: [
-        'Placas e Parafusos extremidades inferiores',
-        'Pinos intramedulares femoral',
-        'Parafusos grandes e canulados',
-        'Grande fixação externa'
-      ]
-    },
-    {
-      title: 'FX TIBIA PROXIMAL',
-      products: [
-        'Placas e Parafusos extremidades inferiores',
-        'Pinos intramedulares tibial',
-        'Parafusos pequenos e cânulados',
-        'Parafusos grandes e canulados',
-        'Grande fixação externa'
-      ]
-    },
-    {
-      title: 'FX DIAFISE TIBIAL',
-      products: [
-        'Placas e Parafusos extremidades inferiores',
-        'Pinos intramedulares tibial',
-        'Grande fixação externa',
-      ]
-    },
-    {
-      title: 'FX TIBIA DISTAL',
-      products: [
-        'Placas e Parafusos',
-        'Parafusos pequenos e canulados',
-        'Fixação externa média',
-      ]
-    },
-    {
-      title: 'FX METATARSO',
-      products: [
-        'Placas e Parafusos extremidades inferiores',
-        'Parafusos pequenos e cânulados',
-        'Parafusos grandes e canulados',
-      ]
-    },
-    {
-      title: 'OSTEOTOMIA QUADRIL',
-      products: [
-        'Placas e parafusos para quadril ou pélvis',
-        'Parafusos grandes e canulados',
-      ]
-    },
-    {
-      title: 'OSTEOTOMIA DE JOELHO',
-      products: [
-        'Placas e Parafusos extremidades inferiores',
-        'Parafusos grandes e canulados'
-      ]
-    },
-    {
-      title: 'ARTRODESE FALANGE',
-      products: [
-        'Placas e Parafusos Extremidades Superiores',
-        'Placas e Parafusos extremidades inferiores',
-        'Parafusos pequenos e cânulados',
-      ]
-    },
-    {
-      title: 'ARTRODESE DE TORNOZELO',
-      products: [
-        'Placas e Parafusos extremidades inferiores',
-        'Pinos intramedulares tibial',
-        'Parafusos pequenos e cânulados',
-        'Parafusos grandes e canulados',
-      ]
-    },
-    {
-      title: 'FX ACETABULO',
-      products: [
-        'Placas e parafusos para quadril ou pélvis',
-        'Parafusos grandes e canulados',
-      ]
-    },
-    {
-      title: 'ARTRODESE PUNHO',
-      products: [
-        'Placas e Parafusos Extremidades Superiores',
-      ]
-    },
-
-  ]
-
   return (
     <>
       <div className="container">
         <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="question">2.	Abaixo listamos alguns produtos, e gostaríamos de saber até que ponto você espera flutuações nas vendas:</h2>
+          <div className="mb-4">
+            <h2 className="question">2. Qual das seguintes declarações descreve melhor sua instituição:</h2>
+            <div className="ml-4">
+              <input className="form-checkbox" type="checkbox" {...register('questao_2_1')} />
+              <label className="ml-4">Somos líderes em procedimentos cirúrgicos de trauma e conduzimos mais do que a média hospitalar em nosso país. </label>
+            </div>
+            <div className="ml-4">
+              <input className="form-checkbox" type="checkbox" {...register('questao_2_2')} />
+              <label className="ml-4">Estamos em igualdade com a média nacional de procedimentos cirúrgicos de trauma que estão sendo realizados.</label>
+            </div>
+            <div className="ml-4">
+              <input className="form-checkbox" type="checkbox" {...register('questao_2_3')} />
+              <label className="ml-4">Somos uma instituição de baixo volume e realizamos menos procedimentos cirúrgicos de trauma do que o hospital médio em nosso país.</label>
+            </div>
+          </div>
+          <div className="mb-4">
+            <h2 className="question">3.	 Quantos procedimentos de cirurgia de trauma sua instituição realiza atualmente por mês?</h2>
+            <InputText placeholder="Quantidade" type="text"  {...register('questao_3')} />
+          </div>
+          <div className="mb-4">
+            <h2 className="question">4.	Quantos procedimentos de cirurgia de trauma você realiza por mês?</h2>
+            <InputText placeholder="Quantidade" type="text" {...register('questao_4')} />
+          </div>
+          <div>
+            <div>
+              <h2 className="question">5.	Como você avaliaria os volumes de procedimentos esperados em 2022 em relação aos níveis de 2019 (pré-COVID)?</h2>
+              <InputText placeholder="Resposta" type="text" {...register('questao_5')} />
+              <div className="pl-6">
+                <div className="pl-4">
+                  <h3 className="question">. Se menor do que os níveis pré-COVID</h3>
+                  <div className="flex flex-row w-4/12 items-end pl-4" >
+                    <h3 className="question">Em quantos %?</h3>
+                    <InputText type="number" placeholder="%" {...register('questao_5_1_1')} />
+                  </div>
+                  <div className="pl-4" >
+                    <h3 className="question">Quando você espera que o volume retorne os níveis pré-pandemias?</h3>
+                    <InputText type="text" placeholder="Resposta"  {...register('questao_5_1_2')} />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="question">. Se você espera que em 2022 os volumes sejam semelhantes aos níveis pré-COVID de 2019, quando você espera que os volumes excedam os níveis pré-COVID?</h3>
+                  <InputText type="text" placeholder="Resposta"  {...register('questao_5_2')} />
+                </div>
+                <div>
+                  <h3 className="question">.	Se você espera que em 2022 os volumes sejam maiores, por quantos %?</h3>
+                  <InputText type="text" placeholder="Resposta" {...register('questao_5_3')} />
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <table className="border border-slate-400" cellSpacing="0" cellPadding="0">
-            <thead>
-              <tr>
-                <th rowSpan={3} colSpan={1} className="border-slate-300">Procedimentos</th>
-                <th rowSpan={3} colSpan={1} className="border-slate-300">Produtos Utilizados</th>
-              </tr>
-            </thead>
-            <tbody>
-
-              {questions.map(row => (
-                <tr key={row.title}>
-                  <td className="border-slate-300" >
-                    <input className="mx-2" type="checkbox" {...register(`questao_2_${row.title.replace(/\s/g, '_').normalize('NFD').replace(/[\u0300-\u036f]/g, "")}`)} />
-                    {row.title}
-                  </td>
-                  <td className="border-slate-300">
-                    {row.products.map(product => (
-                      <span className="flex flex-row border-b" key={product}>{product}</span>
-                    ))}
-                  </td>
-
-                </tr>
-              ))}
-
-            </tbody>
-          </table>
           <NextStepButton />
         </form>
       </div>

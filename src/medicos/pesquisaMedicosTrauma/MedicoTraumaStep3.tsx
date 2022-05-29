@@ -2,89 +2,212 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
 import { updateAction } from "../../utils/updateAction";
-import { InputText } from "../../components/formComponents/inputText";
+
 import { NextStepButton } from "../../components/nextStepButton";
-import axios from "axios";
 import { transformTitleToKeyName } from "../../utils/transformTitleToKeyName";
 
-export default function Step3() {
+export default function step3() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = (data: any) => {
     actions.updateAction(data);
     navigate("/medicos_trauma/step4");
-
   }
 
   const questions = [
     {
-      title: 'Quadril Pelvis Extremidades',
-      options: {
-        option1: 'Placas e Parafusos para quadril ou pélvis',
-        option2: 'Placas e Parafusos extremidades inferiores',
-        option3: 'Placas e Parafusos extremidades superiores',
-      }
+      title: 'FX DE PUNHO',
+      products: [
+        'Placas e Parafusos extremidades superiores',
+        'Parafusos pequenos e cânulados',
+        'Pequena fixação externa'
+      ]
     },
     {
-      title: 'Ombro Quadril FêmurTibia',
-      options: {
-        option1: "Pinos intramedulares acetabular",
-        option2: "Pinos intramedulares femoral",
-        option3: "Pinos intramedulares tibiais",
-      }
+      title: 'FX DE COTOVELO',
+      products: [
+        'Placas e Parafusos extremidades superiores',
+        'Parafusos pequenos e cânulados',
+        'Fixação externa média',
+      ]
+
     },
     {
-      title: 'Ombro Quadril Pélvis Fêmur Tíbia Extremidades',
-      options: {
-        option1: "Parafusos pequenos e canulados",
-        option2: "Parafusos grandes e canulados"
-      }
+      title: 'FX UMERO',
+      products: [
+        'Placas e Parafusos extremidades superiores',
+        'Pinos intramedulares umeral',
+        'Parafusos pequenos e cânulados'
+      ]
     },
     {
-      title: 'Ombro Femur Tíbia Antebraço Mão',
-      options: {
-        option1: "Pinos intramedulares femoral",
-        option2: "Fixação externa média",
-        option3: "Pequena fixação externa",
-        option4: "Mini fixação externa",
-      }
-    }
+      title: 'FX CLAVÍCULA',
+      products: [
+        'Placas e Parafusos extremidades superiores',
+        'Parafusos pequenos e cânulados'
+      ]
+    },
+    {
+      title: 'FX METACARPO',
+      products: [
+        'Placas e Parafusos extremidades superiores',
+        'Mini fixação externa'
+      ]
+    },
+    {
+      title: 'FX DE FALANGE',
+      products: [
+        'Placas e Parafusos extremidades superiores',
+        'Parafusos pequenos e cânulados',
+        'Mini fixação externa'
+      ]
+    },
+    {
+      title: 'FX TROCANTERICA',
+      products: [
+        'Placas e parafusos para quadril ou pélvis',
+        'Pinos intramedulares acetabular',
+        'Parafusos grandes e canulados',
+        'Grande fixação externa'
+      ]
+    },
+    {
+      title: 'FX DIAFISE FEMUR',
+      products: [
+        'Placas e Parafusos extremidades inferiores',
+        'Pinos intramedulares femoral',
+        'Grande fixação externa'
+      ]
+
+
+    },
+    {
+      title: 'FX FEMUR DISTAL',
+      products: [
+        'Placas e Parafusos extremidades inferiores',
+        'Pinos intramedulares femoral',
+        'Parafusos grandes e canulados',
+        'Grande fixação externa'
+      ]
+    },
+    {
+      title: 'FX TIBIA PROXIMAL',
+      products: [
+        'Placas e Parafusos extremidades inferiores',
+        'Pinos intramedulares tibial',
+        'Parafusos pequenos e cânulados',
+        'Parafusos grandes e canulados',
+        'Grande fixação externa'
+      ]
+    },
+    {
+      title: 'FX DIAFISE TIBIAL',
+      products: [
+        'Placas e Parafusos extremidades inferiores',
+        'Pinos intramedulares tibial',
+        'Grande fixação externa',
+      ]
+    },
+    {
+      title: 'FX TIBIA DISTAL',
+      products: [
+        'Placas e Parafusos',
+        'Parafusos pequenos e canulados',
+        'Fixação externa média',
+      ]
+    },
+    {
+      title: 'FX METATARSO',
+      products: [
+        'Placas e Parafusos extremidades inferiores',
+        'Parafusos pequenos e cânulados',
+        'Parafusos grandes e canulados',
+      ]
+    },
+    {
+      title: 'OSTEOTOMIA QUADRIL',
+      products: [
+        'Placas e parafusos para quadril ou pélvis',
+        'Parafusos grandes e canulados',
+      ]
+    },
+    {
+      title: 'OSTEOTOMIA DE JOELHO',
+      products: [
+        'Placas e Parafusos extremidades inferiores',
+        'Parafusos grandes e canulados'
+      ]
+    },
+    {
+      title: 'ARTRODESE FALANGE',
+      products: [
+        'Placas e Parafusos Extremidades Superiores',
+        'Placas e Parafusos extremidades inferiores',
+        'Parafusos pequenos e cânulados',
+      ]
+    },
+    {
+      title: 'ARTRODESE DE TORNOZELO',
+      products: [
+        'Placas e Parafusos extremidades inferiores',
+        'Pinos intramedulares tibial',
+        'Parafusos pequenos e cânulados',
+        'Parafusos grandes e canulados',
+      ]
+    },
+    {
+      title: 'FX ACETABULO',
+      products: [
+        'Placas e parafusos para quadril ou pélvis',
+        'Parafusos grandes e canulados',
+      ]
+    },
+    {
+      title: 'ARTRODESE PUNHO',
+      products: [
+        'Placas e Parafusos Extremidades Superiores',
+      ]
+    },
+
   ]
 
   return (
     <>
       <div className="container">
         <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="question">Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
-          <div className="px-4">
-            <div>
-              <div className="mb-10 mt-2 mx-4">
-                {questions.map((question, questionIndex) => (
-                  <>
-                    <h3 className="question" key={question.title}>{question.title}: </h3>
-                    <div className="pl-4">
-                      <h3>Produtos (e exemplo representativo): </h3>
-                      <div className="mb-10 mt-2 mx-4">
-                        {
-                          Object.values(question.options).map((option, index) => (
-                            < div className="ml-4" >
-                              <input className="form-checkbox" type="checkbox"  {...register(`questao_1_grupo_${questionIndex + 1}_${transformTitleToKeyName(option)}`)} />
-                              <label className="ml-4" >{option}</label>
-                            </div >
-                          ))
-                        }
-                      </div>
-                    </div>
-                  </>
-                ))}
-              </div>
-            </div>
-          </div>
+          <h2 className="question">1. Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
+
+          <table className="border border-slate-400" cellSpacing="0" cellPadding="0">
+            <thead>
+              <tr>
+                <th rowSpan={3} colSpan={1} className="border-slate-300">Procedimentos</th>
+                <th rowSpan={3} colSpan={1} className="border-slate-300">Produtos Utilizados</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              {questions.map(row => (
+                <tr key={row.title}>
+                  <td className="border-slate-300" >
+                    <input className="mx-2" type="checkbox" {...register(`questao_1_${transformTitleToKeyName(row.title)}`)} />
+                    {row.title}
+                  </td>
+                  <td className="border-slate-300">
+                    {row.products.map(product => (
+                      <span className=" p-1 flex flex-row border-b" key={product}>{product}</span>
+                    ))}
+                  </td>
+
+                </tr>
+              ))}
+
+            </tbody>
+          </table>
           <NextStepButton />
         </form>
-      </div >
+      </div>
     </>
   )
 }

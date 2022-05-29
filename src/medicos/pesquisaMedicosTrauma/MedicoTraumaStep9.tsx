@@ -15,68 +15,33 @@ export default function Step9() {
     actions.updateAction(data);
     navigate("/medicos_trauma/step10");
   }
-  const produtos_tipos = [
-    "Placas para quadril ou pélvis",
-    "Placas extremidades inferiores",
-    "Placas extremidades superiores",
-    "Parafusos para quadril ou pélvis",
-    "Parafusos extremidades inferiores",
-    "Parafusos extremidades superiores",
-    "Pinos intramedulares umeral",
-    "Pinos intramedulares acetabulares",
-    "Pino intramedular femoral",
-    "Pinos intramedulares tibiais",
-    "parafusos pequenos e cânulados",
-    "Parafusos grandes e canulados",
-    "Grande fixação externa",
-    "Fixação externa média",
-    "Pequena fixação externa",
-    "Mini fixação externa",
-  ]
 
   return (
     <>
       <div className="container">
         <form className="form-select w-fit" onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <h2 className="question">8 Principais características do produto para os  procedimentos de trauma mais frequentes realizados:</h2>
+            <h2 className="question">11. Quais são os principais fatores de decisão para a seleção de certos produtos da marca em relação aos outros durante a cirurgia</h2>
+            <InputText label="Placas e Parafusos" {...register('questao_11_1')} />
+            <InputText label="Pinos" {...register('questao_11_2')} />
+            <InputText label="Parafusos cânulados" {...register('questao_11_3')} />
+            <InputText label="Parafusos Fixações Externas" {...register('questao_11_4')} />
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th colSpan={3}>Produtos Utilizdos</th>
-                <th colSpan={7}>ATRIBUTOS DE PRODUTO MAIS BEM AVALIADOS pelos hospitais (ordem de classificação de 1 a 7)</th>
-              </tr>
-              <tr>
-                <th>Tipos</th>
-                <th>marca usada em sua instalação</th>
-                <th>Preço de compra</th>
-                <th>Acessibilidade (Custo)</th>
-                <th>Alto desempenho clínico</th>
-                <th>Disponibilidade de produtos/inventário</th>
-                <th>Suporte e treinamento por fabricante para uso</th>
-                <th>Capacidade de usar produtos para outros tipos de procedimentos</th>
-                <th>Percepção da marca como "premium"</th>
-                <th>Outros (por favor, especifique)</th>
-              </tr>
-            </thead>
-            <tbody>
-              {produtos_tipos.map((product, index) => (
-                <tr key={product}>
-                  <td className="pl-2">{product}</td>
-                  <td className="w-20 text-center"><input type="checkbox" /></td>
-                  <td ><InputText placeholder="R$" type="number" /></td>
-                  <td className="w-32"><InputText placeholder="1-7" type="number" /></td>
-                  <td className="w-32"><InputText placeholder="1-7" type="number" /></td>
-                  <td className="w-32"><InputText placeholder="1-7" type="number" /></td>
-                  <td className="w-32"><InputText placeholder="1-7" type="number" /></td>
-                  <td className="w-32"><InputText placeholder="1-7" type="number" /></td>
-                  <td className="w-32"><InputText placeholder="1-7" type="number" /></td>
-                  <td><textarea name="" id="" rows={1} /></td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div>
+            <h2 className="question">12. Quais são as preocupações, se houver, sobre o uso de produtos de valor/economia nos procedimentos discutidos anteriormente?</h2>
+            <textarea {...register("questao_12")} />
+          </div>
+          <div>
+            <h2 className="question">13. Como a disponibilidade de produtos premium versus valor influencia sua decisão de realizar o procedimento de trauma em diferentes instalações?</h2>
+            <textarea {...register("questao_13")} />
+          </div>
+          <div>
+            <h2 className="question">14. Como os pacientes de trauma normalmente pagam por seus procedimentos?</h2>
+            <InputText label="Particular (%)" {...register("questao_14_1")} />
+            <InputText label="Coberto pelo SUS (%)" {...register("questao_14_2")} />
+            <InputText label="Coberto por seguro privado (%)" {...register("questao_14_3")} />
+          </div>
+
           <NextStepButton />
         </form>
       </div >

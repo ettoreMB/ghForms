@@ -10,21 +10,18 @@ import { Step7 } from "./steps/step7";
 import { Step8 } from "./steps/step8";
 import { Step9 } from "./steps/step9";
 
-import MedicoTraumaStep1 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep1'
-import MedicoTraumaStep2 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep2'
-import MedicoTraumaStep3 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep3'
-import MedicoTraumaStep4 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep4'
-import MedicoTraumaStep5 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep5'
-import MedicoTraumaStep6 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep6'
-import MedicoTraumaStep7 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep7'
-import MedicoTraumaStep8 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep8'
-import MedicoTraumaStep9 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep9'
-import MedicoTraumaStep10 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep10'
-import MedicoTraumaStep11 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep11'
-import MedicoTraumaStep12 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep12'
-import MedicoTraumaStepFinal from './medicos/pesquisaMedicosTrauma/MedicoTraumaStepFinal'
-
-
+import MedicoTraumaStep1 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep1';
+import MedicoTraumaStep2 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep2';
+import MedicoTraumaStep3 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep3';
+import MedicoTraumaStep4 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep4';
+import MedicoTraumaStep5 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep5';
+import MedicoTraumaStep6 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep6';
+import MedicoTraumaStep7 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep7';
+import MedicoTraumaStep8 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep8';
+import MedicoTraumaStep9 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep9';
+import MedicoTraumaStep10 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep10';
+import MedicoTraumaStep11 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep11';
+import MedicoTraumaStepFinal from './medicos/pesquisaMedicosTrauma/MedicoTraumaStepFinal';
 
 function App() {
   return (
@@ -52,7 +49,6 @@ function App() {
         <Route path="/medicos_trauma/step9" element={<MedicoTraumaStep9 />} />
         <Route path="/medicos_trauma/step10" element={<MedicoTraumaStep10 />} />
         <Route path="/medicos_trauma/step11" element={<MedicoTraumaStep11 />} />
-        <Route path="/medicos_trauma/step12" element={<MedicoTraumaStep12 />} />
         <Route path="/medicos_trauma/stepFinal" element={<MedicoTraumaStepFinal />} />
       </Routes>
     </Router>

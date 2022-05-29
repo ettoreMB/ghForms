@@ -5,6 +5,7 @@ import { updateAction } from "../../utils/updateAction";
 
 import { InputText } from "../../components/formComponents/inputText";
 import { NextStepButton } from "../../components/nextStepButton";
+import { transformTitleToKeyName } from "../../utils/transformTitleToKeyName";
 
 export default function Step5() {
   const navigate = useNavigate();
@@ -16,61 +17,117 @@ export default function Step5() {
     navigate("/medicos_trauma/step6");
   }
 
+  const questions = [
+    {
+      title: 'FX DE PUNHO',
+    },
+    {
+      title: 'FX DE COTOVELO',
+
+
+    },
+    {
+      title: 'FX UMERO',
+
+    },
+    {
+      title: 'FX CLAVÍCULA',
+
+    },
+    {
+      title: 'FX METACARPO',
+
+    },
+    {
+      title: 'FX DE FALANGE',
+
+    },
+    {
+      title: 'FX TROCANTERICA',
+
+    },
+    {
+      title: 'FX DIAFISE FEMUR',
+    },
+    {
+      title: 'FX FEMUR DISTAL',
+    },
+    {
+      title: 'FX TIBIA PROXIMAL',
+    },
+    {
+      title: 'FX DIAFISE TIBIAL',
+    },
+    {
+      title: 'FX TIBIA DISTAL',
+    },
+    {
+      title: 'FX METATARSO',
+    },
+    {
+      title: 'OSTEOTOMIA QUADRIL',
+    },
+    {
+      title: 'OSTEOTOMIA DE JOELHO',
+    },
+    {
+      title: 'ARTRODESE FALANGE',
+    },
+    {
+      title: 'ARTRODESE DE TORNOZELO',
+    },
+    {
+      title: 'FX ACETABULO',
+    },
+    {
+      title: 'ARTRODESE PUNHO',
+    },
+  ]
+
+
   return (
     <>
       <div className="container">
-        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
-          <div className="mb-4">
-            <h2 className="question">3.	Qual das seguintes declarações descreve melhor sua instituição:</h2>
-            <div className="ml-4">
-              <input className="form-checkbox" type="checkbox" name="" id="" />
-              <label className="ml-4">Somos líderes em procedimentos cirúrgicos de trauma e conduzimos mais do que a média hospitalar em nosso país. </label>
-            </div>
-            <div className="ml-4">
-              <input className="form-checkbox" type="checkbox" name="" id="" />
-              <label className="ml-4">Estamos em igualdade com a média nacional de procedimentos cirúrgicos de trauma que estão sendo realizados.</label>
-            </div>
-            <div className="ml-4">
-              <input className="form-checkbox" type="checkbox" name="" id="" />
-              <label className="ml-4">Somos uma instituição de baixo volume e realizamos menos procedimentos cirúrgicos de trauma do que o hospital médio em nosso país.</label>
-            </div>
-          </div>
-          <div className="mb-4">
-            <h2 className="question">4.	Quantos procedimentos de cirurgia de trauma sua instituição realiza atualmente por mês?</h2>
-            <InputText placeholder="Quantidade" type="number" />
-          </div>
-          <div className="mb-4">
-            <h2 className="question">5.	Quantos procedimentos de cirurgia de trauma você realiza por mês?</h2>
-            <InputText placeholder="Quantidade" type="number" />
-          </div>
-          <div>
-            <div>
-              <h2 className="question">6.	Como você avaliaria os volumes de procedimentos esperados em 2022 em relação aos níveis de 2019 (pré-COVID)?</h2>
-              <InputText placeholder="Resposta" type="text" />
-              <div className="pl-6">
-                <div className="pl-4">
-                  <h3 className="question">a - Se menor do que os níveis pré-COVID</h3>
-                  <div className="flex flex-row w-4/12 items-end pl-4" >
-                    <h3 className="question">. Em quantos %?</h3>
-                    <InputText type="number" placeholder="%" />
-                  </div>
-                  <div className="pl-4" >
-                    <h3 className="question">. Quando você espera que o volume retorne os níveis pré-pandemias?</h3>
-                    <InputText type="text" placeholder="Resposta" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="question">b - Se você espera que em 2022 os volumes sejam semelhantes aos níveis pré-COVID de 2019, quando você espera que os volumes excedam os níveis pré-COVID?</h3>
-                  <InputText type="text" placeholder="Resposta" />
-                </div>
-                <div>
-                  <h3 className="question">c -	Se você espera que em 2022 os volumes sejam maiores, por quantos %?</h3>
-                  <InputText type="text" placeholder="Resposta" />
-                </div>
-              </div>
-            </div>
-          </div>
+        <form className="form-select w-fit" onSubmit={handleSubmit(onSubmit)}>
+          <h2 className="question">6. Até que ponto você espera flutuações sobre os seguintes procedimentos:</h2>
 
+          <table className="border border-slate-400" cellSpacing="0" cellPadding="0">
+            <thead>
+              <tr>
+                <th rowSpan={3} colSpan={1} className=" p-1 border border-slate-300">PRODUTOS VENDIDOS</th>
+                <th rowSpan={3} colSpan={1} className="p-1 w-28 border border-slate-300">selecionar os que sua empresa vende</th>
+                <th colSpan={3} rowSpan={1} className=" p-1 border border-slate-300">Para produtos selecionados</th>
+              </tr>
+              <tr>
+                <th colSpan={1} rowSpan={3} className="p-1 border border-slate-300">qual é o crescimento /diminuição esperado nos próximos 1-5 anos (%)</th>
+                <th colSpan={2} rowSpan={1} className=" p-1 border border-slate-300">O custo oscilou nos últimos 6 meses?</th>
+              </tr>
+              <tr>
+
+                <th className="p-1 border border-slate-300">Se o custo flutuou, por quê?</th>
+                <th className="p-1 border border-slate-300">Se sim, por quanto (%)?</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              {questions.map((row, i) => (
+                <tr key={row.title}>
+                  <td className=" p-1 text-center border border-slate-300" >{row.title}</td>
+                  <>
+                    <td className="border border-slate-300">
+                      <div className="justify-center w-full flex">
+                        <input type="checkbox"  {...register(`questao_5_${transformTitleToKeyName(row.title)}_1`)} />
+                      </div>
+                    </td>
+                    <td className="w-36"><InputText placeholder="1~100" min={1} max={100} type="number"{...register(`questao_6_${transformTitleToKeyName(row.title)}_2`)} /></td>
+                    <td className="border border-slate-300"><textarea {...register(`questao_6_${transformTitleToKeyName(row.title)}_3`)} /></td>
+                    <td className="border border-slate-300"><textarea {...register(`questao_6_${transformTitleToKeyName(row.title)}_3`)} /></td>
+                  </>
+                </tr>
+              ))}
+
+            </tbody>
+          </table>
           <NextStepButton />
         </form>
       </div>

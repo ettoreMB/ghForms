@@ -27,6 +27,7 @@ export default function StepFinal() {
 
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
+    console.log(state)
     // await api.post('/results', state)
     openModal()
   }
@@ -36,11 +37,11 @@ export default function StepFinal() {
         <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
           <h2 className="question">Conclusão</h2>
           <div className="mb-10">
-            <h3 className="question">20 . Há outros cirurgiões ou instituições hospitalares no país cujas perspectivas seriam valiosas para nós considerarmos?</h3>
-            <InputText {...register("questao_20")} />
+            <h3 className="question">19. Há outros cirurgiões ou instituições hospitalares no país cujas perspectivas seriam valiosas para nós considerarmos?</h3>
+            <InputText {...register("questao_19")} />
           </div>
           <div>
-            <h3 className="question">comentario.  Você tem algum comentário ou dúvida sobre o projeto ou entrevista?  </h3>
+            <h3 className="question">Você tem algum comentário ou dúvida sobre o projeto ou entrevista?</h3>
             <div className="flex flex-row">
               <InputText placeholder="Deixe seu comentário" {...register("comentario")} />
             </div>
