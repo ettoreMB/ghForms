@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { NextStepButton } from "../components/nextStepButton";
 
-export default function Step2() {
+export function Step2() {
   const navigate = useNavigate();
 
 

@@ -1,5 +1,5 @@
 import { GlobalState, useStateMachine } from "little-state-machine";
-import { updateAction } from "../utils/updateAction";
+import { updateAction } from "../../utils/updateAction";
 
 
 export const Result = () => {

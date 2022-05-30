@@ -1,12 +1,12 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
-import updateAction from "../utils/updateAction";
+import { updateAction } from "../utils/updateAction";
 
 import { InputText } from "../components/formComponents/inputText";
 import { NextStepButton } from "../components/nextStepButton";
 
-export default function Step6() {
+export function Step6() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions, state } = useStateMachine({ updateAction });

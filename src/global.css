@@ -12,30 +12,35 @@ body {
   @apply bg-gray-100 px-12;
 }
 
+h3 {
+  @apply font-bold;
+}
+
 textarea {
   @apply w-full bg-gray-100 p-4 rounded-md;
 }
 
 section,
 form {
-  @apply w-full mx-auto p-10 max-w-fit bg-white rounded-lg shadow-md;
+  @apply w-full mx-auto p-10 bg-white rounded-lg shadow-md;
 }
 
+textarea {
+  @apply w-full bg-gray-100 p-4 rounded-md;
+}
 
+td,
+th {
+  @apply border;
+}
 
 @layer components {
   .container {
-    @apply flex flex-col mx-auto p-10;
-  }
-
-  .bigtable {
-    max-width: 1850px;
-    /* min-width: 1800px; */
+    @apply flex flex-col mx-auto p-10 max-w-full;
   }
 
   .question {
     @apply text-gray-700 font-bold mb-4 text-lg
   }
-
 
 }

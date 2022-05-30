@@ -1,16 +1,16 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
-import { updateAction } from "../utils/updateAction";
+import { updateAction } from "../../utils/updateAction";
 import { Dialog, Transition } from '@headlessui/react'
 
-import { InputText } from "../components/formComponents/inputText";
-import { NextStepButton } from "../components/nextStepButton";
+import { InputText } from "../../components/formComponents/inputText";
+import { NextStepButton } from "../../components/nextStepButton";
 import { useState, Fragment } from "react";
-import { api } from "../lib/api";
+import { api } from "../../lib/api";
 
 
-export function Step9() {
+export default function StepFinal() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
@@ -27,7 +27,8 @@ export function Step9() {
 
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
-    await api.post('/results', state)
+    console.log(state)
+    await api.post('/results_pesquisa_medicos_trauma', state)
     openModal()
   }
   return (
@@ -36,13 +37,13 @@ export function Step9() {
         <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
           <h2 className="question">Conclusão</h2>
           <div className="mb-10">
-            <h3 className="question">Você tem algum comentário ou dúvida sobre o projeto ou entrevista?  </h3>
-            <textarea {...register("comentario_pesquisa")} />
+            <h3 className="question">19. Há outros cirurgiões ou instituições hospitalares no país cujas perspectivas seriam valiosas para nós considerarmos?</h3>
+            <InputText {...register("questao_19")} />
           </div>
           <div>
-            <h3 className="question">Há outros especialistas que você considera líderes de pensamento e cujas perspectivas seriam valiosas para nós considerarmos? Deixe o nome e telefone. </h3>
+            <h3 className="question">Você tem algum comentário ou dúvida sobre o projeto ou entrevista?</h3>
             <div className="flex flex-row">
-              <InputText label="Recomendações" placeholder="Ex: Nome, Telefone, Nome, Telefone" {...register("recomendacoes")} />
+              <InputText placeholder="Deixe seu comentário" {...register("comentario")} />
             </div>
           </div>
           <NextStepButton title="Enviar Respostas" />
@@ -91,7 +92,7 @@ export function Step9() {
                     <button
                       type="button"
                       className="w-full mt-10 bg-teal-300 text-white p-4 rounded-lg text-center font-bold flex items-center justify-center"
-                      onClick={() => navigate('/')}
+                      onClick={() => navigate('/medicos_trauma')}
                     >
                       Finalizar Pesquisa
                     </button>
