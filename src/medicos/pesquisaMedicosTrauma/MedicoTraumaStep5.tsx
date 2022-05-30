@@ -94,9 +94,9 @@ export default function Step5() {
           <table className="border border-slate-400" cellSpacing="0" cellPadding="0">
             <thead>
               <tr>
-                <th rowSpan={3} colSpan={1} className=" p-1 border border-slate-300">PRODUTOS VENDIDOS</th>
-                <th rowSpan={3} colSpan={1} className="p-1 w-28 border border-slate-300">selecionar os que sua empresa vende</th>
-                <th colSpan={3} rowSpan={1} className=" p-1 border border-slate-300">Para produtos selecionados</th>
+                <th rowSpan={3} colSpan={1} className=" p-1 border border-slate-300">Procedimentos</th>
+                <th rowSpan={3} colSpan={1} className="p-1 w-28 border border-slate-300">selecionar os que você executa</th>
+                <th colSpan={3} rowSpan={1} className=" p-1 border border-slate-300">Para procedimentos selecionados:</th>
               </tr>
               <tr>
                 <th colSpan={1} rowSpan={3} className="p-1 border border-slate-300">qual é o crescimento /diminuição esperado nos próximos 1-5 anos (%)</th>
