@@ -5,6 +5,7 @@ import { updateAction } from "../../utils/updateAction";
 
 import { InputText } from "../../components/formComponents/inputText";
 import { NextStepButton } from "../../components/nextStepButton";
+import { api } from "../../lib/api";
 
 export default function MedicoTraumaStep1() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ export default function MedicoTraumaStep1() {
 
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
-    // await api.post('/contact', data)
+    await api.post('/contact', data)
     navigate("/medicos_trauma/step2");
   }
   return (

@@ -201,8 +201,8 @@ export default function Step6() {
                       <span className=" p-2 flex flex-row border-b" key={product}>{product}</span>
                     ))}
                   </td>
-                  <td className="p-3" ><textarea placeholder="Resposta" {...register(`questao_7_${row.title}_1`)} ></textarea></td>
-                  <td className="p-3" ><textarea placeholder="Resposta" {...register(`questao_7_${row.title}_2`)} ></textarea></td>
+                  <td className="p-3" ><textarea placeholder="Resposta" {...register(`questao_7_${transformTitleToKeyName(row.title)}_1`)} ></textarea></td>
+                  <td className="p-3" ><textarea placeholder="Resposta" {...register(`questao_7_${transformTitleToKeyName(row.title)}_2`)} ></textarea></td>
                 </tr>
               ))}
 
