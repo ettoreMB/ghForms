@@ -281,7 +281,7 @@ export function Step7() {
                   <td className="border border-slate-300" key={row.title}>{row.title}</td>
                   <td className="border border-slate-300"><InputText {...register(`${row.options.q1}`)} /></td>
                   <td className="border border-slate-300 "><InputText placeholder="R$" type="number" {...register(`${row.options.q2}`)} /></td>
-                  <td className="border border-slate-300"><InputText placeholder="R$" type="number"{...register(`${row.options.q3}`)} /></td>
+                  <td className="border border-slate-300"><InputText placeholder="1 ~ 7" min={1} max={7} type="number"{...register(`${row.options.q3}`, { min: 1, max: 7 })} /></td>
                   <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q4}`, { min: 1, max: 7 })} /></td>
                   <td className="border border-slate-300 "><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q5}`, { min: 1, max: 7 })} /></td>
                   <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q6}`, { min: 1, max: 7 })} /></td>
