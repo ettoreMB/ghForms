@@ -204,7 +204,7 @@ export function Step4() {
 
             </tbody>
           </table>
-          <NextStepButton />
+          <NextStepButton step={2} totalSteps={7} />
         </form>
       </div>
     </>

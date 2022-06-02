@@ -42,7 +42,7 @@ export default function Step9() {
             <InputText label="Coberto por seguro privado (%)" {...register("questao_14_3")} />
           </div>
 
-          <NextStepButton />
+          <NextStepButton step={7} totalSteps={9} />
         </form>
       </div >
     </>

@@ -31,7 +31,7 @@ export function Step1(props: any) {
             <InputText placeholder='Sua posição na empresa' label={"Posição"}  {...register("cargo")} required />
           </div>
 
-          <NextStepButton />
+          <NextStepButton title="Iniciar a pesquisa" />
         </form>
       </div>
     </>

@@ -64,7 +64,7 @@ export function Step8() {
             <textarea {...register("questao_10_3")} />
           </div>
 
-          <NextStepButton />
+          <NextStepButton title="ùltima etapa" />
         </form>
       </div >
     </>

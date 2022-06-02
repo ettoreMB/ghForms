@@ -59,7 +59,7 @@ export default function Step10() {
             <textarea {...register('questao_18')} />
           </div>
 
-          <NextStepButton />
+          <NextStepButton step={8} totalSteps={9} />
         </form>
       </div >
     </>

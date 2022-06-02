@@ -113,7 +113,7 @@ export function Step3() {
               </div>
             </div>
           </div>
-          <NextStepButton />
+          <NextStepButton step={1} totalSteps={7} />
         </form>
       </div >
     </>

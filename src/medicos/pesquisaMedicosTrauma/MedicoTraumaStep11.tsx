@@ -62,7 +62,7 @@ export default function Step11() {
             <textarea {...register("questao_18")} />
           </div>
 
-          <NextStepButton />
+          <NextStepButton title="ùltima etapa" />
         </form>
       </div >
     </>
