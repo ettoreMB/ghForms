@@ -20,6 +20,7 @@ export function Step7() {
     {
       title: 'Placas para quadril ou pélvis',
       options: {
+
         q1: 'questao_6_PlacasParaQuadrilPelvis_1',
         q2: 'questao_6_PlacasParaQuadrilPelvis_2',
         q3: 'questao_6_PlacasParaQuadrilPelvis_3',
@@ -29,11 +30,13 @@ export function Step7() {
         q7: 'questao_6_PlacasParaQuadrilPelvis_7',
         q8: 'questao_6_PlacasParaQuadrilPelvis_8',
         q9: 'questao_6_PlacasParaQuadrilPelvis_9',
+        q10: 'questao_6_PlacasParaQuadrilPelvis_10',
       }
     },
     {
       title: 'Placas extremidades inferiores',
       options: {
+
         q1: 'questao_6PlacasExtremidadesInferiores_1',
         q2: 'questao_6PlacasExtremidadesInferiores_2',
         q3: 'questao_6PlacasExtremidadesInferiores_3',
@@ -43,11 +46,13 @@ export function Step7() {
         q7: 'questao_6PlacasExtremidadesInferiores_7',
         q8: 'questao_6PlacasExtremidadesInferiores_8',
         q9: 'questao_6PlacasExtremidadesInferiores_9',
+        q10: 'questao_6PlacasExtremidadesInferiores_10',
       }
     },
     {
       title: 'Placas extremidades superiores',
       options: {
+
         q1: 'questao_6_PlacasExtremidadesSuperiores_1',
         q2: 'questao_6_PlacasExtremidadesSuperiores_2',
         q3: 'questao_6_PlacasExtremidadesSuperiores_3',
@@ -57,11 +62,13 @@ export function Step7() {
         q7: 'questao_6_PlacasExtremidadesSuperiores_7',
         q8: 'questao_6_PlacasExtremidadesSuperiores_8',
         q9: 'questao_6_PlacasExtremidadesSuperiores_9',
+        q10: 'questao_6_PlacasExtremidadesSuperiores_10',
       }
     },
     {
       title: 'Parafusos para quadril ou pélvis',
       options: {
+
         q1: 'questao_6_ParafusosQuadrilPelvis_1',
         q2: 'questao_6_ParafusosQuadrilPelvis_2',
         q3: 'questao_6_ParafusosQuadrilPelvis_3',
@@ -71,6 +78,7 @@ export function Step7() {
         q7: 'questao_6_ParafusosQuadrilPelvis_7',
         q8: 'questao_6_ParafusosQuadrilPelvis_8',
         q9: 'questao_6_ParafusosQuadrilPelvis_9',
+        q10: 'questao_6_ParafusosQuadrilPelvis_10',
       }
     },
     {
@@ -85,6 +93,7 @@ export function Step7() {
         q7: 'questao_6_ParafusosExtremidadesInferiores_7',
         q8: 'questao_6_ParafusosExtremidadesInferiores_8',
         q9: 'questao_6_ParafusosExtremidadesInferiores_9',
+        q10: 'questao_6_ParafusosExtremidadesInferiores_10',
       }
     },
     {
@@ -99,6 +108,7 @@ export function Step7() {
         q7: 'questao_6_ParafusosExtremidadesSuperiores_7',
         q8: 'questao_6_ParafusosExtremidadesSuperiores_8',
         q9: 'questao_6_ParafusosExtremidadesSuperiores_9',
+        q10: 'questao_6_ParafusosExtremidadesSuperiores_10',
       }
     },
     {
@@ -113,6 +123,7 @@ export function Step7() {
         q7: 'questao_6_PinosIntramedularesUmeral_7',
         q8: 'questao_6_PinosIntramedularesUmeral_8',
         q9: 'questao_6_PinosIntramedularesUmeral_9',
+        q10: 'questao_6_PinosIntramedularesUmeral_10',
       }
     },
     {
@@ -126,7 +137,7 @@ export function Step7() {
         q6: 'questao_6_PinosIntramedularesAcetabulares_6',
         q7: 'questao_6_PinosIntramedularesAcetabulares_7',
         q8: 'questao_6_PinosIntramedularesAcetabulares_8',
-        q9: 'questao_6_PinosIntramedularesAcetabulares_9',
+        q10: 'questao_6_PinosIntramedularesAcetabulares_10',
       }
     },
     {
@@ -141,6 +152,7 @@ export function Step7() {
         q7: 'questao_6_PinoIntramedularFemoral_7',
         q8: 'questao_6_PinoIntramedularFemoral_8',
         q9: 'questao_6_PinoIntramedularFemoral_9',
+        q10: 'questao_6_PinoIntramedularFemoral_10',
       }
     },
     {
@@ -155,6 +167,7 @@ export function Step7() {
         q7: 'questao_6_PinosIntramedularesTibiais_7',
         q8: 'questao_6_PinosIntramedularesTibiais_8',
         q9: 'questao_6_PinosIntramedularesTibiais_9',
+        q10: 'questao_6_PinosIntramedularesTibiais_10',
       }
     },
     {
@@ -169,6 +182,7 @@ export function Step7() {
         q7: 'questao_6_ParafusosPequenosCanulados_7',
         q8: 'questao_6_ParafusosPequenosCanulados_8',
         q9: 'questao_6_ParafusosPequenosCanulados_9',
+        q10: 'questao_6_ParafusosPequenosCanulados_10',
       }
     },
     {
@@ -183,6 +197,7 @@ export function Step7() {
         q7: 'questao_6_ParafusosGrandescanulados_7',
         q8: 'questao_6_ParafusosGrandescanulados_8',
         q9: 'questao_6_ParafusosGrandescanulados_9',
+        q10: 'questao_6_ParafusosGrandescanulados_10',
       }
     },
     {
@@ -197,6 +212,7 @@ export function Step7() {
         q7: 'questao_6_GrandesFixaCoesExternas_7',
         q8: 'questao_6_GrandesFixaCoesExternas_8',
         q9: 'questao_6_GrandesFixaCoesExternas_9',
+        q10: 'questao_6_GrandesFixaCoesExternas_10',
       }
     },
     {
@@ -211,6 +227,7 @@ export function Step7() {
         q7: 'questao_6_FixacoesExternasMedias_7',
         q8: 'questao_6_FixacoesExternasMedias_8',
         q9: 'questao_6_FixacoesExternasMedias_9',
+        q10: 'questao_6_FixacoesExternasMedias_10',
       }
     },
     {
@@ -225,6 +242,7 @@ export function Step7() {
         q7: 'questao_6_PequenasFixaCoesExternas_7',
         q8: 'questao_6_PequenasFixaCoesExternas_8',
         q9: 'questao_6_PequenasFixaCoesExternas_9',
+        q10: 'questao_6_PequenasFixaCoesExternas_10',
       }
     },
     {
@@ -239,6 +257,7 @@ export function Step7() {
         q7: 'questao_6_MiniFixacoesExternas_7',
         q8: 'questao_6_MiniFixacoesExternas_8',
         q9: 'questao_6_MiniFixacoesExternas_9',
+        q10: 'questao_6_MiniFixacoesExternas_10',
       }
     },
   ]
@@ -251,7 +270,7 @@ export function Step7() {
             <h2 className="question">Principais características do produto para os procedimentos de trauma mais frequentes realizados:</h2>
           </div>
 
-          <div>
+          <div className="pl-4">
             <h3 className="question">a•	Qual é a melhor marca usada para cada tipo de produto? Por favor preencha na tabela abaixo.</h3>
             <h3 className="question">b•	Você está ciente do preço que os hospitais privados normalmente pagam por cada produto? Se sim, qual é o preço médio de cada dispositivo? Por favor preencha na tabela abaixo. </h3>
             <h3 className="question">c•	Classifique os atributos do produto que são mais relevantes para você, na tabela abaixo. </h3>
@@ -262,16 +281,18 @@ export function Step7() {
                 <th rowSpan={3} colSpan={1} className=" border border-slate-300">Tipos</th>
                 <th rowSpan={3} colSpan={1} className="w-52  border border-slate-300">MARCA MAIS VENDIDA</th>
                 <th rowSpan={3} colSpan={1} className="w-48 border border-slate-300 ">Preço médio de venda da marca top</th>
+                <th rowSpan={3} colSpan={1} className="w-48 border border-slate-300 ">Inventário mantido(semana/mês)</th>
                 <th colSpan={7} rowSpan={1} className="w-48 border border-slate-300 ">ATRIBUTOS DE PRODUTO MAIS BEM AVALIADOS pelos hospitais (ordem de classificação de 1 a 7)</th>
               </tr>
               <tr>
-                <th className="w-48 border border-slate-300 ">Acessibilidade (Custo)</th>
+
+                <th className="w-48 border border-slate-300 ">Acessibilidade(Custo)</th>
                 <th className="w-36 border border-slate-300 ">Alto desempenho clínico</th>
                 <th className="w-36 border border-slate-300 ">Disponibilidade de produtos/inventário</th>
                 <th className="w-36  border border-slate-300 ">Suporte e treinamento por fabricante para uso</th>
                 <th className="w-36  border border-slate-300 ">Capacidade de usar produtos para outros tipos de procedimentos</th>
                 <th className="w-36 border border-slate-300 ">Percepção da marca como "premium"</th>
-                <th className="w-36 border border-slate-300 ">Outros (por favor, especifiquem): </th>
+                <th className="w-36 border border-slate-300 ">Outros(por favor, especifiquem): </th>
               </tr>
             </thead>
             <tbody>
@@ -279,9 +300,10 @@ export function Step7() {
               {questions.map(row => (
                 <tr>
                   <td className="border border-slate-300" key={row.title}>{row.title}</td>
-                  <td className="border border-slate-300"><InputText {...register(`${row.options.q1}`)} /></td>
+                  <td className="border border-slate-300"><textarea {...register(`${row.options.q1}`)} /></td>
                   <td className="border border-slate-300 "><InputText placeholder="R$" type="number" {...register(`${row.options.q2}`)} /></td>
-                  <td className="border border-slate-300"><InputText placeholder="R$" type="number"{...register(`${row.options.q3}`)} /></td>
+                  <td className="border border-slate-300"><textarea {...register(`${row.options.q10}`)} /></td>
+                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q3}`, { min: 1, max: 7 })} /></td>
                   <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q4}`, { min: 1, max: 7 })} /></td>
                   <td className="border border-slate-300 "><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q5}`, { min: 1, max: 7 })} /></td>
                   <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q6}`, { min: 1, max: 7 })} /></td>

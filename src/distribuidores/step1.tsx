@@ -19,16 +19,16 @@ export function Step1(props: any) {
   }
   return (
     <>
-      <div className="container">
-        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
-          <div className="mb-6 w-full">
-            <InputText placeholder='Nome Completo' label={"Nome"}   {...register("nome")} required />
+      <div className="pt-20 sm:p-2 m-auto sm:m-0 break-all">
+        <form className=" " onSubmit={handleSubmit(onSubmit)}>
+          <div className="mb-6">
+            <InputText placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
             <div className="flex flex-row flex-wrap">
-              <InputText placeholder='Seu melhor email' label={"Email"}  {...register("email")} required />
-              <InputText placeholder='colocar mascara' label={"Telefone"}  {...register("telefone")} required />
+              <InputText placeholder='Seu melhor email' type={'text'} label={"Email"}  {...register("email")} required />
+              <InputText placeholder='colocar mascara' type={'text'} label={"Telefone"}  {...register("telefone")} required />
             </div>
-            <InputText placeholder='Nome da Instituição' label={"Instituição"}  {...register("empresa")} required />
-            <InputText placeholder='Sua posição na empresa' label={"Posição"}  {...register("cargo")} required />
+            <InputText placeholder='Nome da Instituição' type={'text'} label={"Instituição"}  {...register("empresa")} required />
+            <InputText placeholder='Sua posição na empresa' type={'text'} label={"Posição"}  {...register("cargo")} required />
           </div>
 
           <NextStepButton title="Iniciar a pesquisa" />

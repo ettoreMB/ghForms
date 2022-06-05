@@ -165,8 +165,8 @@ export function Step4() {
 
   return (
     <>
-      <div className="max-w-screen-fit">
-        <form className="bigtable form-select max-w-fit " onSubmit={handleSubmit(onSubmit)}>
+      <div className="w-max  pt-20 sm:p-2 m-auto sm:m-0">
+        <form className="w-" onSubmit={handleSubmit(onSubmit)}>
           <h2 className="question">2.	Abaixo listamos alguns produtos, e gostaríamos de saber até que ponto você espera flutuações nas vendas:</h2>
 
           <table className="border border-slate-400" cellSpacing="0" cellPadding="0">
@@ -190,15 +190,15 @@ export function Step4() {
 
               {questions.map(row => (
                 <tr>
-                  <td className="border border-slate-300" key={row.title}>{row.title}</td>
-                  <td className="border border-slate-300">
+                  <td className="pt-1 border border-slate-300" key={row.title}>{row.title}</td>
+                  <td className="pt-1 border border-slate-300">
                     <div className="justify-center  flex">
                       <input type="checkbox" id="" {...register(`${row.options.q1}`)} />
                     </div>
                   </td>
-                  <td className="border border-slate-300"><InputText type="text"{...register(`${row.options.q2}`)} /></td>
-                  <td className="border border-slate-300"><InputText {...register(`${row.options.q3}`)} /></td>
-                  <td className="border border-slate-300"><InputText type="text"{...register(`${row.options.q4}`)} /></td>
+                  <td className="pt-1 border border-slate-300"><textarea {...register(`${row.options.q2}`)} /></td>
+                  <td className="pt-1 border border-slate-300"><textarea {...register(`${row.options.q3}`)} /></td>
+                  <td className="pt-1 border border-slate-300"><textarea {...register(`${row.options.q4}`)} /></td>
                 </tr>
               ))}
 

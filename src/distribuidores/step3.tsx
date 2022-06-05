@@ -21,41 +21,41 @@ export function Step3() {
     {
       title: 'QuadrilPelvisExtremidades',
       options: {
-        option1: 'Placas e Parafusos para quadril ou pélvis',
-        option2: 'Placas e Parafusos extremidades inferiores',
-        option3: 'Placas e Parafusos extremidades superiores',
+        option1: 'Placas e Parafusos para quadril ou pélvis - [LCP / DPS]',
+        option2: 'Placas e Parafusos extremidades inferiores - [Varix / Stryker]',
+        option3: 'Placas e Parafusos extremidades superiores - [Aptus / Medartis]',
       }
     },
     {
       title: 'OmbroQuadrilFêmurTibia',
       options: {
-        option1: "Pinos intramedulares acetabular",
-        option2: "Pinos intramedulares femoral",
-        option3: "Pinos intramedulares tibiais",
+        option1: "Pinos intramedulares acetabular - [Multilock / DPS]",
+        option2: "Pinos intramedulares femoral - [Gama / Stryker]",
+        option3: "Pinos intramedulares tibiais - [ZNN - Zimmer Bionet]",
       }
     },
     {
       title: 'OmbroQuadrilPélvisFêmurTíbiaExtremidades',
       options: {
-        option1: "Parafusos pequenos e canulados",
-        option2: "Parafusos grandes e canulados"
+        option1: "Parafusos pequenos e canulados - [Acutrack / Acumed]",
+        option2: "Parafusos grandes e canulados - [Acutrack / Acumed]",
       }
     },
     {
       title: 'OmbroFemurTíbiaAntebracomao',
       options: {
-        option1: "Pinos intramedulares femoral",
-        option2: "Fixação externa média",
-        option3: "Pequena fixação externa",
-        option4: "Mini fixação externa",
+        option1: "Pinos intramedulares femoral - [ProCallus / Orthofix]",
+        option2: "Fixação externa média - [ LRS / Orthofix]",
+        option3: "Pequena fixação externa - [LRS / Orthofix]",
+        option4: "Mini fixação externa - [LRS / Orthofix]"
       }
     }
   ]
   // questao1__grupo_1_optionNome
   return (
     <>
-      <div className="container">
-        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
+      <div className=" flex-wrap">
+        <form className="" onSubmit={handleSubmit(onSubmit)}>
           <h2 className="question">Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
           <div className="px-4">
             <div>
@@ -90,25 +90,19 @@ export function Step3() {
               <div>
                 <h2 className="question">Se possível pode dizer entre essas principais regiões:</h2>
                 <div className="flex flex-row my-10">
-                  <InputText label="São Paulo" type="number" placeholder="Quantidade"{...register("questao_1_pergunta_3_SP")} />
-                  <InputText label="Rio de Janeiro" type="number" placeholder="Quantidade"{...register("questao_1_pergunta_3_RJ")} />
-                  <InputText label="Minas Gerais" type="number" placeholder="Quantidade"{...register("questao_1_pergunta_3_MG")} />
-                  <InputText label="Recife" type="number" placeholder="Quantidade"{...register("questao_1_pergunta_3_RECIFE")} />
-                  <InputText label="Fortaleza" type="number" placeholder="Quantidade"{...register("questao_1_pergunta_3_FORTALEZA")} />
-                  <InputText label="Outros" type="number" placeholder="Quantidade"{...register("questao_1_pergunta_3_OUTROS")} />
+                  <InputText label="São Paulo" type="number" placeholder="Qtd"{...register("questao_1_pergunta_3_SP")} />
+                  <InputText label="Rio de Janeiro" type="number" placeholder="Qtd"{...register("questao_1_pergunta_3_RJ")} />
+                  <InputText label="Minas Gerais" type="number" placeholder="Qtd"{...register("questao_1_pergunta_3_MG")} />
+                  <InputText label="Recife" type="number" placeholder="Qtd"{...register("questao_1_pergunta_3_RECIFE")} />
+                  <InputText label="Fortaleza" type="number" placeholder="Qtd"{...register("questao_1_pergunta_3_FORTALEZA")} />
+                  <InputText label="Outros" type="number" placeholder="Qtd"{...register("questao_1_pergunta_3_OUTROS")} />
                 </div>
               </div>
               <div>
                 <h2 className="question">Poderia dividir o volume das vendas entre privado e púbico, de preferência um valor em %:</h2>
                 <div className="flex flex-row w-6/12 justify-between">
-                  <div className="flex flex-row px-2 mx-2 border-b border-teal-500 mb-2  w-40">
-                    <label className="mr-4" htmlFor="">Publico</label>
-                    <input placeholder="%" type="number" className="w-14"{...register("questao_1_pergunta_4_qtd_publico")} />
-                  </div>
-                  <div className="flex flex-row px-2 mx-2 border-b border-teal-500 mb-2 w-40 ">
-                    <label className="mr-4">Privado</label>
-                    <input placeholder="%" prefix="%" type="number" className="w-14" {...register("questao_1_pergunta_4_qtd_privado")} />
-                  </div>
+                  <InputText label="Publico" placeholder="%" type="number" {...register("questao_1_pergunta_4_qtd_publico")} />
+                  <InputText label='Privado' placeholder="%" type="number"  {...register("questao_1_pergunta_4_qtd_privado")} />
                 </div>
               </div>
             </div>
