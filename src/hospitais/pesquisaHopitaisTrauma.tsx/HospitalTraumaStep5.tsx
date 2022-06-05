@@ -7,6 +7,26 @@ import { InputText } from "../../components/formComponents/inputText";
 import { NextStepButton } from "../../components/nextStepButton";
 import { transformTitleToKeyName } from "../../utils/transformTitleToKeyName";
 
+
+const products = [
+  'Placas para quadril ou pélvis',
+  'Placas extremidades inferiores',
+  'Placas extremidades superiores',
+  'Parafusos para quadril ou pélvis',
+  'Parafusos extremidades inferiores',
+  'Parafusos extremidades superiores',
+  'Pinos intramedulares umeral',
+  'Pinos intramedulares acetabulares',
+  'Pino intramedular femoral',
+  'Pinos intramedulares tibiais',
+  'Parafusos pequenos e cânulados',
+  'Parafusos grandes e canulados',
+  'Grandes Fixações Externas',
+  'Fixações externas médias',
+  'Pequenas Fixações Externas',
+  'Mini Fixações Externas',
+]
+
 export default function HospitalTraumaStep5() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
@@ -14,28 +34,8 @@ export default function HospitalTraumaStep5() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/medicos_trauma/step6");
+    navigate("/hospital_trauma/step6");
   }
-
-  const products = [
-    'Placas para quadril ou pélvis',
-    'Placas extremidades inferiores',
-    'Placas extremidades superiores',
-    'Parafusos para quadril ou pélvis',
-    'Parafusos extremidades inferiores',
-    'Parafusos extremidades superiores',
-    'Pinos intramedulares umeral',
-    'Pinos intramedulares acetabulares',
-    'Pino intramedular femoral',
-    'Pinos intramedulares tibiais',
-    'Parafusos pequenos e cânulados',
-    'Parafusos grandes e canulados',
-    'Grandes Fixações Externas',
-    'Fixações externas médias',
-    'Pequenas Fixações Externas',
-    'Mini Fixações Externas',
-  ]
-
 
   return (
     <>
@@ -73,10 +73,8 @@ export default function HospitalTraumaStep5() {
                   <td className=" border border-slate-300"><textarea {...register(`questao_5_${transformTitleToKeyName(product)}_2`)} /></td>
                   <td className=" border border-slate-300"><textarea {...register(`questao_5_${transformTitleToKeyName(product)}_3`)} /></td>
                   <td className=" border border-slate-300"><textarea {...register(`questao_5_${transformTitleToKeyName(product)}_4`)} /></td>
-
                 </tr>
               ))}
-
 
             </tbody>
           </table>

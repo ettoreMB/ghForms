@@ -7,6 +7,25 @@ import { InputText } from "../../components/formComponents/inputText";
 import { NextStepButton } from "../../components/nextStepButton";
 import { transformTitleToKeyName } from "../../utils/transformTitleToKeyName";
 
+const produtos_tipos = [
+  "Placas para quadril ou pélvis",
+  "Placas extremidades inferiores",
+  "Placas extremidades superiores",
+  "Parafusos para quadril ou pélvis",
+  "Parafusos extremidades inferiores",
+  "Parafusos extremidades superiores",
+  "Pinos intramedulares umeral",
+  "Pinos intramedulares acetabulares",
+  "Pino intramedular femoral",
+  "Pinos intramedulares tibiais",
+  "parafusos pequenos e cânulados",
+  "Parafusos grandes e canulados",
+  "Grande fixação externa",
+  "Fixação externa média",
+  "Pequena fixação externa",
+  "Mini fixação externa",
+]
+
 export default function HospitalTraumaStep8() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
@@ -14,26 +33,8 @@ export default function HospitalTraumaStep8() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/medicos_trauma/step9");
+    navigate("/hospital_trauma/step9");
   }
-  const produtos_tipos = [
-    "Placas para quadril ou pélvis",
-    "Placas extremidades inferiores",
-    "Placas extremidades superiores",
-    "Parafusos para quadril ou pélvis",
-    "Parafusos extremidades inferiores",
-    "Parafusos extremidades superiores",
-    "Pinos intramedulares umeral",
-    "Pinos intramedulares acetabulares",
-    "Pino intramedular femoral",
-    "Pinos intramedulares tibiais",
-    "parafusos pequenos e cânulados",
-    "Parafusos grandes e canulados",
-    "Grande fixação externa",
-    "Fixação externa média",
-    "Pequena fixação externa",
-    "Mini fixação externa",
-  ]
 
   return (
     <>

@@ -13,7 +13,7 @@ export default function HospitalTraumaStep9() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/medicos_trauma/step10");
+    navigate("/hospital_trauma/stepFinal");
   }
 
   return (
@@ -28,8 +28,6 @@ export default function HospitalTraumaStep9() {
               <InputText type={'text'} label="Coberto por seguro médico privado(%)" />
             </div>
           </div>
-
-
 
           <NextStepButton step={7} totalSteps={9} />
         </form>

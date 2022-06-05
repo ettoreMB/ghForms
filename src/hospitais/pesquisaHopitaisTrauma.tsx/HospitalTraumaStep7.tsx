@@ -12,7 +12,7 @@ export default function HospitalTraumaStep7() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/medicos_trauma/step8");
+    navigate("/hospital_trauma/step8");
   }
 
   return (

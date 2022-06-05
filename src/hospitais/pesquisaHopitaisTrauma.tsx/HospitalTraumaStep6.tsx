@@ -3,9 +3,27 @@ import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
 import { updateAction } from "../../utils/updateAction";
 
-import { InputText } from "../../components/formComponents/inputText";
 import { NextStepButton } from "../../components/nextStepButton";
 import { transformTitleToKeyName } from "../../utils/transformTitleToKeyName";
+
+const products = [
+  'Placas para quadril ou pélvis',
+  'Placas extremidades inferiores',
+  'Placas extremidades superiores',
+  'Parafusos para quadril ou pélvis',
+  'Parafusos extremidades inferiores',
+  'Parafusos extremidades superiores',
+  'Pinos intramedulares umeral',
+  'Pinos intramedulares acetabulares',
+  'Pino intramedular femoral',
+  'Pinos intramedulares tibiais',
+  'Parafusos pequenos e cânulados',
+  'Parafusos grandes e canulados',
+  'Grandes Fixações Externas',
+  'Fixações externas médias',
+  'Pequenas Fixações Externas',
+  'Mini Fixações Externas',
+]
 
 export default function HospitalTraumaStep6() {
   const navigate = useNavigate();
@@ -14,28 +32,8 @@ export default function HospitalTraumaStep6() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/medicos_trauma/step6");
+    navigate("/hospital_trauma/step6");
   }
-
-  const products = [
-    'Placas para quadril ou pélvis',
-    'Placas extremidades inferiores',
-    'Placas extremidades superiores',
-    'Parafusos para quadril ou pélvis',
-    'Parafusos extremidades inferiores',
-    'Parafusos extremidades superiores',
-    'Pinos intramedulares umeral',
-    'Pinos intramedulares acetabulares',
-    'Pino intramedular femoral',
-    'Pinos intramedulares tibiais',
-    'Parafusos pequenos e cânulados',
-    'Parafusos grandes e canulados',
-    'Grandes Fixações Externas',
-    'Fixações externas médias',
-    'Pequenas Fixações Externas',
-    'Mini Fixações Externas',
-  ]
-
 
   return (
     <>
