@@ -10,7 +10,7 @@ import { api } from "../lib/api";
 export function Step1(props: any) {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const { actions, state } = useStateMachine({ updateAction });
+  const { actions } = useStateMachine({ updateAction });
 
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
@@ -20,7 +20,7 @@ export function Step1(props: any) {
   return (
     <>
       <div className="pt-20 sm:p-2 m-auto sm:m-0 break-all">
-        <form className=" " onSubmit={handleSubmit(onSubmit)}>
+        {/* <form className=" " onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6">
             <InputText placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
             <div className="flex flex-row flex-wrap">
@@ -32,7 +32,8 @@ export function Step1(props: any) {
           </div>
 
           <NextStepButton title="Iniciar a pesquisa" />
-        </form>
+        </form> */}
+        Estamos fazendo uma pequena alteração no site, em breve retornaremos.
       </div>
     </>
   )
