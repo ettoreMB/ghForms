@@ -47,11 +47,10 @@ export default function HospitalTraumaStep3() {
   const { actions } = useStateMachine({ updateAction });
 
   const onSubmit = (data: any) => {
-    // actions.updateAction(data);
+    actions.updateAction(data);
     console.log(data)
-    // navigate("/hospital_trauma/step4");
+    navigate("/hospital_trauma/step4");
   }
-
 
   return (
     <>

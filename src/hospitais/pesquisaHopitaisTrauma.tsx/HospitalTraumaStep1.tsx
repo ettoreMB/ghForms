@@ -14,7 +14,7 @@ export default function HospitalTraumaStep1() {
 
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
-    // await api.post('/contact', data)
+    await api.post('/contact', data)
     navigate("/hospital_trauma/step2");
   }
   return (

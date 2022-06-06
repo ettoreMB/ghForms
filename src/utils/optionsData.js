@@ -1,4 +1,4 @@
-export const questions = [
+const questions = [
   {
     title: 'Quadril Pelvis Extremidades',
     options: [
