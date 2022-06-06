@@ -149,7 +149,7 @@ export default function HospitalTraumaStepFinal() {
                     <button
                       type="button"
                       className="w-full mt-10 bg-teal-300 text-white p-4 rounded-lg text-center font-bold flex items-center justify-center"
-                      onClick={() => navigate('/medicos_trauma')}
+                      onClick={() => navigate('/hospital_trauma')}
                     >
                       Finalizar Pesquisa
                     </button>
