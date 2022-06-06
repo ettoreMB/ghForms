@@ -21,7 +21,7 @@ export function Step1(props: any) {
     <>
       <div className="container">
         <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
-          {/* <div className="mb-6 w-full">
+          <div className="mb-6 w-full">
             <InputText placeholder='Nome Completo' label={"Nome"}   {...register("nome")} required />
             <div className="flex flex-row flex-wrap">
               <InputText placeholder='Seu melhor email' label={"Email"}  {...register("email")} required />
@@ -31,8 +31,8 @@ export function Step1(props: any) {
             <InputText placeholder='Sua posição na empresa' label={"Posição"}  {...register("cargo")} required />
           </div>
 
-          <NextStepButton /> */}
-          <h2>Estamos Fazendo um pequeno ajuste!! Por favor Tente Responder sua pesquisa mais tarde</h2>
+          <NextStepButton />
+
         </form>
       </div>
     </>
