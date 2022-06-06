@@ -13,8 +13,7 @@ export function Step3() {
 
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
-    // navigate("/step4");
-    console.log(data)
+    navigate("/step4");
 
   }
 
@@ -22,33 +21,33 @@ export function Step3() {
     {
       title: 'QuadrilPelvisExtremidades',
       options: {
-        option1: 'Placas e Parafusos para quadril ou pélvis - (LCP / DPS)',
-        option2: 'Placas e Parafusos extremidades inferiores - (Varix / Stryker)',
-        option3: 'Placas e Parafusos extremidades superiores - (Aptus / Medartis)',
+        option1: 'Placas e Parafusos para quadril ou pélvis',
+        option2: 'Placas e Parafusos extremidades inferiores',
+        option3: 'Placas e Parafusos extremidades superiores',
       }
     },
     {
       title: 'OmbroQuadrilFêmurTibia',
       options: {
-        option1: "Pinos intramedulares acetabular - (Multilock / DPS)",
-        option2: "Pinos intramedulares femoral - (Gama / Stryker)",
-        option3: "Pinos intramedulares tibiais - (ZNN - Zimmer Bionet)",
+        option1: "Pinos intramedulares acetabular",
+        option2: "Pinos intramedulares femoral",
+        option3: "Pinos intramedulares tibiais",
       }
     },
     {
       title: 'OmbroQuadrilPélvisFêmurTíbiaExtremidades',
       options: {
-        option1: "Parafusos pequenos e canulados - (Acutrack / Acumed)",
-        option2: "Parafusos grandes e canulados - (Acutrack / Acumed)",
+        option1: "Parafusos pequenos e canulados",
+        option2: "Parafusos grandes e canulados",
       }
     },
     {
       title: 'OmbroFemurTíbiaAntebracomao',
       options: {
-        option1: "Pinos intramedulares femoral - (ProCallus / Orthofix)",
-        option2: "Fixação externa média - (LRS / Orthofix)",
-        option3: "Pequena fixação externa - (LRS / Orthofix)",
-        option4: "Mini fixação externa - (LRS / Orthofix)"
+        option1: "Pinos intramedulares femoral",
+        option2: "Fixação externa média",
+        option3: "Pequena fixação externa",
+        option4: "Mini fixação externa"
       }
     }
   ]

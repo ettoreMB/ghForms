@@ -8,7 +8,7 @@ import { transformTitleToKeyName } from "../../utils/transformTitleToKeyName";
 
 const questions = [
   {
-    title: 'QuadrilPelvisExtremidades',
+    title: 'Quadril Pelvis Extremidades',
     options: [
       'Placas e Parafusos para quadril ou pélvis - (LCP / DPS)',
       'Placas e Parafusos extremidades inferiores - (Varix / Stryker)',
@@ -16,7 +16,7 @@ const questions = [
     ]
   },
   {
-    title: 'OmbroQuadrilFêmurTibia',
+    title: 'Ombro Quadril FêmurTibia',
     options: [
       "Pinos intramedulares acetabular - (Multilock / DPS)",
       "Pinos intramedulares femoral - (Gama / Stryker)",
@@ -24,14 +24,14 @@ const questions = [
     ]
   },
   {
-    title: 'OmbroQuadrilPélvisFêmurTíbiaExtremidades',
+    title: 'Ombro Quadril Pélvis Fêmur Tíbia Extremidades',
     options: [
       "Parafusos pequenos e canulados - (Acutrack / Acumed)",
       "Parafusos grandes e canulados - (Acutrack / Acumed)",
     ]
   },
   {
-    title: 'OmbroFemurTíbiaAntebracomao',
+    title: 'Ombro Femur Tíbia Antebraço mão',
     options: [
       "Pinos intramedulares femoral - (ProCallus / Orthofix)",
       "Fixação externa média - (LRS / Orthofix)",
