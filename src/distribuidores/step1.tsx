@@ -21,7 +21,7 @@ export function Step1(props: any) {
     <>
       <div className="pt-20 sm:p-2 m-auto sm:m-0 break-all">
         <form className=" " onSubmit={handleSubmit(onSubmit)}>
-          <div className="mb-6">
+          {/* <div className="mb-6">
             <InputText placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
             <div className="flex flex-row flex-wrap">
               <InputText placeholder='Seu melhor email' type={'text'} label={"Email"}  {...register("email")} required />
@@ -31,7 +31,7 @@ export function Step1(props: any) {
             <InputText placeholder='Sua posição na empresa' type={'text'} label={"Posição"}  {...register("cargo")} required />
           </div>
 
-          <NextStepButton title="Iniciar a pesquisa" />
+          <NextStepButton title="Iniciar a pesquisa" /> */}
           <h2>Estamos atualizando o sistema, tente mais tarde por favor</h2>
         </form>
 
