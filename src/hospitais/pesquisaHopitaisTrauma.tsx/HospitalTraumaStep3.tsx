@@ -10,33 +10,33 @@ const questions = [
   {
     title: 'Quadril Pelvis Extremidades',
     options: [
-      'Placas e Parafusos para quadril ou pélvis - (LCP / DPS)',
-      'Placas e Parafusos extremidades inferiores - (Varix / Stryker)',
-      'Placas e Parafusos extremidades superiores - (Aptus / Medartis)',
+      'Placas e Parafusos para quadril ou pélvis',
+      'Placas e Parafusos extremidades inferiores',
+      'Placas e Parafusos extremidades superiores',
     ]
   },
   {
     title: 'Ombro Quadril FêmurTibia',
     options: [
-      "Pinos intramedulares acetabular - (Multilock / DPS)",
-      "Pinos intramedulares femoral - (Gama / Stryker)",
-      "Pinos intramedulares tibiais - (ZNN - Zimmer Bionet)",
+      "Pinos intramedulares acetabular",
+      "Pinos intramedulares femoral",
+      "Pinos intramedulares tibiais",
     ]
   },
   {
     title: 'Ombro Quadril Pélvis Fêmur Tíbia Extremidades',
     options: [
-      "Parafusos pequenos e canulados - (Acutrack / Acumed)",
-      "Parafusos grandes e canulados - (Acutrack / Acumed)",
+      "Parafusos pequenos e canulados",
+      "Parafusos grandes e canulados",
     ]
   },
   {
     title: 'Ombro Femur Tíbia Antebraço mão',
     options: [
-      "Pinos intramedulares femoral - (ProCallus / Orthofix)",
-      "Fixação externa média - (LRS / Orthofix)",
-      "Pequena fixação externa - (LRS / Orthofix)",
-      "Mini fixação externa - (LRS / Orthofix)"
+      "Pinos intramedulares femoral",
+      "Fixação externa média",
+      "Pequena fixação externa",
+      "Mini fixação externa"
     ]
   }
 ]
