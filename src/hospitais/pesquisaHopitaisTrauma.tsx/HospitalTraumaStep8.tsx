@@ -83,7 +83,7 @@ export default function HospitalTraumaStep8() {
               ))}
             </tbody>
           </table>
-          <NextStepButton step={6} totalSteps={9} />
+          <NextStepButton step={6} totalSteps={8} />
         </form>
       </div >
     </>

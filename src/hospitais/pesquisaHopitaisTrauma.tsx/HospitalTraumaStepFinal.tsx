@@ -64,14 +64,14 @@ export default function HospitalTraumaStepFinal() {
 
           <div className="mb-6">
             <h2 className="question">13 Quais distribuidores ou marcas se aproximaram do seu hospital para esses tipos de produtos?</h2>
-            <textarea {...register("questao_11")} />
+            <textarea {...register("questao_13")} />
             <div className="pl-4">
               <h3>. Qual é o processo de vendas para as principais marcas que você compra sobre os produtos abaixo? (por exemplo, vendas diretas? Via distribuidores, etc.)?</h3>
               <div className="ml-4">
-                <InputText type={'text'} label="Placa e Parafusos" />
-                <InputText type={'text'} label="Unhas" />
-                <InputText type={'text'} label="Parafusos e cânulados" />
-                <InputText type={'text'} label="Fixações Externas" />
+                <InputText type={'text'} label="Placa e Parafusos" {...register("questao_13_1")} />
+                <InputText type={'text'} label="Unhas" {...register("questao_13_2")} />
+                <InputText type={'text'} label="Parafusos e cânulados" {...register("questao_13_3")} />
+                <InputText type={'text'} label="Fixações Externas" {...register("questao_13_4")} />
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function HospitalTraumaStepFinal() {
             <textarea {...register("cometario")} />
           </div>
 
-          <NextStepButton step={8} totalSteps={9} />
+          <NextStepButton title="Finalizar Pesqusia" />
         </form>
       </div >
 

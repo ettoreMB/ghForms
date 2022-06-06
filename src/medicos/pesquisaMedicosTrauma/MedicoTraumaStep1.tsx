@@ -20,7 +20,7 @@ export default function MedicoTraumaStep1() {
   return (
     <>
       <div className="container">
-        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
+        {/* <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6 w-full">
             <InputText placeholder='Nome Completo' label={"Nome"}   {...register("nome")} required />
             <div className="flex flex-row flex-wrap">
@@ -32,7 +32,8 @@ export default function MedicoTraumaStep1() {
           </div>
 
           <NextStepButton />
-        </form>
+        </form> */}
+        Estamos fazendo uma pequena alteração no site, em breve retornaremos.
       </div>
     </>
   )

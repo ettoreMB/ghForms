@@ -23,13 +23,13 @@ export default function HospitalTraumaStep9() {
           <div>
             <h2 className="question">10 Como os pacientes de trauma normalmente pagam por seus procedimentos?</h2>
             <div className="ml-2 flex flex-row">
-              <InputText type={'text'} label="Particular(%)" />
-              <InputText type={'text'} label="Coberto pelo SUS(%)" />
-              <InputText type={'text'} label="Coberto por seguro médico privado(%)" />
+              <InputText type={'text'} label="Particular(%)" {...register('questao_10_particular')} />
+              <InputText type={'text'} label="Coberto pelo SUS(%)" {...register('questao_10_sus')} />
+              <InputText type={'text'} label="Coberto por seguro médico privado(%)" {...register('questao_10_seguro_privado')} />
             </div>
           </div>
 
-          <NextStepButton step={7} totalSteps={9} />
+          <NextStepButton step={7} totalSteps={8} />
         </form>
       </div >
     </>

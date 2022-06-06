@@ -32,12 +32,12 @@ export default function HospitalTraumaStep6() {
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
-    navigate("/hospital_trauma/step6");
+    navigate("/hospital_trauma/step7");
   }
 
   return (
     <>
-      <div className="w-max  pt-20 sm:p-2 m-auto sm:m-0 " >
+      <div className="pt-20 sm:p-2 m-auto sm:m-0 break-all" >
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="question">6. Quais produtos e marcas você usa atualmente para procedimentos de Trauma?</h2>
           <div className="mr-4">
@@ -69,7 +69,7 @@ export default function HospitalTraumaStep6() {
 
             </tbody>
           </table>
-          <NextStepButton step={2} totalSteps={7} />
+          <NextStepButton step={4} totalSteps={8} />
         </form>
       </div>
     </>

@@ -37,11 +37,11 @@ export default function HospitalTraumaStep7() {
               </div>
               <div>
                 <h3>por quê?</h3>
-                <textarea  {...register("questao_9_3")} />
+                <textarea  {...register("questao_8_3")} />
               </div>
             </div>
           </div>
-          <NextStepButton step={5} totalSteps={9} />
+          <NextStepButton step={5} totalSteps={8} />
         </form>
       </div >
     </>

@@ -58,7 +58,7 @@ export default function HospitalTraumaStep4() {
             <textarea {...register('questao_4')}></textarea>
           </div>
 
-          <NextStepButton step={2} totalSteps={7} />
+          <NextStepButton step={2} totalSteps={8} />
         </form>
       </div>
     </>

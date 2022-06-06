@@ -3,15 +3,13 @@ import { NextStepButton } from "../components/nextStepButton";
 
 export function Step2() {
   const navigate = useNavigate();
-
-
   return (
     <div className="w-full pt-24 md:pt-24 sm:p-2 m-auto sm:m-0">
       <form className="form-select max-w-screen-xl" onSubmit={() => { navigate("/step3") }}>
         <div>
-          <h2 className='text-center font-bold mb-2'>Introduçao</h2>
-          <h2 className="question tex-center  sm:p-0" >
-            Estamos realizando um estudo para uma empresa de dispositivos médicos em vários países da América Latina para entender melhor as atuais oportunidades de mercado para dispositivos cirúrgicos em procedimentos de Trauma.  Como um líder de pensamento reconhecido no campo, gostaríamos de discutir alguns pontos de interesse. Todas as informações são mantidas confidenciais e não atribuídas – serão usadas apenas de forma agregada e anonimizada.
+          <h1 className="text-center text-2xl font-bold tex-center">Introdução</h1>
+          <h2 className="question tex-center p-10" >
+            Estamos realizando um estudo para uma empresa de dispositivos médicos em vários países da América Latina para entender melhor as atuais oportunidades de mercado para dispositivos cirúrgicos em procedimentos de Trauma. Como um praticante reconhecido e líder de pensamento no campo, gostaríamos de discutir alguns pontos de interesse. Todas as informações são mantidas confidenciais e não atribuídas – serão usadas apenas de forma agregada e anonimizada.
           </h2>
           <h2 className='text-gray-500'>
             Tempo estimado para relização da pesquisa: 15 min
