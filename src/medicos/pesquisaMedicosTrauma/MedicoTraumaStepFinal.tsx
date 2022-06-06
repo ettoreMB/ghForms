@@ -26,8 +26,7 @@ export default function StepFinal() {
 
 
   const onSubmit = async (data: any) => {
-    actions.updateAction(data);
-    console.log(state)
+    actions.updateAction(data);)
     await api.post('/results_pesquisa_medicos_trauma', state)
     openModal()
   }
