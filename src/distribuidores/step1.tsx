@@ -32,6 +32,7 @@ export function Step1(props: any) {
           </div>
 
           <NextStepButton title="Iniciar a pesquisa" />
+          <h2>Estamos atualizando o sistema, tente mais tarde por favor</h2>
         </form>
 
       </div>
