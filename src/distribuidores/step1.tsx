@@ -20,7 +20,7 @@ export function Step1(props: any) {
   return (
     <>
       <div className="pt-20 sm:p-2 m-auto sm:m-0 break-all">
-        <form className=" " onSubmit={handleSubmit(onSubmit)}>
+        {/* <form className=" " onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6">
             <InputText placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
             <div className="flex flex-row flex-wrap">
@@ -32,8 +32,8 @@ export function Step1(props: any) {
           </div>
 
           <NextStepButton title="Iniciar a pesquisa" />
-        </form>
-
+        </form> */}
+        <h2>Estamos atualizando o sistema em breve voltaremos </h2>
       </div>
     </>
   )

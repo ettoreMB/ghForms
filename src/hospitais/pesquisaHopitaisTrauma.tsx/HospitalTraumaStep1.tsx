@@ -20,7 +20,7 @@ export default function HospitalTraumaStep1() {
   return (
     <>
       <div className="pt-20 sm:p-2 m-auto sm:m-0 break-all">
-        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
+        {/* <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6 w-full">
             <InputText placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
             <div className="flex flex-row flex-wrap">
@@ -31,8 +31,9 @@ export default function HospitalTraumaStep1() {
             <InputText placeholder='Sua posição na empresa' type={'text'} label={"Posição"}  {...register("cargo")} required />
           </div>
 
-          <NextStepButton />
-        </form>
+          <NextStepButton /> */}
+        <h2>Estamos atualizando o sistema em breve voltaremos </h2>
+        {/* </form> */}
       </div>
     </>
   )
