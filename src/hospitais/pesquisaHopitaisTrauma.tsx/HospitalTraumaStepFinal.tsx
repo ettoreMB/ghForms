@@ -34,7 +34,7 @@ export default function HospitalTraumaStepFinal() {
   return (
     <>
       <div className="container">
-        <form className="form-select w-fit" onSubmit={handleSubmit(onSubmit)}>
+        <form className="w-max" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6">
             <h2>11 Quais tendências você prevê ver a compra/venda desses produtos relacionados ao trauma I sua instalação nos próximos 5 anos?</h2>
             <textarea {...register("questao_11")} />

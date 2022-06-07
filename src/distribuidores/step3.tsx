@@ -57,7 +57,7 @@ export function Step3() {
       <div className="container">
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2>Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
-          <div className="px-4">
+          <div className="">
             <div>
 
               <div className="mb-10 mt-2 mx-4">
@@ -79,9 +79,6 @@ export function Step3() {
                 ))}
               </div>
             </div>
-
-
-
             <div>
               <div className="mb-10">
                 <h2 className="">Em média, para quantos hospitais você vende em relação aos produtos mencionados acima?</h2>
@@ -100,7 +97,7 @@ export function Step3() {
               </div>
               <div>
                 <h2 className="">Poderia dividir o volume das vendas entre privado e púbico, de preferência um valor em %:</h2>
-                <div className="flex flex-col w-6/12 justify-between sm:flex-row">
+                <div className="flex flex-col  justify-between sm:flex-row">
                   <InputText label="Publico" placeholder="%" type="number" {...register("questao_1_pergunta_4_qtd_publico")} />
                   <InputText label='Privado' placeholder="%" type="number"  {...register("questao_1_pergunta_4_qtd_privado")} />
                 </div>

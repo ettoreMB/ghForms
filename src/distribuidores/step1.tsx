@@ -20,7 +20,7 @@ export function Step1(props: any) {
   return (
     <>
       <div className="container">
-        <form className=" " onSubmit={handleSubmit(onSubmit)}>
+        <form className="w-max" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6">
             <InputText placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
             <div className="flex flex-col  sm:flex-row">
