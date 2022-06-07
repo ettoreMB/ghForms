@@ -177,7 +177,7 @@ export function Step4() {
                 <th colSpan={3} rowSpan={1} >Para produtos selecionados</th>
               </tr>
               <tr>
-                <th colSpan={1} rowSpan={3} >qual é o crescimento /diminuição esperado nos próximos 1-5 anos (%)</th>
+                <th colSpan={1} rowSpan={3} className="w-64 break-normal">qual é o crescimento /diminuição esperado nos próximos 1-5 anos (%)</th>
                 <th colSpan={2} rowSpan={1}>O custo oscilou nos últimos 6 meses?</th>
               </tr>
               <tr>
