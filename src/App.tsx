@@ -46,7 +46,6 @@ function App() {
         <Route path="/step7" element={<Step7 />} />
         <Route path="/step8" element={<Step8 />} />
         <Route path="/step9" element={<Step9 />} />
-        <Route path="/results" element={<Result />} />
         {/* Medicos Rotues */}
         <Route path="/medicos_trauma" element={<MedicoTraumaStep1 />} />
         <Route path="/medicos_trauma/step2" element={<MedicoTraumaStep2 />} />
