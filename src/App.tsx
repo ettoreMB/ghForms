@@ -19,7 +19,6 @@ import MedicoTraumaStep7 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep7
 import MedicoTraumaStep8 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep8';
 import MedicoTraumaStep9 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep9';
 import MedicoTraumaStep10 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep10';
-import MedicoTraumaStep11 from './medicos/pesquisaMedicosTrauma/MedicoTraumaStep11';
 import MedicoTraumaStepFinal from './medicos/pesquisaMedicosTrauma/MedicoTraumaStepFinal';
 
 import HospitalTraumaStep1 from "./hospitais/pesquisaHopitaisTrauma.tsx/HospitalTraumaStep1";
@@ -57,7 +56,6 @@ function App() {
         <Route path="/medicos_trauma/step8" element={<MedicoTraumaStep8 />} />
         <Route path="/medicos_trauma/step9" element={<MedicoTraumaStep9 />} />
         <Route path="/medicos_trauma/step10" element={<MedicoTraumaStep10 />} />
-        <Route path="/medicos_trauma/step11" element={<MedicoTraumaStep11 />} />
         <Route path="/medicos_trauma/stepFinal" element={<MedicoTraumaStepFinal />} />
         {/* Hospital Routes */}
         <Route path="/hospital_trauma/" element={<HospitalTraumaStep1 />} />

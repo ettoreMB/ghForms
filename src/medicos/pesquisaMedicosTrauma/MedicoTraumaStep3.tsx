@@ -1,15 +1,15 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
-import { updateAction } from "../../utils/updateAction";
 
+import { updateAction } from "../../utils/updateAction";
 import { NextStepButton } from "../../components/nextStepButton";
 import { transformTitleToKeyName } from "../../utils/transformTitleToKeyName";
 
 export default function step3() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const { actions, state } = useStateMachine({ updateAction });
+  const { actions } = useStateMachine({ updateAction });
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
@@ -176,25 +176,25 @@ export default function step3() {
   return (
     <>
       <div className="container">
-        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <h2>1. Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
 
-          <table className="border border-slate-400" cellSpacing="0" cellPadding="0">
+          <table cellSpacing="0" cellPadding="0">
             <thead>
               <tr>
-                <th rowSpan={3} colSpan={1} className="border-slate-300">Procedimentos</th>
-                <th rowSpan={3} colSpan={1} className="border-slate-300">Produtos Utilizados</th>
+                <th rowSpan={3} colSpan={1} >Procedimentos</th>
+                <th rowSpan={3} colSpan={1}>Produtos Utilizados</th>
               </tr>
             </thead>
             <tbody>
 
               {questions.map(row => (
                 <tr key={row.title}>
-                  <td className="border-slate-300" >
-                    <input className="mx-2" type="checkbox" {...register(`questao_1_${transformTitleToKeyName(row.title)}`)} />
+                  <td  >
+                    <input className="mx-2 sm:text-sm" type="checkbox" {...register(`questao_1_${transformTitleToKeyName(row.title)}`)} />
                     {row.title}
                   </td>
-                  <td className="border-slate-300">
+                  <td >
                     {row.products.map(product => (
                       <span className=" p-1 flex flex-row border-b" key={product}>{product}</span>
                     ))}
@@ -205,7 +205,7 @@ export default function step3() {
 
             </tbody>
           </table>
-          <NextStepButton step={1} totalSteps={9} />
+          <NextStepButton step={1} totalSteps={8} />
         </form>
       </div>
     </>

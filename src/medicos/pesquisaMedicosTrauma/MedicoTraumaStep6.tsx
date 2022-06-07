@@ -1,15 +1,15 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
-import { updateAction } from "../../utils/updateAction";
 
+import { updateAction } from "../../utils/updateAction";
 import { NextStepButton } from "../../components/nextStepButton";
 import { transformTitleToKeyName } from "../../utils/transformTitleToKeyName";
 
 export default function Step6() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const { actions, state } = useStateMachine({ updateAction });
+  const { actions } = useStateMachine({ updateAction });
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
@@ -176,39 +176,37 @@ export default function Step6() {
   return (
     <>
       <div className="container">
-        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
+        <form className="w-max" onSubmit={handleSubmit(onSubmit)}>
           <h2>7. Quais produtos e marcas você usa atualmente para procedimentos de Trauma?</h2>
 
-          <table className="border border-slate-400" cellSpacing="0" cellPadding="0">
+          <table cellSpacing="0" cellPadding="0">
             <thead>
               <tr>
-                <th rowSpan={3} colSpan={1} className="border border-slate-300">Procedimentos</th>
-                <th rowSpan={3} colSpan={1} className="border-slate-300">Produtos Utilizados</th>
-                <th rowSpan={3} colSpan={1} className="border-slate-300">Marcas disponíveis para uso em sua instalação</th>
-                <th rowSpan={3} colSpan={1} className="w-96 border-slate-300">Marca preferida? Por que?</th>
+                <th rowSpan={3} colSpan={1}>Procedimentos</th>
+                <th rowSpan={3} colSpan={1} >Produtos Utilizados</th>
+                <th rowSpan={3} colSpan={1} >Marcas disponíveis para uso em sua instalação</th>
+                <th rowSpan={3} colSpan={1} className="">Marca preferida? Por que?</th>
               </tr>
             </thead>
             <tbody>
-
               {questions.map(row => (
                 <tr key={row.title}>
-                  <td className="border-slate-300 text-center" >
+                  <td className="text-center" >
                     <input className="mx-2" type="checkbox" {...register(`questao_7_${transformTitleToKeyName(row.title)}`)} />
                     {row.title}
                   </td>
-                  <td className="border-slate-300">
+                  <td className="">
                     {row.products.map(product => (
-                      <span className=" p-2 flex flex-row border-b" key={product}>{product}</span>
+                      <span className="p-2 flex flex-row " key={product}>{product}</span>
                     ))}
                   </td>
-                  <td className="p-3" ><textarea placeholder="Resposta" {...register(`questao_7_${transformTitleToKeyName(row.title)}_1`)} ></textarea></td>
-                  <td className="p-3" ><textarea placeholder="Resposta" {...register(`questao_7_${transformTitleToKeyName(row.title)}_2`)} ></textarea></td>
+                  <td><textarea placeholder="Resposta" {...register(`questao_7_${transformTitleToKeyName(row.title)}_1`)} ></textarea></td>
+                  <td><textarea placeholder="Resposta" {...register(`questao_7_${transformTitleToKeyName(row.title)}_2`)} ></textarea></td>
                 </tr>
               ))}
-
             </tbody>
           </table>
-          <NextStepButton step={4} totalSteps={9} />
+          <NextStepButton step={4} totalSteps={8} />
         </form>
       </div>
     </>

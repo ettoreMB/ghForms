@@ -9,7 +9,7 @@
   }
 
   h2 {
-    @apply text-gray-700 font-bold mb-4 text-lg;
+    @apply text-gray-700 font-bold mb-4 text-lg break-normal;
   }
   h3 {
     @apply text-gray-700 font-bold mb-4 text-lg font-semibold;

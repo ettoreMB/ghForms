@@ -48,9 +48,9 @@ export default function Step4() {
               <h2>5.	Como você avaliaria os volumes de procedimentos esperados em 2022 em relação aos níveis de 2019 (pré-COVID)?</h2>
               <InputText placeholder="Resposta" type="text" {...register('questao_5')} />
               <div className="pl-6">
-                <div className="pl-4">
+                <div>
                   <h3>. Se menor do que os níveis pré-COVID</h3>
-                  <div className="flex flex-row w-4/12 items-end pl-4" >
+                  <div className="pl-4">
                     <h3>Em quantos %?</h3>
                     <InputText type="number" placeholder="%" {...register('questao_5_1_1')} />
                   </div>
@@ -71,7 +71,7 @@ export default function Step4() {
             </div>
           </div>
 
-          <NextStepButton step={2} totalSteps={9} />
+          <NextStepButton step={2} totalSteps={8} />
         </form>
       </div>
     </>

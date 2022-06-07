@@ -21,7 +21,7 @@ export default function Step2() {
           </h2>
         </div>
         <NextStepButton />
-      </form >
-    </div >
+      </form>
+    </div>
   )
 }

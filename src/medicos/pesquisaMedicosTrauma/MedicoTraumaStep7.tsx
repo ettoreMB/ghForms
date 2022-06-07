@@ -18,7 +18,7 @@ export default function Step7() {
   return (
     <>
       <div className="container">
-        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
+        <form className="" onSubmit={handleSubmit(onSubmit)}>
           <div>
             <h2>8.	Existem marcas que você gostaria de usar, mas que não estão disponíveis em sua instalação ou região?</h2>
             <textarea {...register("questao_8")} />
@@ -41,7 +41,7 @@ export default function Step7() {
               </div>
             </div>
           </div>
-          <NextStepButton step={5} totalSteps={9} />
+          <NextStepButton step={5} totalSteps={8} />
         </form>
       </div >
     </>

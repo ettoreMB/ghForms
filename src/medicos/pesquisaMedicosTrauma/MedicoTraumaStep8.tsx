@@ -37,8 +37,8 @@ export default function Step8() {
 
   return (
     <>
-      <div className="w-max">
-        <form className="form-select " onSubmit={handleSubmit(onSubmit)}>
+      <div className="container">
+        <form className="w-max" onSubmit={handleSubmit(onSubmit)}>
           <div>
             <h2>10. Principais características do produto para os  procedimentos de trauma mais frequentes realizados:</h2>
           </div>
@@ -50,7 +50,7 @@ export default function Step8() {
               </tr>
               <tr>
                 <th className="text-center">Tipos</th>
-                <th>marca usada em sua instalação</th>
+                <th className="break-normal">marca usada em sua instalação</th>
                 <th className="w-40">Preço de compra</th>
                 <th className="w-32">Acessibilidade (Custo)</th>
                 <th className="w-32">Alto desempenho clínico</th>
@@ -58,7 +58,7 @@ export default function Step8() {
                 <th className="w-32">Suporte e treinamento por fabricante para uso</th>
                 <th className="w-32">Capacidade de usar produtos para outros tipos de procedimentos</th>
                 <th className="w-32">Percepção da marca como "premium"</th>
-                <th className="w-44">Outros (por favor, especifique)</th>
+                <th className="w-44 break-normal">Outros (por favor, especifique)</th>
               </tr>
             </thead>
             <tbody>
@@ -78,7 +78,7 @@ export default function Step8() {
               ))}
             </tbody>
           </table>
-          <NextStepButton step={6} totalSteps={9} />
+          <NextStepButton step={6} totalSteps={8} />
         </form>
       </div >
     </>
