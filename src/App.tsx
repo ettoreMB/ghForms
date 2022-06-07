@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Step1 } from "./distribuidores/step1";
-import { Result } from "./distribuidores/result";
 import { Step2 } from "./distribuidores/step2";
 import { Step3 } from "./distribuidores/step3";
 import { Step4 } from "./distribuidores/step4";
