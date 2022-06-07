@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
-import { updateAction } from "../../utils/updateAction";
 
+import { updateAction } from "../../utils/updateAction";
 import { InputText } from "../../components/formComponents/inputText";
 import { NextStepButton } from "../../components/nextStepButton";
 import { transformTitleToKeyName } from "../../utils/transformTitleToKeyName";
@@ -29,7 +29,7 @@ const produtos_tipos = [
 export default function HospitalTraumaStep8() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const { actions, state } = useStateMachine({ updateAction });
+  const { actions } = useStateMachine({ updateAction });
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
@@ -38,8 +38,8 @@ export default function HospitalTraumaStep8() {
 
   return (
     <>
-      <div className="w-max">
-        <form className="form-select " onSubmit={handleSubmit(onSubmit)}>
+      <div className="container">
+        <form className="w-max" onSubmit={handleSubmit(onSubmit)}>
           <div>
             <h2>
               9. Principais características do produto para os  procedimentos de trauma mais frequentes realizados:
@@ -52,8 +52,8 @@ export default function HospitalTraumaStep8() {
                 <th colSpan={11}>ATRIBUTOS (ordem de classificação de 1 a 7)</th>
               </tr>
               <tr>
-                <th className="text-center">Tipos</th>
-                <th>marca usada em sua instalação</th>
+                <th className="text-center w-26 break-all">Tipos</th>
+                <th className="break-normal">marca usada em sua instalação</th>
                 <th className="w-40">Preço de compra</th>
                 <th className="w-40">Inventário tipicamente mantido</th>
                 <th className="w-32">Acessibilidade (Custo)</th>
@@ -71,13 +71,13 @@ export default function HospitalTraumaStep8() {
                   <td className="pl-2">{product}</td>
                   <td className="w-20 text-center"><input type="checkbox" {...register(`questao_9_${transformTitleToKeyName(product)}_1`)} /></td>
                   <td ><InputText placeholder="R$" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_2`)} /></td>
-                  <td className=""><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_3`)} /></td>
-                  <td className=""><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_4`)} /></td>
-                  <td className=""><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_5`)} /></td>
-                  <td className=""><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_6`)} /></td>
-                  <td className=""><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_7`)} /></td>
-                  <td className=""><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_8`)} /></td>
-                  <td className=""><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_9`)} /></td>
+                  <td><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_3`)} /></td>
+                  <td><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_4`)} /></td>
+                  <td><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_5`)} /></td>
+                  <td><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_6`)} /></td>
+                  <td><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_7`)} /></td>
+                  <td><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_8`)} /></td>
+                  <td><InputText placeholder="1-7" type="number" {...register(`questao_9_${transformTitleToKeyName(product)}_9`)} /></td>
                   <td><textarea rows={1} {...register(`questao_10_${transformTitleToKeyName(product)}_10`)} /></td>
                 </tr>
               ))}

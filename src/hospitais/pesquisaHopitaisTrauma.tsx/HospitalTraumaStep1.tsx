@@ -10,7 +10,7 @@ import { api } from "../../lib/api";
 export default function HospitalTraumaStep1() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const { actions, state } = useStateMachine({ updateAction });
+  const { actions } = useStateMachine({ updateAction });
 
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
@@ -19,21 +19,20 @@ export default function HospitalTraumaStep1() {
   }
   return (
     <>
-      <div className="pt-20 sm:p-2 m-auto sm:m-0 break-all">
-        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
-          <div className="mb-6 w-full">
+      <div className="container">
+        <form className=" " onSubmit={handleSubmit(onSubmit)}>
+          <div className="mb-6">
             <InputText placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
-            <div className="flex flex-row flex-wrap">
+            <div className="flex flex-col  sm:flex-row">
               <InputText placeholder='Seu melhor email' type={'text'} label={"Email"}  {...register("email")} required />
-              <InputText placeholder='colocar mascara' type={'text'} label={"Telefone"}  {...register("telefone")} required />
+              <InputText placeholder='Telefone' type={'text'} label={"Telefone"}  {...register("telefone")} required />
             </div>
             <InputText placeholder='Nome da Instituição' type={'text'} label={"Instituição"}  {...register("empresa")} required />
             <InputText placeholder='Sua posição na empresa' type={'text'} label={"Posição"}  {...register("cargo")} required />
           </div>
-
-          <NextStepButton />
-          {/* <h2>Estamos atualizando o sistema em breve voltaremos </h2> */}
+          <NextStepButton title="Iniciar a pesquisa" />
         </form>
+
       </div>
     </>
   )

@@ -1,15 +1,14 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import { useStateMachine } from "little-state-machine";
-import { updateAction } from "../../utils/updateAction";
 
-import { InputText } from "../../components/formComponents/inputText";
+import { updateAction } from "../../utils/updateAction";
 import { NextStepButton } from "../../components/nextStepButton";
 
 export default function HospitalTraumaStep4() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const { actions, state } = useStateMachine({ updateAction });
+  const { actions } = useStateMachine({ updateAction });
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
@@ -18,7 +17,7 @@ export default function HospitalTraumaStep4() {
 
   return (
     <>
-      <div className="pt-20 sm:p-2 m-auto sm:m-0 break-all">
+      <div className="container">
         <form className="" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
             <h2>2. Qual das seguintes declarações descreve melhor sua instituição:</h2>
@@ -48,14 +47,14 @@ export default function HospitalTraumaStep4() {
             <h2>
               3. Quantos procedimentos de cirurgia de trauma sua instituição realiza atualmente por mês?
             </h2>
-            <textarea {...register('questao_3')}></textarea>
+            <textarea placeholder="Resposta" {...register('questao_3')}></textarea>
           </div>
 
           <div className="mb-4" >
             <h2>
               4 .Quantos médicos de trauma (incluindo cirurgiões ortopédicos) atualmente realizam procedimentos de trauma em sua instalação?
             </h2>
-            <textarea {...register('questao_4')}></textarea>
+            <textarea placeholder="Resposta"{...register('questao_4')}></textarea>
           </div>
 
           <NextStepButton step={2} totalSteps={8} />

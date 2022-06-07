@@ -54,7 +54,7 @@ export default function HospitalTraumaStep3() {
 
   return (
     <>
-      <div className=" flex-wrap">
+      <div className="container">
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2>1. Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
           <div className="px-4">
@@ -80,7 +80,6 @@ export default function HospitalTraumaStep3() {
                 </>
               ))}
             </div>
-
           </div>
           <NextStepButton step={1} totalSteps={8} />
         </form>

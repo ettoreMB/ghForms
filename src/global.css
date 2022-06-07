@@ -12,7 +12,7 @@
     @apply text-gray-700 font-bold mb-4 text-lg break-normal;
   }
   h3 {
-    @apply text-gray-700 font-bold mb-4 text-lg font-semibold;
+    @apply text-gray-700 font-bold mb-4 text-lg font-semibold break-normal;
   }
 
   input[type=text],

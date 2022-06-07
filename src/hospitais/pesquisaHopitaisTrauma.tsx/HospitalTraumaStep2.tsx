@@ -3,7 +3,6 @@ import { NextStepButton } from "../../components/nextStepButton";
 
 export default function HospitalTraumaStep2() {
   const navigate = useNavigate();
-
   return (
     <div className="container">
       <form className="form-select max-w-screen-xl" onSubmit={() => { navigate("/hospital_trauma/step3") }}>
@@ -20,7 +19,7 @@ export default function HospitalTraumaStep2() {
           </h2>
         </div>
         <NextStepButton />
-      </form >
-    </div >
+      </form>
+    </div>
   )
 }
