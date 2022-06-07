@@ -166,30 +166,30 @@ export function Step5() {
   return (
     <>
       <div className="container">
-        <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="question">3.	Quais produtos e marcas você vende  atualmente para procedimentos de Trauma?  </h2>
+        <form className="w-fit sm:w-max" onSubmit={handleSubmit(onSubmit)}>
+          <h2 className="">3.	Quais produtos e marcas você vende  atualmente para procedimentos de Trauma?  </h2>
 
-          <table className="border-collapse border border-slate-400 table-auto">
+          <table >
             <thead>
               <tr>
-                <th className="border border-slate-300">PRODUTOS VENDIDOS</th>
-                <th className="border border-slate-300">selecionar os que sua empresa vende</th>
-                <th className="border border-slate-300">As marcas mais vendidas?</th>
-                <th className="border border-slate-300">Por que? O que explica a preferência da marca?</th>
+                <th className="break-normal sm:break-words w-24" >PRODUTOS VENDIDOS</th>
+                <th className="break-normal sm:break-words w-24">selecionar os que sua empresa vende</th>
+                <th className="break-normal sm:break-words w-24 sm:w-36">As marcas mais vendidas?</th>
+                <th className="break-normal sm:break-words w-24">Por que? O que explica a preferência da marca?</th>
               </tr>
             </thead>
             <tbody>
 
               {questions.map(row => (
                 <tr>
-                  <td className="w-1/12 border border-slate-300" key={row.title}>{row.title}</td>
-                  <td className="w-1/12 border border-slate-300">
+                  <td key={row.title}>{row.title}</td>
+                  <td >
                     <div className="justify-center w-full flex">
                       <input type="checkbox" id="" {...register(`${row.options.q1}`)} />
                     </div>
                   </td>
-                  <td className="w-2/12 border border-slate-300"><InputText {...register(`${row.options.q2}`)} /></td>
-                  <td className="w-2/12  border border-slate-300"><InputText {...register(`${row.options.q3}`)} /></td>
+                  <td className=""><textarea {...register(`${row.options.q2}`)} /></td>
+                  <td className=""><textarea {...register(`${row.options.q3}`)} /></td>
                 </tr>
               ))}
 

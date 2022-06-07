@@ -21,7 +21,7 @@ export default function HospitalTraumaStep4() {
       <div className="pt-20 sm:p-2 m-auto sm:m-0 break-all">
         <form className="" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
-            <h2 className="question">2. Qual das seguintes declarações descreve melhor sua instituição:</h2>
+            <h2>2. Qual das seguintes declarações descreve melhor sua instituição:</h2>
             <div className="flex flex-col pl-4">
               <div>
                 <input className="form-checkbox" type="checkbox" {...register("questao_2_1")} />
@@ -45,14 +45,14 @@ export default function HospitalTraumaStep4() {
           </div>
 
           <div className="mb-4">
-            <h2 className="question">
+            <h2>
               3. Quantos procedimentos de cirurgia de trauma sua instituição realiza atualmente por mês?
             </h2>
             <textarea {...register('questao_3')}></textarea>
           </div>
 
           <div className="mb-4" >
-            <h2 className="question">
+            <h2>
               4 .Quantos médicos de trauma (incluindo cirurgiões ortopédicos) atualmente realizam procedimentos de trauma em sua instalação?
             </h2>
             <textarea {...register('questao_4')}></textarea>

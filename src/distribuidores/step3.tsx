@@ -54,9 +54,9 @@ export function Step3() {
   // questao1__grupo_1_optionNome
   return (
     <>
-      <div className=" flex-wrap">
-        <form className="" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="question">Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
+      <div className="container">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <h2>Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
           <div className="px-4">
             <div>
 
@@ -84,12 +84,12 @@ export function Step3() {
 
             <div>
               <div className="mb-10">
-                <h2 className="question">Em média, para quantos hospitais você vende em relação aos produtos mencionados acima?</h2>
+                <h2 className="">Em média, para quantos hospitais você vende em relação aos produtos mencionados acima?</h2>
                 <InputText type="number" {...register("questao_1_pergunta_2")} />
               </div>
               <div>
-                <h2 className="question">Se possível pode dizer entre essas principais regiões:</h2>
-                <div className="flex flex-row my-10">
+                <h2 className="">Se possível pode dizer entre essas principais regiões:</h2>
+                <div className="flex flex-col my-10 sm:flex-row ">
                   <InputText label="São Paulo" type="number" placeholder="Qtd"{...register("questao_1_pergunta_3_SP")} />
                   <InputText label="Rio de Janeiro" type="number" placeholder="Qtd"{...register("questao_1_pergunta_3_RJ")} />
                   <InputText label="Minas Gerais" type="number" placeholder="Qtd"{...register("questao_1_pergunta_3_MG")} />
@@ -99,8 +99,8 @@ export function Step3() {
                 </div>
               </div>
               <div>
-                <h2 className="question">Poderia dividir o volume das vendas entre privado e púbico, de preferência um valor em %:</h2>
-                <div className="flex flex-row w-6/12 justify-between">
+                <h2 className="">Poderia dividir o volume das vendas entre privado e púbico, de preferência um valor em %:</h2>
+                <div className="flex flex-col w-6/12 justify-between sm:flex-row">
                   <InputText label="Publico" placeholder="%" type="number" {...register("questao_1_pergunta_4_qtd_publico")} />
                   <InputText label='Privado' placeholder="%" type="number"  {...register("questao_1_pergunta_4_qtd_privado")} />
                 </div>

@@ -34,15 +34,15 @@ export function Step9() {
     <>
       <div className="container">
         <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="question">Conclusão</h2>
+          <h2>Conclusão</h2>
           <div className="mb-10">
-            <h3 className="question">Você tem algum comentário ou dúvida sobre o projeto ou entrevista?  </h3>
-            <textarea {...register("comentario_pesquisa")} />
+            <h3>Você tem algum comentário ou dúvida sobre o projeto ou entrevista?  </h3>
+            <textarea placeholder="Resposta"{...register("comentario_pesquisa")} />
           </div>
           <div>
-            <h3 className="question">Há outros especialistas que você considera líderes de pensamento e cujas perspectivas seriam valiosas para nós considerarmos? Deixe o nome e telefone. </h3>
+            <h3 className="break-normal">Há outros especialistas que você considera líderes de pensamento e cujas perspectivas seriam valiosas para nós considerarmos? Deixe o nome e telefone. </h3>
             <div className="flex flex-row">
-              <InputText label="Recomendações" placeholder="Ex: Nome, Telefone, Nome, Telefone" {...register("recomendacoes")} />
+              <InputText type="text" label="Recomendações" placeholder="Ex: Nome, Telefone, Nome, Telefone" {...register("recomendacoes")} />
             </div>
           </div>
           <NextStepButton title="Enviar Respostas" />

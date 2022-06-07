@@ -3,58 +3,60 @@
 @tailwind utilities;
 
 
-/* input[type=checkbox] {
-  @apply rounded-full mr-2;
-} */
+@layer base {
+  body {
+    @apply bg-gray-400 p-6;
+  }
 
+  h2 {
+    @apply text-gray-700 font-bold mb-4 text-lg;
+  }
+  h3 {
+    @apply text-gray-700 font-bold mb-4 text-lg font-semibold;
+  }
 
-body {
-  @apply bg-gray-400 p-6;
-}
+  input[type=text],
+  input[type=number] {
+    @apply bg-gray-300 rounded-lg w-full px-6 py-3;
+  }
 
-h3 {
-  @apply font-bold;
-}
+  textarea {
+    @apply w-full bg-gray-100 p-4 rounded-md;
+  }
 
-input[type=text],
-input[type=number] {
-  @apply bg-gray-300 rounded-lg w-full px-6 py-3;
-}
+  section,
+  form {
+    @apply mx-auto p-10 bg-slate-100 rounded-lg shadow-md;
+  }
 
-textarea {
-  @apply w-full bg-gray-100 p-4 rounded-md;
-}
+  textarea {
+    @apply w-full bg-gray-300 p-4 rounded-md;
+  }
 
-section,
-form {
-  @apply mx-auto p-10 bg-slate-100 rounded-lg shadow-md;
-}
+  label {
+    @apply font-medium mb-1;
+  }
 
-textarea {
-  @apply w-full bg-gray-100 p-4 rounded-md;
-}
+  td,
+  th {
+    @apply p-1 border border-slate-400;
+  }
 
-label {
-  @apply font-medium mb-1;
-}
+  table {
+    @apply border-collapse border border-slate-400;
+  }
 
-td,
-th {
-  @apply border;
-}
-
-th {
-  @apply p-1;
 }
 
 @layer components {
-  .container {
-    @apply flex flex-col mx-auto p-10 max-w-full;
+
+  .container{
+    @apply pt-20 sm:p-2 m-auto break-all;
   }
+
 
   .question {
     @apply text-gray-700 font-bold mb-4 text-lg
   }
-
 
 }

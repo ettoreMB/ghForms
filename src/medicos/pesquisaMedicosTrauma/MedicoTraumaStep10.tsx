@@ -21,7 +21,7 @@ export default function Step10() {
       <div className="container">
         <form className="form-select w-fit" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6">
-            <h2 className="question">15. Quais as tendências que  você espera que vejam a compra desses produtos relacionados ao trauma em sua instalação nos próximos 5 anos?</h2>
+            <h2>15. Quais as tendências que  você espera que vejam a compra desses produtos relacionados ao trauma em sua instalação nos próximos 5 anos?</h2>
             <textarea {...register("questao_15")} />
             <div className="pl-4">
               <h3>. Que motivos explicam essas tendências?</h3>
@@ -29,7 +29,7 @@ export default function Step10() {
             </div>
           </div>
           <div>
-            <h2 className="question">16. Qual é o processo de compra para a introdução desses produtos ao hospital?</h2>
+            <h2>16. Qual é o processo de compra para a introdução desses produtos ao hospital?</h2>
             <textarea {...register("questao_16")} />
             <div className="pl-4">
               <div>
@@ -48,14 +48,14 @@ export default function Step10() {
           </div>
 
           <div>
-            <h2 className="question">17. Quais distribuidores ou marcas se aproximaram do seu hospital para esses tipos de produtos?</h2>
+            <h2>17. Quais distribuidores ou marcas se aproximaram do seu hospital para esses tipos de produtos?</h2>
             <InputText label="Placas e Parafusos" {...register('questao_17_1')} />
             <InputText label="Pinos" {...register('questao_17_2')} />
             <InputText label="Parafusos cânulados" {...register('questao_17_3')} />
             <InputText label="Fixações Externas" {...register('questao_17_4')} />
           </div>
           <div>
-            <h2 className="question">18. O que faria você considerar uma mudança de fornecedor?</h2>
+            <h2>18. O que faria você considerar uma mudança de fornecedor?</h2>
             <textarea {...register('questao_18')} />
           </div>
 

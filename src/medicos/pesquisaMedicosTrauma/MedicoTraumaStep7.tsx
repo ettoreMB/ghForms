@@ -20,11 +20,11 @@ export default function Step7() {
       <div className="container">
         <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <h2 className="question">8.	Existem marcas que você gostaria de usar, mas que não estão disponíveis em sua instalação ou região?</h2>
+            <h2>8.	Existem marcas que você gostaria de usar, mas que não estão disponíveis em sua instalação ou região?</h2>
             <textarea {...register("questao_8")} />
           </div>
           <div>
-            <h2 className="question">10. Quais são as principais marcas brasileiras que você conhece?</h2>
+            <h2>10. Quais são as principais marcas brasileiras que você conhece?</h2>
             <textarea {...register("questao_9")} />
             <div className="pl-4">
               <div>

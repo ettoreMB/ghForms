@@ -165,40 +165,40 @@ export function Step4() {
 
   return (
     <>
-      <div className="w-max  pt-20 sm:p-2 m-auto sm:m-0">
-        <form className="w-" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="question">2.	Abaixo listamos alguns produtos, e gostaríamos de saber até que ponto você espera flutuações nas vendas:</h2>
+      <div className="container ">
+        <form className="w-max" onSubmit={handleSubmit(onSubmit)}>
+          <h2 className="">2.	Abaixo listamos alguns produtos, e gostaríamos de saber até que ponto você espera flutuações nas vendas:</h2>
 
           <table className="border border-slate-400" cellSpacing="0" cellPadding="0">
-            <thead>
+            <thead className="break-all">
               <tr>
-                <th rowSpan={3} colSpan={1} className="w-32 border border-slate-300">PRODUTOS VENDIDOS</th>
-                <th rowSpan={3} colSpan={1} className="w-20 border border-slate-300">selecionar os que sua empresa vende</th>
-                <th colSpan={3} rowSpan={1} className="border border-slate-300">Para produtos selecionados</th>
+                <th rowSpan={3} colSpan={1} className="w-32 ">PRODUTOS VENDIDOS</th>
+                <th rowSpan={3} colSpan={1} className="w-20 ">selecionar os que sua empresa vende</th>
+                <th colSpan={3} rowSpan={1} >Para produtos selecionados</th>
               </tr>
               <tr>
-                <th colSpan={1} rowSpan={3} className="border border-slate-300">qual é o crescimento /diminuição esperado nos próximos 1-5 anos (%)</th>
-                <th colSpan={2} rowSpan={1} className="border border-slate-300">O custo oscilou nos últimos 6 meses?</th>
+                <th colSpan={1} rowSpan={3} >qual é o crescimento /diminuição esperado nos próximos 1-5 anos (%)</th>
+                <th colSpan={2} rowSpan={1}>O custo oscilou nos últimos 6 meses?</th>
               </tr>
               <tr>
 
-                <th className="border border-slate-300">Se o custo flutuou, por quê?</th>
-                <th className="border border-slate-300">Se sim, por quanto (%)?</th>
+                <th >Se o custo flutuou, por quê?</th>
+                <th>Se sim, por quanto (%)?</th>
               </tr>
             </thead>
             <tbody>
 
               {questions.map(row => (
                 <tr>
-                  <td className="pt-1 border border-slate-300" key={row.title}>{row.title}</td>
-                  <td className="pt-1 border border-slate-300">
+                  <td key={row.title}>{row.title}</td>
+                  <td>
                     <div className="justify-center  flex">
                       <input type="checkbox" id="" {...register(`${row.options.q1}`)} />
                     </div>
                   </td>
-                  <td className="pt-1 border border-slate-300"><textarea {...register(`${row.options.q2}`)} /></td>
-                  <td className="pt-1 border border-slate-300"><textarea {...register(`${row.options.q3}`)} /></td>
-                  <td className="pt-1 border border-slate-300"><textarea {...register(`${row.options.q4}`)} /></td>
+                  <td ><textarea {...register(`${row.options.q2}`)} /></td>
+                  <td ><textarea {...register(`${row.options.q3}`)} /></td>
+                  <td ><textarea {...register(`${row.options.q4}`)} /></td>
                 </tr>
               ))}
 

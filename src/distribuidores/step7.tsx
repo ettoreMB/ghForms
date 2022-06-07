@@ -264,52 +264,52 @@ export function Step7() {
 
   return (
     <>
-      <div className="w-max p-10">
-        <form className="bigtable" onSubmit={handleSubmit(onSubmit)}>
+      <div className="container ">
+        <form className="w-max" onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <h2 className="question">Principais características do produto para os procedimentos de trauma mais frequentes realizados:</h2>
+            <h2>Principais características do produto para os procedimentos de trauma mais frequentes realizados:</h2>
           </div>
 
           <div className="pl-4">
-            <h3 className="question">a•	Qual é a melhor marca usada para cada tipo de produto? Por favor preencha na tabela abaixo.</h3>
-            <h3 className="question">b•	Você está ciente do preço que os hospitais privados normalmente pagam por cada produto? Se sim, qual é o preço médio de cada dispositivo? Por favor preencha na tabela abaixo. </h3>
-            <h3 className="question">c•	Classifique os atributos do produto que são mais relevantes para você, na tabela abaixo. </h3>
+            <h3>a•	Qual é a melhor marca usada para cada tipo de produto? Por favor preencha na tabela abaixo.</h3>
+            <h3>b•	Você está ciente do preço que os hospitais privados normalmente pagam por cada produto? Se sim, qual é o preço médio de cada dispositivo? Por favor preencha na tabela abaixo. </h3>
+            <h3>c•	Classifique os atributos do produto que são mais relevantes para você, na tabela abaixo. </h3>
           </div>
           <table className="border-collapse border border-slate-400 table-auto">
             <thead>
               <tr>
-                <th rowSpan={3} colSpan={1} className=" border border-slate-300">Tipos</th>
-                <th rowSpan={3} colSpan={1} className="w-52  border border-slate-300">MARCA MAIS VENDIDA</th>
-                <th rowSpan={3} colSpan={1} className="w-48 border border-slate-300 ">Preço médio de venda da marca top</th>
-                <th rowSpan={3} colSpan={1} className="w-48 border border-slate-300 ">Inventário mantido(semana/mês)</th>
-                <th colSpan={7} rowSpan={1} className="w-48 border border-slate-300 ">ATRIBUTOS DE PRODUTO MAIS BEM AVALIADOS pelos hospitais (ordem de classificação de 1 a 7)</th>
+                <th rowSpan={3} colSpan={1} className="w-58">Tipos</th>
+                <th rowSpan={3} colSpan={1} className="w-52">MARCA MAIS VENDIDA</th>
+                <th rowSpan={3} colSpan={1} className="w-48">Preço médio de venda da marca top</th>
+                <th rowSpan={3} colSpan={1} className="w-48">Inventário mantido(semana/mês)</th>
+                <th colSpan={7} rowSpan={1} className="w-48">ATRIBUTOS DE PRODUTO MAIS BEM AVALIADOS pelos hospitais (ordem de classificação de 1 a 7)</th>
               </tr>
               <tr>
 
-                <th className="w-48 border border-slate-300 ">Acessibilidade(Custo)</th>
-                <th className="w-36 border border-slate-300 ">Alto desempenho clínico</th>
-                <th className="w-36 border border-slate-300 ">Disponibilidade de produtos/inventário</th>
-                <th className="w-36  border border-slate-300 ">Suporte e treinamento por fabricante para uso</th>
-                <th className="w-36  border border-slate-300 ">Capacidade de usar produtos para outros tipos de procedimentos</th>
-                <th className="w-36 border border-slate-300 ">Percepção da marca como "premium"</th>
-                <th className="w-36 border border-slate-300 ">Outros(por favor, especifiquem): </th>
+                <th className="w-48  ">Acessibilidade(Custo)</th>
+                <th className="w-36  ">Alto desempenho clínico</th>
+                <th className="w-36  ">Disponibilidade de produtos/inventário</th>
+                <th className="w-36   ">Suporte e treinamento por fabricante para uso</th>
+                <th className="w-36   ">Capacidade de usar produtos para outros tipos de procedimentos</th>
+                <th className="w-36  ">Percepção da marca como "premium"</th>
+                <th className="w-36  ">Outros(por favor, especifiquem): </th>
               </tr>
             </thead>
             <tbody>
 
               {questions.map(row => (
                 <tr>
-                  <td className="border border-slate-300" key={row.title}>{row.title}</td>
-                  <td className="border border-slate-300"><textarea {...register(`${row.options.q1}`)} /></td>
-                  <td className="border border-slate-300 "><InputText placeholder="R$" type="number" {...register(`${row.options.q2}`)} /></td>
-                  <td className="border border-slate-300"><textarea {...register(`${row.options.q10}`)} /></td>
-                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q3}`, { min: 1, max: 7 })} /></td>
-                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q4}`, { min: 1, max: 7 })} /></td>
-                  <td className="border border-slate-300 "><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q5}`, { min: 1, max: 7 })} /></td>
-                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q6}`, { min: 1, max: 7 })} /></td>
-                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q7}`, { min: 1, max: 7 })} /></td>
-                  <td className="border border-slate-300 "><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q8}`, { min: 1, max: 7 })} /></td>
-                  <td className="border border-slate-300"><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q9}`, { min: 1, max: 7 })} /></td>
+                  <td className="" key={row.title}>{row.title}</td>
+                  <td className=""><textarea {...register(`${row.options.q1}`)} /></td>
+                  <td className=" "><InputText placeholder="R$" type="number" {...register(`${row.options.q2}`)} /></td>
+                  <td className=""><textarea {...register(`${row.options.q10}`)} /></td>
+                  <td className=""><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q3}`, { min: 1, max: 7 })} /></td>
+                  <td className=""><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q4}`, { min: 1, max: 7 })} /></td>
+                  <td className=" "><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q5}`, { min: 1, max: 7 })} /></td>
+                  <td className=""><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q6}`, { min: 1, max: 7 })} /></td>
+                  <td className=""><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q7}`, { min: 1, max: 7 })} /></td>
+                  <td className=" "><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q8}`, { min: 1, max: 7 })} /></td>
+                  <td className=""><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q9}`, { min: 1, max: 7 })} /></td>
                 </tr>
               ))}
 

@@ -177,7 +177,7 @@ export default function step3() {
     <>
       <div className="container">
         <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="question">1. Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
+          <h2>1. Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
 
           <table className="border border-slate-400" cellSpacing="0" cellPadding="0">
             <thead>

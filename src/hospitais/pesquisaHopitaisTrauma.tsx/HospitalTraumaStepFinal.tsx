@@ -36,7 +36,7 @@ export default function HospitalTraumaStepFinal() {
       <div className="container">
         <form className="form-select w-fit" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6">
-            <h2 className="question">11 Quais tendências você prevê ver a compra/venda desses produtos relacionados ao trauma I sua instalação nos próximos 5 anos?</h2>
+            <h2>11 Quais tendências você prevê ver a compra/venda desses produtos relacionados ao trauma I sua instalação nos próximos 5 anos?</h2>
             <textarea {...register("questao_11")} />
             <div className="pl-4">
               <h3>. Que motivos explicam essas tendências?</h3>
@@ -45,7 +45,7 @@ export default function HospitalTraumaStepFinal() {
           </div>
 
           <div className="mb-6">
-            <h2 className="question">12 Qual é o processo de compra para a introdução desses produtos ao hospital?</h2>
+            <h2>12 Qual é o processo de compra para a introdução desses produtos ao hospital?</h2>
             <textarea {...register("questao_12")} />
             <div className="pl-4">
               <h3>. Qual é o seu papel (se houver) em garantir que certos produtos estejam disponíveis em sua instalação?</h3>
@@ -62,7 +62,7 @@ export default function HospitalTraumaStepFinal() {
           </div>
 
           <div className="mb-6">
-            <h2 className="question">13 Quais distribuidores ou marcas se aproximaram do seu hospital para esses tipos de produtos?</h2>
+            <h2>13 Quais distribuidores ou marcas se aproximaram do seu hospital para esses tipos de produtos?</h2>
             <textarea {...register("questao_13")} />
             <div className="pl-4">
               <h3>. Qual é o processo de vendas para as principais marcas que você compra sobre os produtos abaixo? (por exemplo, vendas diretas? Via distribuidores, etc.)?</h3>
@@ -76,28 +76,28 @@ export default function HospitalTraumaStepFinal() {
           </div>
 
           <div className="mb-6">
-            <h2 className="question">
+            <h2>
               14 O que faria você considerar uma mudança de fornecedor?
             </h2>
             <textarea {...register("questao_14")} />
           </div>
 
           <div className="mb-6">
-            <h2 className="question">
+            <h2>
               15 Que termos você normalmente oferece aos distribuidores ou fabricantes para os produtos acima mencionados?
             </h2>
             <textarea {...register("questao_15")} />
           </div>
 
           <div className="mb-6">
-            <h2 className="question">
+            <h2>
               16 . Há outros cirurgiões ou instituições hospitalares no país cujas perspectivas seriam valiosas para nós considerarmos?
             </h2>
             <textarea {...register("questao_16")} />
           </div>
 
           <div className="mb-6">
-            <h2 className="question">
+            <h2>
               Você tem algum comentário ou dúvida sobre o projeto ou entrevista?
             </h2>
             <textarea {...register("cometario")} />

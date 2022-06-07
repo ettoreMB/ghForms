@@ -56,7 +56,7 @@ export default function HospitalTraumaStep3() {
     <>
       <div className=" flex-wrap">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="question">1. Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
+          <h2>1. Por favor, indique quais categorias de produtos você está familiarizado e confortável para falar:</h2>
           <div className="px-4">
             <div className="mb-10 mt-2 mx-4">
               {questions.map((question, questionIndex) => (

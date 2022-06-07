@@ -89,7 +89,7 @@ export default function Step5() {
     <>
       <div className="container">
         <form className="form-select w-fit" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="question">6. Até que ponto você espera flutuações sobre os seguintes procedimentos:</h2>
+          <h2>6. Até que ponto você espera flutuações sobre os seguintes procedimentos:</h2>
 
           <table className="border border-slate-400" cellSpacing="0" cellPadding="0">
             <thead>

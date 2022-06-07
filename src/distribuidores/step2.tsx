@@ -4,7 +4,7 @@ import { NextStepButton } from "../components/nextStepButton";
 export function Step2() {
   const navigate = useNavigate();
   return (
-    <div className="w-full pt-24 md:pt-24 sm:p-2 m-auto sm:m-0">
+    <div className="container">
       <form className="form-select max-w-screen-xl" onSubmit={() => { navigate("/step3") }}>
         <div>
           <h1 className="text-center text-2xl font-bold tex-center">Introdução</h1>

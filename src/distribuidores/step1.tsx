@@ -19,11 +19,11 @@ export function Step1(props: any) {
   }
   return (
     <>
-      <div className="pt-20 sm:p-2 m-auto sm:m-0 break-all ">
+      <div className="container">
         <form className=" " onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6">
             <InputText placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
-            <div className="flex flex-row flex-wrap">
+            <div className="flex flex-col  sm:flex-row">
               <InputText placeholder='Seu melhor email' type={'text'} label={"Email"}  {...register("email")} required />
               <InputText placeholder='Telefone' type={'text'} label={"Telefone"}  {...register("telefone")} required />
             </div>

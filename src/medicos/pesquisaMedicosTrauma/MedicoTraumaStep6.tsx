@@ -177,7 +177,7 @@ export default function Step6() {
     <>
       <div className="container">
         <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="question">7. Quais produtos e marcas você usa atualmente para procedimentos de Trauma?</h2>
+          <h2>7. Quais produtos e marcas você usa atualmente para procedimentos de Trauma?</h2>
 
           <table className="border border-slate-400" cellSpacing="0" cellPadding="0">
             <thead>

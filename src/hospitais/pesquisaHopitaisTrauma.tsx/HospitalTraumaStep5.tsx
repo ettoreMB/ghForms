@@ -41,7 +41,7 @@ export default function HospitalTraumaStep5() {
     <>
       <div className="w-max  pt-20 sm:p-2 m-auto sm:m-0">
         <form className="" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="question">5.	Até que ponto você espera flutuações na compra dos seguintes produtos relacionados ao trauma:</h2>
+          <h2>5.	Até que ponto você espera flutuações na compra dos seguintes produtos relacionados ao trauma:</h2>
           <div className="mr-4">
             <span>Usar percentual de -/+ para indicar magnitude de crescimento e/ou diminuição</span>
           </div>

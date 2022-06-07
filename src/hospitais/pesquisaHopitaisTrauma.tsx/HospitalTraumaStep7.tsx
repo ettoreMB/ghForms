@@ -20,11 +20,11 @@ export default function HospitalTraumaStep7() {
       <div className="container">
         <form className="form-select max-w-screen-xl" onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <h2 className="question">7. Há marcas que você gostaria de comprar, mas que não estão disponíveis na sua região?</h2>
+            <h2>7. Há marcas que você gostaria de comprar, mas que não estão disponíveis na sua região?</h2>
             <textarea {...register("questao_7")} />
           </div>
           <div>
-            <h2 className="question">8. Quais são as principais marcas brasileiras que você é agora?</h2>
+            <h2>8. Quais são as principais marcas brasileiras que você é agora?</h2>
             <textarea {...register("questao_8")} />
             <div className="pl-4">
               <div>

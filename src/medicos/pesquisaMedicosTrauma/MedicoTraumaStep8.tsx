@@ -40,7 +40,7 @@ export default function Step8() {
       <div className="w-max">
         <form className="form-select " onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <h2 className="question">10. Principais características do produto para os  procedimentos de trauma mais frequentes realizados:</h2>
+            <h2>10. Principais características do produto para os  procedimentos de trauma mais frequentes realizados:</h2>
           </div>
           <table>
             <thead>

@@ -39,7 +39,7 @@ export default function HospitalTraumaStep6() {
     <>
       <div className="pt-20 sm:p-2 m-auto sm:m-0 break-all" >
         <form onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="question">6. Quais produtos e marcas você usa atualmente para procedimentos de Trauma?</h2>
+          <h2>6. Quais produtos e marcas você usa atualmente para procedimentos de Trauma?</h2>
           <div className="mr-4">
             <span>Usar percentual de -/+ para indicar magnitude de crescimento e/ou diminuição</span>
           </div>
