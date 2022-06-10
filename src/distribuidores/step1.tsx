@@ -10,7 +10,10 @@ import { api } from "../lib/api";
 export function Step1(props: any) {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const { actions, state } = useStateMachine({ updateAction });
+  const { actions } = useStateMachine({ updateAction });
+
+  const valuesInStorage: any = localStorage.getItem("__LSM__");
+  const values = JSON.parse(valuesInStorage);
 
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
@@ -20,15 +23,15 @@ export function Step1(props: any) {
   return (
     <>
       <div className="container">
-        <form className="w-max" onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6">
-            <InputText defaultValue={state.data.nome} placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
+            <InputText defaultValue={values.data.nome} placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
             <div className="flex flex-col  sm:flex-row">
-              <InputText defaultValue={state.data.email} placeholder='Seu melhor email' type={'text'} label={"Email"}  {...register("email")} required />
+              <InputText defaultValue={values.data.email} placeholder='Seu melhor email' type={'text'} label={"Email"}  {...register("email")} required />
               <InputText placeholder='Telefone' type={'text'} label={"Telefone"}  {...register("telefone")} required />
             </div>
-            <InputText defaultValue={state.data.empresa} placeholder='Nome da Instituição' type={'text'} label={"Instituição"}  {...register("empresa")} required />
-            <InputText defaultValue={state.data.cargo} placeholder='Sua posição na empresa' type={'text'} label={"Posição"}  {...register("cargo")} required />
+            <InputText defaultValue={values.data.empresa} placeholder='Nome da Instituição' type={'text'} label={"Instituição"}  {...register("empresa")} required />
+            <InputText defaultValue={values.data.cargo} placeholder='Sua posição na empresa' type={'text'} label={"Posição"}  {...register("cargo")} required />
           </div>
 
           <NextStepButton title="Iniciar a pesquisa" />
