@@ -28,7 +28,7 @@ export function Step1(props: any) {
             <InputText defaultValue={values.data.nome} placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
             <div className="flex flex-col  sm:flex-row">
               <InputText defaultValue={values.data.email} placeholder='Seu melhor email' type={'text'} label={"Email"}  {...register("email")} required />
-              <InputText placeholder='Telefone' type={'text'} label={"Telefone"}  {...register("telefone")} required />
+              <InputText placeholder='Telefone' type={'text'} label={"Telefone"} defaultValue={values.data.telefone} {...register("telefone")} required />
             </div>
             <InputText defaultValue={values.data.empresa} placeholder='Nome da Instituição' type={'text'} label={"Instituição"}  {...register("empresa")} required />
             <InputText defaultValue={values.data.cargo} placeholder='Sua posição na empresa' type={'text'} label={"Posição"}  {...register("cargo")} required />
