@@ -68,7 +68,7 @@ export default function HospitalTraumaStepFinal() {
               <h3>. Qual é o processo de vendas para as principais marcas que você compra sobre os produtos abaixo? (por exemplo, vendas diretas? Via distribuidores, etc.)?</h3>
               <div className="ml-2">
                 <InputText type={'text'} label="Placa e Parafusos" {...register("questao_13_1")} />
-                <InputText type={'text'} label="Unhas" {...register("questao_13_2")} />
+                <InputText type={'text'} label="Pinos" {...register("questao_13_2")} />
                 <InputText type={'text'} label="Parafusos e cânulados" {...register("questao_13_3")} />
                 <InputText type={'text'} label="Fixações Externas" {...register("questao_13_4")} />
               </div>

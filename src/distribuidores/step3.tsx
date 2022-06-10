@@ -19,7 +19,8 @@ export function Step3() {
 
   const questions = [
     {
-      title: 'QuadrilPelvisExtremidades',
+      title: 'Quadril, Pelvis e Extremidades',
+      value: 'QuadrilPelvisExtremidades',
       options: {
         option1: 'Placas e Parafusos para quadril ou pélvis',
         option2: 'Placas e Parafusos extremidades inferiores',
@@ -27,7 +28,8 @@ export function Step3() {
       }
     },
     {
-      title: 'OmbroQuadrilFêmurTibia',
+      title: 'Ombro Quadril Fêmur Tibia',
+      value: 'OmbroQuadrilFêmurTibia',
       options: {
         option1: "Pinos intramedulares acetabular",
         option2: "Pinos intramedulares femoral",
@@ -35,14 +37,16 @@ export function Step3() {
       }
     },
     {
-      title: 'OmbroQuadrilPélvisFêmurTíbiaExtremidades',
+      title: 'Ombro, Quadril, Pélvis, Fêmur, Tíbia e Extremidades',
+      value: 'OmbroQuadrilPélvisFêmurTíbiaExtremidades',
       options: {
         option1: "Parafusos pequenos e canulados",
         option2: "Parafusos grandes e canulados",
       }
     },
     {
-      title: 'OmbroFemurTíbiaAntebracomao',
+      title: 'Ombro, Femur, Tíbia, Antebraço e Mão',
+      value: 'OmbroFemurTíbiaAntebracomao',
       options: {
         option1: "Pinos intramedulares femoral",
         option2: "Fixação externa média",
