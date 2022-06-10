@@ -10,7 +10,7 @@ import { api } from "../lib/api";
 export function Step1(props: any) {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const { actions } = useStateMachine({ updateAction });
+  const { actions, state } = useStateMachine({ updateAction });
 
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
@@ -22,13 +22,13 @@ export function Step1(props: any) {
       <div className="container">
         <form className="w-max" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6">
-            <InputText placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
+            <InputText defaultValue={state.data.nome} placeholder='Nome Completo' type={'text'} label={"Nome"}   {...register("nome")} required />
             <div className="flex flex-col  sm:flex-row">
-              <InputText placeholder='Seu melhor email' type={'text'} label={"Email"}  {...register("email")} required />
+              <InputText defaultValue={state.data.email} placeholder='Seu melhor email' type={'text'} label={"Email"}  {...register("email")} required />
               <InputText placeholder='Telefone' type={'text'} label={"Telefone"}  {...register("telefone")} required />
             </div>
-            <InputText placeholder='Nome da Instituição' type={'text'} label={"Instituição"}  {...register("empresa")} required />
-            <InputText placeholder='Sua posição na empresa' type={'text'} label={"Posição"}  {...register("cargo")} required />
+            <InputText defaultValue={state.data.empresa} placeholder='Nome da Instituição' type={'text'} label={"Instituição"}  {...register("empresa")} required />
+            <InputText defaultValue={state.data.cargo} placeholder='Sua posição na empresa' type={'text'} label={"Posição"}  {...register("cargo")} required />
           </div>
 
           <NextStepButton title="Iniciar a pesquisa" />

@@ -1,12 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createStore, StateMachineProvider } from 'little-state-machine'
+import { createStore, StateMachineProvider, useStateMachine, GlobalState } from 'little-state-machine'
 import App from './App'
 import './global.css'
 
-createStore({
-  data: {}
-})
+createStore(
+  {
+    data: {}
+  },
+  {
+    storageType: localStorage,
+  }
+)
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

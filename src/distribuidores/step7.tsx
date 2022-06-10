@@ -20,7 +20,6 @@ export function Step7() {
     {
       title: 'Placas para quadril ou pélvis',
       options: {
-
         q1: 'questao_6_PlacasParaQuadrilPelvis_1',
         q2: 'questao_6_PlacasParaQuadrilPelvis_2',
         q3: 'questao_6_PlacasParaQuadrilPelvis_3',
@@ -36,7 +35,6 @@ export function Step7() {
     {
       title: 'Placas extremidades inferiores',
       options: {
-
         q1: 'questao_6PlacasExtremidadesInferiores_1',
         q2: 'questao_6PlacasExtremidadesInferiores_2',
         q3: 'questao_6PlacasExtremidadesInferiores_3',
@@ -52,7 +50,6 @@ export function Step7() {
     {
       title: 'Placas extremidades superiores',
       options: {
-
         q1: 'questao_6_PlacasExtremidadesSuperiores_1',
         q2: 'questao_6_PlacasExtremidadesSuperiores_2',
         q3: 'questao_6_PlacasExtremidadesSuperiores_3',
@@ -68,7 +65,6 @@ export function Step7() {
     {
       title: 'Parafusos para quadril ou pélvis',
       options: {
-
         q1: 'questao_6_ParafusosQuadrilPelvis_1',
         q2: 'questao_6_ParafusosQuadrilPelvis_2',
         q3: 'questao_6_ParafusosQuadrilPelvis_3',
@@ -286,30 +282,30 @@ export function Step7() {
               </tr>
               <tr>
 
-                <th className="w-48  ">Acessibilidade(Custo)</th>
-                <th className="w-36  ">Alto desempenho clínico</th>
-                <th className="w-36  ">Disponibilidade de produtos/inventário</th>
-                <th className="w-36   ">Suporte e treinamento por fabricante para uso</th>
-                <th className="w-36   ">Capacidade de usar produtos para outros tipos de procedimentos</th>
-                <th className="w-36  ">Percepção da marca como "premium"</th>
-                <th className="w-36  ">Outros(por favor, especifiquem): </th>
+                <th className="w-36 break-normal">Acessibilidade (Custo)</th>
+                <th className="w-36  break-normal">Alto desempenho clínico</th>
+                <th className="w-36  break-normal">Disponibilidade de produtos/inventário</th>
+                <th className="w-36  break-normal">Suporte e treinamento por fabricante para uso</th>
+                <th className="w-36  break-normal">Capacidade de usar produtos para outros tipos de procedimentos</th>
+                <th className="w-36  break-normal">Percepção da marca como "premium"</th>
+                <th className="w-36  break-normal">Outros(por favor, especifiquem): </th>
               </tr>
             </thead>
             <tbody>
 
               {questions.map(row => (
-                <tr>
-                  <td className="" key={row.title}>{row.title}</td>
-                  <td className=""><textarea {...register(`${row.options.q1}`)} /></td>
-                  <td className=" "><InputText placeholder="R$" type="number" {...register(`${row.options.q2}`)} /></td>
-                  <td className=""><textarea {...register(`${row.options.q10}`)} /></td>
-                  <td className=""><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q3}`, { min: 1, max: 7 })} /></td>
-                  <td className=""><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q4}`, { min: 1, max: 7 })} /></td>
-                  <td className=" "><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q5}`, { min: 1, max: 7 })} /></td>
-                  <td className=""><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q6}`, { min: 1, max: 7 })} /></td>
-                  <td className=""><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q7}`, { min: 1, max: 7 })} /></td>
-                  <td className=" "><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q8}`, { min: 1, max: 7 })} /></td>
-                  <td className=""><InputText type="number" placeholder="1 ~ 7" min={1} max={7}{...register(`${row.options.q9}`, { min: 1, max: 7 })} /></td>
+                <tr className="break-normal">
+                  <td key={row.title}>{row.title}</td>
+                  <td ><textarea defaultValue={state.data[`${row.options.q1}`]}{...register(`${row.options.q1}`)} /></td>
+                  <td ><InputText placeholder="R$" type="number" defaultValue={state.data[`${row.options.q2}`]} {...register(`${row.options.q2}`)} /></td>
+                  <td ><textarea defaultValue={state.data[`${row.options.q10}`]} {...register(`${row.options.q10}`)} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={state.data[`${row.options.q3}`]} {...register(`${row.options.q3}`, { min: 1, max: 7 })} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={state.data[`${row.options.q4}`]} {...register(`${row.options.q4}`, { min: 1, max: 7 })} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={state.data[`${row.options.q5}`]} {...register(`${row.options.q5}`, { min: 1, max: 7 })} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={state.data[`${row.options.q6}`]} {...register(`${row.options.q6}`, { min: 1, max: 7 })} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={state.data[`${row.options.q7}`]} {...register(`${row.options.q7}`, { min: 1, max: 7 })} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={state.data[`${row.options.q8}`]} {...register(`${row.options.q8}`, { min: 1, max: 7 })} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={state.data[`${row.options.q9}`]} {...register(`${row.options.q9}`, { min: 1, max: 7 })} /></td>
                 </tr>
               ))}
 

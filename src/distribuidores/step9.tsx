@@ -37,12 +37,12 @@ export function Step9() {
           <h2>Conclusão</h2>
           <div className="mb-10">
             <h3>Você tem algum comentário ou dúvida sobre o projeto ou entrevista?  </h3>
-            <textarea placeholder="Resposta"{...register("comentario_pesquisa")} />
+            <textarea defaultValue={state.data.comentario_pesquisa} placeholder="Resposta"{...register("comentario_pesquisa")} />
           </div>
           <div>
             <h3 className="break-normal">Há outros especialistas que você considera líderes de pensamento e cujas perspectivas seriam valiosas para nós considerarmos? Deixe o nome e telefone. </h3>
             <div className="flex flex-row">
-              <InputText type="text" label="Recomendações" placeholder="Ex: Nome, Telefone, Nome, Telefone" {...register("recomendacoes")} />
+              <InputText type="text" label="Recomendações" placeholder="Ex: Nome, Telefone, Nome, Telefone" defaultValue={state.data.recomendacoes} {...register("recomendacoes")} />
             </div>
           </div>
           <NextStepButton title="Enviar Respostas" />

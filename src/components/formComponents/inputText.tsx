@@ -7,6 +7,7 @@ interface InputProps {
   required?: boolean;
   type?: string;
   onChange?: (event: any) => void;
+  defaultValue?: string;
 
 }
 

@@ -63,7 +63,7 @@ export default function HospitalTraumaStep5() {
             <tbody>
               {products.map((product, index) => (
                 <tr>
-                  <td>{product}</td>
+                  <td key={product}>{product}</td>
                   <td>
                     <div className="justify-center  flex">
                       <input type="checkbox" {...register(`questao_5_${transformTitleToKeyName(product)}_1`)} />

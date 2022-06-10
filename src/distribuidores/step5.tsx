@@ -166,30 +166,30 @@ export function Step5() {
   return (
     <>
       <div className="container">
-        <form className="w-fit sm:w-max" onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="">3.	Quais produtos e marcas você vende  atualmente para procedimentos de Trauma?  </h2>
+        <form className="w-max" onSubmit={handleSubmit(onSubmit)}>
+          <h2 >3.	Quais produtos e marcas você vende  atualmente para procedimentos de Trauma?  </h2>
 
           <table >
             <thead>
               <tr>
-                <th className="break-normal sm:break-words w-24" >PRODUTOS VENDIDOS</th>
+                <th className="break-normal w-[150px] sm:w-52" >PRODUTOS VENDIDOS</th>
                 <th className="break-normal sm:break-words w-24">selecionar os que sua empresa vende</th>
-                <th className="break-normal sm:break-words w-24 sm:w-36">As marcas mais vendidas?</th>
-                <th className="break-normal sm:break-words w-24">Por que? O que explica a preferência da marca?</th>
+                <th className="break-normal sm:break-words sm:w-[300px] w-[200px]">As marcas mais vendidas?</th>
+                <th className="break-normal sm:break-words sm:w-[300px] w-[200px]">Por que? O que explica a preferência da marca?</th>
               </tr>
             </thead>
             <tbody>
 
               {questions.map(row => (
-                <tr>
+                <tr className="break-normal">
                   <td key={row.title}>{row.title}</td>
                   <td >
                     <div className="justify-center w-full flex">
-                      <input type="checkbox" id="" {...register(`${row.options.q1}`)} />
+                      <input type="checkbox" defaultChecked={state.data[`${row.options.q1}`]} {...register(`${row.options.q1}`)} />
                     </div>
                   </td>
-                  <td className=""><textarea {...register(`${row.options.q2}`)} /></td>
-                  <td className=""><textarea {...register(`${row.options.q3}`)} /></td>
+                  <td><textarea defaultValue={state.data[`${row.options.q2}`]}{...register(`${row.options.q2}`)} /></td>
+                  <td><textarea defaultValue={state.data[`${row.options.q3}`]} {...register(`${row.options.q3}`)} /></td>
                 </tr>
               ))}
 
