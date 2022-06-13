@@ -9,14 +9,16 @@ import { NextStepButton } from "../../components/nextStepButton";
 import { useState, Fragment } from "react";
 import { api } from "../../lib/api";
 import { Modal } from "../../components/Modal";
+import { getDataFromStorage } from "../../utils/getDataFromStorage";
 
 
 export default function HospitalTraumaStepFinal() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions, state } = useStateMachine({ updateAction });
+  const values = getDataFromStorage();
   let [isOpen, setIsOpen] = useState(false)
-  console.log(state)
+
   function closeModal() {
     setIsOpen(false)
   }
@@ -37,37 +39,37 @@ export default function HospitalTraumaStepFinal() {
         <form className="w-max" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6">
             <h2>11 Quais tendências você prevê ver a compra/venda desses produtos relacionados ao trauma I sua instalação nos próximos 5 anos?</h2>
-            <textarea defaultValue={state.data.questao_11}{...register("questao_11")} />
+            <textarea defaultValue={values?.data.questao_11}{...register("questao_11")} />
             <div className="pl-4">
               <h3>. Que motivos explicam essas tendências?</h3>
-              <textarea defaultValue={state.data.questao_11_1} {...register("questao_11_1")}></textarea>
+              <textarea defaultValue={values?.data.questao_11_1} {...register("questao_11_1")}></textarea>
             </div>
           </div>
 
           <div className="mb-6">
             <h2>12 Qual é o processo de compra para a introdução desses produtos ao hospital?</h2>
-            <textarea defaultValue={state.data.questao_12} {...register("questao_12")} />
+            <textarea defaultValue={values?.data.questao_12} {...register("questao_12")} />
             <div className="pl-4">
               <h3>. Qual é o seu papel (se houver) em garantir que certos produtos estejam disponíveis em sua instalação?</h3>
-              <textarea defaultValue={state.data.questao_12_1} {...register("questao_12_1")}></textarea>
+              <textarea defaultValue={values?.data.questao_12_1} {...register("questao_12_1")}></textarea>
             </div>
             <div className="pl-4">
               <h3>. Existe algum processo de avaliação para identificar e testar novos produtos?</h3>
-              <textarea defaultValue={state.data.questao_12_2} {...register("questao_12_2")}></textarea>
+              <textarea defaultValue={values?.data.questao_12_2} {...register("questao_12_2")}></textarea>
             </div>
             <div className="pl-4">
               <h3>. Existe uma expectativa de que o fabricante forneça treinamento antes de introduzir um novo produto?</h3>
-              <textarea defaultValue={state.data.questao_12_3} {...register("questao_12_3")}></textarea>
+              <textarea defaultValue={values?.data.questao_12_3} {...register("questao_12_3")}></textarea>
             </div>
           </div>
 
           <div className="mb-6">
             <h2>13 Quais distribuidores ou marcas se aproximaram do seu hospital para esses tipos de produtos?</h2>
-            <textarea defaultValue={state.data.questao_13} {...register("questao_13")} />
+            <textarea defaultValue={values?.data.questao_13} {...register("questao_13")} />
             <div className="pl-4">
               <h3>. Qual é o processo de vendas para as principais marcas que você compra sobre os produtos abaixo? (por exemplo, vendas diretas? Via distribuidores, etc.)?</h3>
               <div className="ml-2">
-                <InputText type={'text'} defaultValue={state.data.questao_13_1} label="Placa e Parafusos" {...register("questao_13_1")} />
+                <InputText type={'text'} defaultValue={values?.data.questao_13_1} label="Placa e Parafusos" {...register("questao_13_1")} />
                 <InputText type={'text'} label="Pinos" {...register("questao_13_2")} />
                 <InputText type={'text'} label="Parafusos e cânulados" {...register("questao_13_3")} />
                 <InputText type={'text'} label="Fixações Externas" {...register("questao_13_4")} />

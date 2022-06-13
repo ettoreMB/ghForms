@@ -186,11 +186,11 @@ export function Step5() {
                   <td key={row.title}>{row.title}</td>
                   <td >
                     <div className="justify-center w-full flex">
-                      <input type="checkbox" defaultChecked={values.data[`${row.options.q1}`]} {...register(`${row.options.q1}`)} />
+                      <input type="checkbox" defaultChecked={values?.data[`${row.options.q1}`]} {...register(`${row.options.q1}`)} />
                     </div>
                   </td>
-                  <td><textarea defaultValue={values.data[`${row.options.q2}`]}{...register(`${row.options.q2}`)} /></td>
-                  <td><textarea defaultValue={values.data[`${row.options.q3}`]} {...register(`${row.options.q3}`)} /></td>
+                  <td><textarea defaultValue={values?.data[`${row.options.q2}`]}{...register(`${row.options.q2}`)} /></td>
+                  <td><textarea defaultValue={values?.data[`${row.options.q3}`]} {...register(`${row.options.q3}`)} /></td>
                 </tr>
               ))}
 

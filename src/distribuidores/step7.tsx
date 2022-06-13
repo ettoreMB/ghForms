@@ -297,16 +297,16 @@ export function Step7() {
               {questions.map(row => (
                 <tr className="break-normal">
                   <td key={row.title}>{row.title}</td>
-                  <td ><textarea defaultValue={values.data[`${row.options.q1}`]}{...register(`${row.options.q1}`)} /></td>
-                  <td ><InputText placeholder="R$" type="number" defaultValue={values.data[`${row.options.q2}`]} {...register(`${row.options.q2}`)} /></td>
-                  <td ><textarea defaultValue={values.data[`${row.options.q10}`]} {...register(`${row.options.q10}`)} /></td>
-                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values.data[`${row.options.q3}`]} {...register(`${row.options.q3}`, { min: 1, max: 7 })} /></td>
-                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values.data[`${row.options.q4}`]} {...register(`${row.options.q4}`, { min: 1, max: 7 })} /></td>
-                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values.data[`${row.options.q5}`]} {...register(`${row.options.q5}`, { min: 1, max: 7 })} /></td>
-                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values.data[`${row.options.q6}`]} {...register(`${row.options.q6}`, { min: 1, max: 7 })} /></td>
-                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values.data[`${row.options.q7}`]} {...register(`${row.options.q7}`, { min: 1, max: 7 })} /></td>
-                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values.data[`${row.options.q8}`]} {...register(`${row.options.q8}`, { min: 1, max: 7 })} /></td>
-                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values.data[`${row.options.q9}`]} {...register(`${row.options.q9}`, { min: 1, max: 7 })} /></td>
+                  <td ><textarea defaultValue={values?.data[`${row.options.q1}`]}{...register(`${row.options.q1}`)} /></td>
+                  <td ><InputText placeholder="R$" type="number" defaultValue={values?.data[`${row.options.q2}`]} {...register(`${row.options.q2}`)} /></td>
+                  <td ><textarea defaultValue={values?.data[`${row.options.q10}`]} {...register(`${row.options.q10}`)} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values?.data[`${row.options.q3}`]} {...register(`${row.options.q3}`, { min: 1, max: 7 })} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values?.data[`${row.options.q4}`]} {...register(`${row.options.q4}`, { min: 1, max: 7 })} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values?.data[`${row.options.q5}`]} {...register(`${row.options.q5}`, { min: 1, max: 7 })} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values?.data[`${row.options.q6}`]} {...register(`${row.options.q6}`, { min: 1, max: 7 })} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values?.data[`${row.options.q7}`]} {...register(`${row.options.q7}`, { min: 1, max: 7 })} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values?.data[`${row.options.q8}`]} {...register(`${row.options.q8}`, { min: 1, max: 7 })} /></td>
+                  <td ><InputText type="number" placeholder="1 ~ 7" min={1} max={7} defaultValue={values?.data[`${row.options.q9}`]} {...register(`${row.options.q9}`, { min: 1, max: 7 })} /></td>
                 </tr>
               ))}
 

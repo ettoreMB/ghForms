@@ -5,6 +5,7 @@ import { useStateMachine } from "little-state-machine";
 import { updateAction } from "../../utils/updateAction";
 import { NextStepButton } from "../../components/nextStepButton";
 import { transformTitleToKeyName } from "../../utils/transformTitleToKeyName";
+import { getDataFromStorage } from "../../utils/getDataFromStorage";
 
 const products = [
   'Placas para quadril ou pélvis',
@@ -29,6 +30,8 @@ export default function HospitalTraumaStep6() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions } = useStateMachine({ updateAction });
+
+  const values = getDataFromStorage();
 
   const onSubmit = (data: any) => {
     actions.updateAction(data);
@@ -58,11 +61,11 @@ export default function HospitalTraumaStep6() {
                   <td>{product}</td>
                   <td>
                     <div className="justify-center  flex">
-                      <input type="checkbox" {...register(`questao_6_${transformTitleToKeyName(product)}_1`)} />
+                      <input type="checkbox" defaultChecked={values?.data[`questao_6_${transformTitleToKeyName(product)}_1`]} {...register(`questao_6_${transformTitleToKeyName(product)}_1`)} />
                     </div>
                   </td>
-                  <td><textarea placeholder="Resposta" {...register(`questao_6_${transformTitleToKeyName(product)}_2`)} /></td>
-                  <td><textarea placeholder="Resposta" {...register(`questao_6_${transformTitleToKeyName(product)}_3`)} /></td>
+                  <td><textarea placeholder="Resposta" defaultValue={values?.data[`questao_6_${transformTitleToKeyName(product)}_2`]}{...register(`questao_6_${transformTitleToKeyName(product)}_2`)} /></td>
+                  <td><textarea placeholder="Resposta" defaultValue={values?.data[`questao_6_${transformTitleToKeyName(product)}_3`]}{...register(`questao_6_${transformTitleToKeyName(product)}_3`)} /></td>
                 </tr>
               ))}
             </tbody>

@@ -193,15 +193,15 @@ export function Step4() {
 
               {questions.map(row => (
                 <tr>
-                  <td key={row.title}>{row.title}</td>
-                  <td>
-                    <div className="justify-center  flex">
-                      <input type="checkbox" defaultChecked={values.data[`${row.options.q1}`]} {...register(`${row.options.q1}`)} />
+                  <td className="break-normal" key={row.title}>{row.title}</td>
+                  <td >
+                    <div className="justify-center flex ">
+                      <input type="checkbox" defaultChecked={values?.data[`${row.options.q1}`]} {...register(`${row.options.q1}`)} />
                     </div>
                   </td>
-                  <td ><textarea {...register(`${row.options.q2}`)} defaultValue={values.data[`${row.options.q2}`]} /></td>
-                  <td ><textarea {...register(`${row.options.q3}`)} defaultValue={values.data[`${row.options.q3}`]} /></td>
-                  <td ><textarea {...register(`${row.options.q4}`)} defaultValue={values.data[`${row.options.q4}`]} /></td>
+                  <td ><textarea {...register(`${row.options.q2}`)} defaultValue={values?.data[`${row.options.q2}`]} /></td>
+                  <td ><textarea {...register(`${row.options.q3}`)} defaultValue={values?.data[`${row.options.q3}`]} /></td>
+                  <td ><textarea {...register(`${row.options.q4}`)} defaultValue={values?.data[`${row.options.q4}`]} /></td>
                 </tr>
               ))}
 

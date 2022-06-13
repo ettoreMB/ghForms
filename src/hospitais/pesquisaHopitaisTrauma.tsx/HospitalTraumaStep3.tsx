@@ -5,6 +5,7 @@ import { updateAction } from "../../utils/updateAction";
 
 import { NextStepButton } from "../../components/nextStepButton";
 import { transformTitleToKeyName } from "../../utils/transformTitleToKeyName";
+import { getDataFromStorage } from "../../utils/getDataFromStorage";
 
 const questions = [
   {
@@ -46,6 +47,8 @@ export default function HospitalTraumaStep3() {
   const { register, handleSubmit } = useForm();
   const { actions } = useStateMachine({ updateAction });
 
+  const values = getDataFromStorage();
+
   const onSubmit = (data: any) => {
     actions.updateAction(data);
     console.log(data)
@@ -70,6 +73,7 @@ export default function HospitalTraumaStep3() {
                           <input
                             className="form-checkbox"
                             type="checkbox"
+                            defaultChecked={values?.data[`questao_1_grupo_${questionIndex + 1}_${transformTitleToKeyName(option)}`]}
                             {...register(`questao_1_grupo_${questionIndex + 1}_${transformTitleToKeyName(option)}`)}
                           />
                           <label className="ml-4" >{option}</label>
