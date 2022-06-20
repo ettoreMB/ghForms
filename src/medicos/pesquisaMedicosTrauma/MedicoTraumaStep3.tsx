@@ -5,12 +5,13 @@ import { useStateMachine } from "little-state-machine";
 import { updateAction } from "../../utils/updateAction";
 import { NextStepButton } from "../../components/nextStepButton";
 import { transformTitleToKeyName } from "../../utils/transformTitleToKeyName";
+import { getDataFromStorage } from "../../utils/getDataFromStorage";
 
 export default function step3() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { actions } = useStateMachine({ updateAction });
-
+  const values = getDataFromStorage();
   const onSubmit = (data: any) => {
     actions.updateAction(data);
     navigate("/medicos_trauma/step4");
@@ -191,7 +192,7 @@ export default function step3() {
               {questions.map(row => (
                 <tr key={row.title}>
                   <td  >
-                    <input className="mx-2 sm:text-sm" type="checkbox" {...register(`questao_1_${transformTitleToKeyName(row.title)}`)} />
+                    <input className="mx-2 sm:text-sm" type="checkbox" defaultChecked={values?.data[`questao_1_${transformTitleToKeyName(row.title)}`]} {...register(`questao_1_${transformTitleToKeyName(row.title)}`)} />
                     {row.title}
                   </td>
                   <td >

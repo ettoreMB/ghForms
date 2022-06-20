@@ -120,7 +120,7 @@ export default function Step5() {
                     </td>
                     <td className="w-36"><InputText placeholder="1~100" min={1} max={100} type="number"{...register(`questao_6_${transformTitleToKeyName(row.title)}_2`)} /></td>
                     <td><textarea {...register(`questao_6_${transformTitleToKeyName(row.title)}_3`)} /></td>
-                    <td><textarea {...register(`questao_6_${transformTitleToKeyName(row.title)}_3`)} /></td>
+                    <td><textarea {...register(`questao_6_${transformTitleToKeyName(row.title)}_4`)} /></td>
                   </>
                 </tr>
               ))}
