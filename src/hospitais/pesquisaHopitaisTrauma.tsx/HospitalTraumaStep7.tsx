@@ -27,7 +27,7 @@ export default function HospitalTraumaStep7() {
             <textarea placeholder="Resposta" defaultValue={values?.data['questao_7']} {...register("questao_7")} />
           </div>
           <div>
-            <h2>8. Quais são as principais marcas brasileiras que você é agora?</h2>
+            <h2>8. Quais são as principais marcas brasileiras que você conhece?</h2>
             <textarea placeholder="Resposta" defaultValue={values?.data['questao_8']}  {...register("questao_8")} />
             <div className="pl-4">
               <div>

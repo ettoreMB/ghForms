@@ -24,7 +24,7 @@ export default function Step7() {
             <textarea {...register("questao_8")} />
           </div>
           <div>
-            <h2>10. Quais são as principais marcas brasileiras que você conhece?</h2>
+            <h2>9. Quais são as principais marcas brasileiras que você conhece?</h2>
             <textarea {...register("questao_9")} />
             <div className="pl-4">
               <div>
