@@ -32,3 +32,17 @@ const questions = [
     ]
   }
 ]
+
+
+export const question_brasilian_products = [
+  "GM Reis",
+  "Neo Ortho",
+  "Hexagon",
+  "Ortosíntese",
+  "Baumer",
+  "Traumédica",
+  "Traumec",
+  "IOL",
+  "Biomecânica",
+  "Vincula",
+]
