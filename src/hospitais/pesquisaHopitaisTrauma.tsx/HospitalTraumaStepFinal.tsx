@@ -27,9 +27,9 @@ export default function HospitalTraumaStepFinal() {
     setIsOpen(true)
   }
 
-
   const onSubmit = async (data: any) => {
     actions.updateAction(data);
+ 
     await api.post('/results_pesquisa_hospital', state)
     openModal()
   }
